@@ -1,0 +1,150 @@
+[
+  {
+    "Class": "OWL:Thing",
+    "description": "Every class or object."
+  },
+  {
+    "SULO Class": "sulo:Capability",
+    "description": "A capability is a feature that describes what an entity is able to do, under some set of circumstances."
+  },
+  {
+    "SULO Class": "sulo:Duration",
+    "description": "Duration is a temporal quantity that represents the extent or (non-negative) amount of time that elapses between two temporal points, typically the start and end of a time interval."
+  },
+  {
+    "SULO Class": "sulo:EndTime",
+    "description": "an end time is a time instant at the end of a process/time interval."
+  },
+  {
+    "SULO Class": "sulo:Feature",
+    "description": "A feature is any characteristic that stems from the intrisinc structure and/or context"
+  },
+  {
+    "SULO Class": "sulo:InformationObject",
+    "description": "an information object is a feature that represents, is about, or encodes some information."
+  },
+  {
+    "SULO Class": "sulo:Object",
+    "description": "An object is an entity that maintains its identity through time, and does not have processes as its parts."
+  },
+  {
+    "SULO Class": "sulo:Process",
+    "description": "a process is a entity that unfolds in time, has temporal parts, and has objects that participate in the process."
+  },
+  {
+    "SULO Class": "sulo:Quality",
+    "description": "the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event - A quality is a feature that is intrinsically associated with its bearer (or its parts)."
+  },
+  {
+    "SULO Class": "sulo:Quantity",
+    "description": "A quantity is an informational object that contains the magnitude (and unit) of an attribute."
+  },
+  {
+    "SULO Class": "sulo:Role",
+    "description": "A role is a feature that describes a context-dependent behaviour."
+  },
+  {
+    "SULO Class": "sulo:Set",
+    "description": "A set is an information object for which there may be zero or more items."
+  },
+  {
+    "SULO Class": "sulo:SpatialObject",
+    "description": "A spatial object is an object that occupies space"
+  },
+  {
+    "SULO Class": "sulo:StartTime",
+    "description": "a start time is a time instant at the beginning of a process/time interval."
+  },
+  {
+    "SULO Class": "sulo:Time",
+    "description": "time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference)."
+  },
+  {
+    "SULO Class": "sulo:TimeInstant",
+    "description": "time instant is a quantity of time a particular moment in time."
+  },
+  {
+    "SULO Class": "sulo:TimeInterval",
+    "description": "A time interval is a quantity for a continuous and bounded extent of time, characterized by a start time and an end time."
+  },
+  {
+    "SULO Class": "sulo:Unit",
+    "description": "a unit is a standardized quantity that is used as a reference for a particular quantity."
+  },
+  {
+    "SULO Property": "sulo:atTime",
+    "description": "a relation between any thing and the time in which it occurs at."
+  },
+  {
+    "SULO Property": "sulo:hasDirectPart",
+    "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts."
+  },
+  {
+    "SULO Property": "sulo:hasFeature",
+    "description": "has feature is a relation between a thing and an internal, contextual, or externally attributed characteristic."
+  },
+  {
+    "SULO Property": "sulo:hasMember",
+    "description": "has item is a relation between a collection and an item contained therein."
+  },
+  {
+    "SULO Property": "sulo:hasPart",
+    "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part."
+  },
+  {
+    "SULO Property": "sulo:hasParticipant",
+    "description": "has participant is a relation that describes the participation of a (non-process) thing in a process."
+  },
+  {
+    "SULO Property": "sulo:hasValue",
+    "description": "has value is the (only) data type attribute to store the values of information objects."
+  },
+  {
+    "SULO Property": "sulo:isDirectPartOf",
+    "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole."
+  },
+  {
+    "SULO Property": "sulo:isFeatureOf",
+    "description": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing."
+  },
+  {
+    "SULO Property": "sulo:isItemIn",
+    "description": "has item is a relation between an item and the collection in which it contained."
+  },
+  {
+    "SULO Property": "sulo:isLocatedIn",
+    "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A."
+  },
+  {
+    "SULO Property": "sulo:isLocationOf",
+    "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B."
+  },
+  {
+    "SULO Property": "sulo:isPartOf",
+    "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole."
+  },
+  {
+    "SULO Property": "sulo:isParticipantIn",
+    "description": "is participant in is a relation to relate an object and the process in which it participates."
+  },
+  {
+    "SULO Property": "sulo:isPrecededBy",
+    "description": "A relation in which one process occurs after to another process."
+  },
+  {
+    "SULO Property": "sulo:isReferredIn",
+    "description": "is referred in is relation between an object that is the subject of an information object."
+  },
+  {
+    "SULO Property": "sulo:isTimeOf",
+    "description": "a relation between a time and an object that occurs within it."
+  },
+  {
+    "SULO Property": "sulo:precedes",
+    "description": "A relation in which one process occurs prior to another process."
+  },
+  {
+    "SULO Property": "sulo:refersTo",
+    "description": "refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about."
+  }
+]
