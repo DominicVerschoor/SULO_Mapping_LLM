@@ -1,0 +1,6709 @@
+[
+  {
+    "class": "AccessDevice",
+    "label": "Access Device",
+    "description": "product intended for medical use to gain access to the body, such as cannula, tube, catheter or drainage",
+    "properties": [
+      {
+        "property": "has product code",
+        "class_or_datatype": [
+          "Code",
+          "Terminology"
+        ]
+      },
+      {
+        "property": "has type code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has software",
+        "class_or_datatype": [
+          "Software"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "AccessDevicePresence",
+    "label": "Access Device Presence",
+    "description": "presence of a medical access device, such as cannula, tube, catheter or drainage",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has resting point",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has insertion point",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      },
+      {
+        "property": "has medical device",
+        "class_or_datatype": [
+          "Access Device"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "AdministrativeCase",
+    "label": "Administrative Case",
+    "description": "administrative artifact for billing according to national healthcare billing guidelines, e.g. Swiss Diagnosis Related Groups, and local settings",
+    "properties": [
+      {
+        "property": "has care handling",
+        "class_or_datatype": [
+          "Care Handling"
+        ]
+      },
+      {
+        "property": "has admission",
+        "class_or_datatype": [
+          "Admission"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has identifier",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has discharge",
+        "class_or_datatype": [
+          "Discharge"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "AdministrativeSex",
+    "label": "Administrative Sex",
+    "description": "the sex of the individual used for administrative purposes",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has record datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Admission",
+    "label": "Admission",
+    "description": "admission of a patient to the healthcare provider institute",
+    "properties": [
+      {
+        "property": "has origin location",
+        "class_or_datatype": [
+          "Location"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "AdverseEvent",
+    "label": "Adverse Event",
+    "description": "results from an intervention that caused unintentional harm",
+    "properties": [
+      {
+        "property": "has outcome",
+        "class_or_datatype": [
+          "Adverse Event outcome"
+        ]
+      },
+      {
+        "property": "has intervention",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": [
+          "Code"
+        ]
+      },
+      {
+        "property": "has severity code",
+        "class_or_datatype": [
+          "Terminology",
+          "Code"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has consequences",
+        "class_or_datatype": [
+          "Adverse Event consequences"
+        ]
+      },
+      {
+        "property": "has onset datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Age",
+    "label": "Age",
+    "description": "time elapsed since birth of the individual",
+    "properties": [
+      {
+        "property": "has quantity",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has determination datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Allergen",
+    "label": "Allergen",
+    "description": "any substance, product or physical force producing immediate hypersensitivity",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "Allergy",
+    "label": "Allergy",
+    "description": "risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to an allergen",
+    "properties": [
+      {
+        "property": "has first record datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has reaction type code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has verification status code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has severity code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has allergen",
+        "class_or_datatype": [
+          "Allergen"
+        ]
+      },
+      {
+        "property": "has last reaction datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "AllergyEpisode",
+    "label": "Allergy Episode",
+    "description": "manifestation of an allergic reaction following an exposure to an allergen",
+    "properties": [
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has exposure",
+        "class_or_datatype": [
+          "Exposure"
+        ]
+      },
+      {
+        "property": "has manifestation code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      },
+      {
+        "property": "has allergen",
+        "class_or_datatype": [
+          "Allergen"
+        ]
+      },
+      {
+        "property": "has duration",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has severity code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has certainty code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "AntimicrobialSusceptibilityLabTest",
+    "label": "Antimicrobial Susceptibility Lab Test",
+    "description": "specific lab test performed on an isolate against a chemical agent for determining antimicrobial susceptibility",
+    "properties": [
+      {
+        "property": "has instrument",
+        "class_or_datatype": [
+          "Lab Analyzer"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has test kit",
+        "class_or_datatype": [
+          "Lab Analyzer"
+        ]
+      },
+      {
+        "property": "has chemical agent",
+        "class_or_datatype": [
+          "Substance",
+          "Drug"
+        ]
+      },
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Antimicrobial Susceptibility Result"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "AntimicrobialSusceptibilityLabTestEvent",
+    "label": "Antimicrobial Susceptibility Lab Test Event",
+    "description": "occurrence in which one or multiple laboratory tests are performed on an isolate at a given time for determining antimicrobial susceptibility",
+    "properties": [
+      {
+        "property": "has report datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has lab test",
+        "class_or_datatype": [
+          "Antimicrobial Susceptibility Lab Test"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has sample",
+        "class_or_datatype": [
+          "Isolate"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "AntimicrobialSusceptibilityResult",
+    "label": "Antimicrobial Susceptibility Result",
+    "description": "result of an antimicrobial susceptibility lab analysis",
+    "properties": [
+      {
+        "property": "has numerical reference",
+        "class_or_datatype": [
+          "Reference Value",
+          "Reference Range"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has string value",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has standard guideline",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Assay",
+    "label": "Assay",
+    "description": "a process with the objective to produce information about a sample by examining it",
+    "properties": [
+      {
+        "property": "has standard operating procedure",
+        "class_or_datatype": [
+          "Standard Operating Procedure"
+        ]
+      },
+      {
+        "property": "has sample",
+        "class_or_datatype": [
+          "Sample"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has data file",
+        "class_or_datatype": [
+          "Data File"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has identifier",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has predecessor",
+        "class_or_datatype": [
+          "Sample Processing"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Assessment",
+    "label": "Assessment",
+    "description": "assessment scale, classification, staging or scoring system",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has range",
+        "class_or_datatype": [
+          "Range"
+        ]
+      },
+      {
+        "property": "has component",
+        "class_or_datatype": [
+          "Assessment Component"
+        ]
+      },
+      {
+        "property": "has name",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Assessment Result"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "AssessmentComponent",
+    "label": "Assessment Component",
+    "description": "component of an assessment",
+    "properties": [
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Assessment Result"
+        ]
+      },
+      {
+        "property": "has name",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has range",
+        "class_or_datatype": [
+          "Range"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "AssessmentEvent",
+    "label": "Assessment Event",
+    "description": "evaluation at a given time, which takes into account a predefined scale, classification, staging or scoring system",
+    "properties": [
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has assessment",
+        "class_or_datatype": [
+          "Assessment"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has performer",
+        "class_or_datatype": [
+          "Performer"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "AssessmentResult",
+    "label": "Assessment Result",
+    "description": "outcome of an assessment",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": [
+          "Terminology",
+          "Code"
+        ]
+      },
+      {
+        "property": "has string value",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "BilledDiagnosis",
+    "label": "Billed Diagnosis",
+    "description": "discharge diagnosis used for the billing system (e.g. for building the Diagnosis Related Groups) according to guidelines of the national authority (e.g. Swiss Federal Office of Public Health), e.g. K35.3 acute appendicitis with localized peritonitis",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has subject age",
+        "class_or_datatype": [
+          "Age"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has rank code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has record datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "BilledProcedure",
+    "label": "Billed Procedure",
+    "description": "procedure, coded for billing (e.g. for building the Diagnosis Related Groups) according to guidelines of the national authority (e.g. Swiss Federal Office of Public Health), e.g. 57.34 open biopsy of the urinary bladder",
+    "properties": [
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      },
+      {
+        "property": "has rank code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has intent",
+        "class_or_datatype": [
+          "Intent"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Biobanksample",
+    "label": "Biobanksample",
+    "description": "biosample stored in a biobank",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has biobank name",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has sample",
+        "class_or_datatype": [
+          "Sample"
+        ]
+      },
+      {
+        "property": "has identifier",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Birth",
+    "label": "Birth",
+    "description": "the event of being born",
+    "properties": [
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has gestational age",
+        "class_or_datatype": [
+          "Gestational Age At Birth"
+        ]
+      },
+      {
+        "property": "has country",
+        "class_or_datatype": [
+          "Country"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has medical device",
+        "class_or_datatype": [
+          "Medical Device"
+        ]
+      },
+      {
+        "property": "has date",
+        "class_or_datatype": [
+          "Birth Date"
+        ]
+      },
+      {
+        "property": "has group size",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has delivery mode code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "BirthDate",
+    "label": "Birth Date",
+    "description": "the date and time of birth of the individual",
+    "properties": [
+      {
+        "property": "has comparator",
+        "class_or_datatype": [
+          "Comparator"
+        ]
+      },
+      {
+        "property": "has month",
+        "class_or_datatype": [
+          "xsd:gMonth"
+        ]
+      },
+      {
+        "property": "has year",
+        "class_or_datatype": [
+          "xsd:gYear"
+        ]
+      },
+      {
+        "property": "has day",
+        "class_or_datatype": [
+          "xsd:gDay"
+        ]
+      },
+      {
+        "property": "has time",
+        "class_or_datatype": [
+          "xsd:time"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "BloodPressure",
+    "label": "Blood Pressure",
+    "description": "blood pressure of the individual",
+    "properties": [
+      {
+        "property": "has mean pressure",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has data file",
+        "class_or_datatype": [
+          "Time Series Data File"
+        ]
+      },
+      {
+        "property": "has systolic pressure",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has diastolic pressure",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "BloodPressureMeasurement",
+    "label": "Blood Pressure Measurement",
+    "description": "measurement process of a blood pressure on an individual",
+    "properties": [
+      {
+        "property": "has medical device",
+        "class_or_datatype": [
+          "Medical Device"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Blood Pressure"
+        ]
+      },
+      {
+        "property": "has method code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has performer",
+        "class_or_datatype": [
+          "Performer"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "BodyHeight",
+    "label": "Body Height",
+    "description": "height of the individual",
+    "properties": [
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has data determination",
+        "class_or_datatype": [
+          "Data Determination"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "BodyHeightMeasurement",
+    "label": "Body Height Measurement",
+    "description": "measurement of the height of the individual",
+    "properties": [
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Body Height"
+        ]
+      },
+      {
+        "property": "has method code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has associated event",
+        "class_or_datatype": [
+          "Birth"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has performer",
+        "class_or_datatype": [
+          "Performer"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has medical device",
+        "class_or_datatype": [
+          "Medical Device"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "BodyMassIndex",
+    "label": "Body Mass Index",
+    "description": "body weight in kilograms divided by the square of the body height in meters",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has determination datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "BodyPosition",
+    "label": "Body Position",
+    "description": "position of the body during a certain time interval, examination or therapy",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "BodySite",
+    "label": "Body Site",
+    "description": "any anatomical structure, any nonspecific and anatomical site, as well as morphologic abnormalities",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has laterality",
+        "class_or_datatype": [
+          "Laterality"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "BodySurfaceArea",
+    "label": "Body Surface Area",
+    "description": "two-dimensional measure of the outer layer of the body",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has determination datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has calculation method",
+        "class_or_datatype": [
+          "Body Surface Area calculation method"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "BodyTemperature",
+    "label": "Body Temperature",
+    "description": "body temperature of the individual",
+    "properties": [
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has data file",
+        "class_or_datatype": [
+          "Time Series Data File"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "BodyTemperatureMeasurement",
+    "label": "Body Temperature Measurement",
+    "description": "measurement of the body temperature of the individual",
+    "properties": [
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has medical device",
+        "class_or_datatype": [
+          "Medical Device"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      },
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Body Temperature"
+        ]
+      },
+      {
+        "property": "has method code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has performer",
+        "class_or_datatype": [
+          "Performer"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "BodyWeight",
+    "label": "Body Weight",
+    "description": "weight of the individual",
+    "properties": [
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has data determination",
+        "class_or_datatype": [
+          "Data Determination"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "BodyWeightMeasurement",
+    "label": "Body Weight Measurement",
+    "description": "measurement of the weight of the individual",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has method code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has associated event",
+        "class_or_datatype": [
+          "Birth"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has performer",
+        "class_or_datatype": [
+          "Performer"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has medical device",
+        "class_or_datatype": [
+          "Medical Device"
+        ]
+      },
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Body Weight"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "CardiacIndex",
+    "label": "Cardiac Index",
+    "description": "cardiac output in relation to the body surface area (BSA)",
+    "properties": [
+      {
+        "property": "has quantity",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has determination datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has method code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "CardiacOutput",
+    "label": "Cardiac Output",
+    "description": "volume of blood passing through the heart per unit of time",
+    "properties": [
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has data file",
+        "class_or_datatype": [
+          "Time Series Data File"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "CardiacOutputMeasurement",
+    "label": "Cardiac Output Measurement",
+    "description": "measurement of the cardiac output of the individual",
+    "properties": [
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has performer",
+        "class_or_datatype": [
+          "Performer"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has medical device",
+        "class_or_datatype": [
+          "Medical Device"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Cardiac Output"
+        ]
+      },
+      {
+        "property": "has method code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "CareHandling",
+    "label": "Care Handling",
+    "description": "describes the relationship between the individual and care provider institute",
+    "properties": [
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has type code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "ChromosomalLocation",
+    "label": "Chromosomal Location",
+    "description": "chromosome locus defined as cytoband intervals",
+    "properties": [
+      {
+        "property": "has start cytoband code",
+        "class_or_datatype": [
+          "Code"
+        ]
+      },
+      {
+        "property": "has end cytoband code",
+        "class_or_datatype": [
+          "Code"
+        ]
+      },
+      {
+        "property": "has chromosome",
+        "class_or_datatype": [
+          "Chromosome"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Chromosome",
+    "label": "Chromosome",
+    "description": "thread-like structure composed of tightly coiled DNA and histones or circular DNA (mitochondrial DNA). These structures act as carriers of genetic information",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "Circumference",
+    "label": "Circumference",
+    "description": "circumference of a body site",
+    "properties": [
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "CircumferenceMeasurement",
+    "label": "Circumference Measurement",
+    "description": "measurement of the circumference measure of a body site",
+    "properties": [
+      {
+        "property": "has medical device",
+        "class_or_datatype": [
+          "Medical Device"
+        ]
+      },
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Circumference"
+        ]
+      },
+      {
+        "property": "has method code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has associated event",
+        "class_or_datatype": [
+          "Birth"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has performer",
+        "class_or_datatype": [
+          "Performer"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "CivilStatus",
+    "label": "Civil Status",
+    "description": "the civil status indicates the familial and social situation of the individual",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has event datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Code",
+    "label": "Code",
+    "description": "symbols and/or expressions defined in a coding system",
+    "properties": [
+      {
+        "property": "has coding system and version",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has name",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has identifier",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Consent",
+    "label": "Consent",
+    "description": "information on the individual’s permission to make health related data and collected samples available for research purposes",
+    "properties": [
+      {
+        "property": "has type code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has status code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has template identifier",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "CopyNumberVariation",
+    "label": "Copy Number Variation",
+    "description": "structural genomic variant characterized by relative changes in the number of copies of a specific genomic segment compared to a reference sequence",
+    "properties": [
+      {
+        "property": "has feature location",
+        "class_or_datatype": [
+          "Genomic Position",
+          "Chromosomal Location"
+        ]
+      },
+      {
+        "property": "has total copy number",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has type code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "Country",
+    "label": "Country",
+    "description": "distinct part of the world, such as a state, nation, or other political entity, often but not necessarily a sovereign state",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "DataDetermination",
+    "label": "Data Determination",
+    "description": "describes how the data was determined, e.g. measured, calculated",
+    "properties": [
+      {
+        "property": "has method code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "DataFile",
+    "label": "Data File",
+    "description": "electronic resource of information, which can be stored, accessed and transferred as a single unit",
+    "properties": [
+      {
+        "property": "has creation datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has encoding",
+        "class_or_datatype": [
+          "Data File encoding"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has format code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has hash",
+        "class_or_datatype": [
+          "Hash"
+        ]
+      },
+      {
+        "property": "has name",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has uniform resource identifier",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "DataProcessing",
+    "label": "Data Processing",
+    "description": "a process that produces output data from input data",
+    "properties": [
+      {
+        "property": "has standard operating procedure",
+        "class_or_datatype": [
+          "Standard Operating Procedure"
+        ]
+      },
+      {
+        "property": "has software",
+        "class_or_datatype": [
+          "Software"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has output",
+        "class_or_datatype": [
+          "Data File"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has input",
+        "class_or_datatype": [
+          "Data File"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has quality control metric",
+        "class_or_datatype": [
+          "Quality Control Metric"
+        ]
+      },
+      {
+        "property": "has predecessor",
+        "class_or_datatype": [
+          "Data Processing",
+          "Assay"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "DataProvider",
+    "label": "Data Provider",
+    "description": "organization that prepares and delivers data",
+    "properties": [
+      {
+        "property": "has department",
+        "class_or_datatype": [
+          "Department"
+        ]
+      },
+      {
+        "property": "has category",
+        "class_or_datatype": [
+          "Data Provider category"
+        ]
+      },
+      {
+        "property": "has institution code",
+        "class_or_datatype": [
+          "Code"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "DataRelease",
+    "label": "Data Release",
+    "description": "Metadata about the release of the data",
+    "properties": [
+      {
+        "property": "has data provider",
+        "class_or_datatype": [
+          "Data Provider"
+        ]
+      },
+      {
+        "property": "has extraction datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "dcterms:conformsTo",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "Death",
+    "label": "Death",
+    "description": "cessation of all vital bodily functions",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has report datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has circumstance code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has condition code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has date",
+        "class_or_datatype": [
+          "Death Date"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "DeathDate",
+    "label": "Death Date",
+    "description": "the date and time of death of the individual",
+    "properties": [
+      {
+        "property": "has year",
+        "class_or_datatype": [
+          "xsd:gYear"
+        ]
+      },
+      {
+        "property": "has day",
+        "class_or_datatype": [
+          "xsd:gDay"
+        ]
+      },
+      {
+        "property": "has time",
+        "class_or_datatype": [
+          "xsd:time"
+        ]
+      },
+      {
+        "property": "has month",
+        "class_or_datatype": [
+          "xsd:gMonth"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Department",
+    "label": "Department",
+    "description": "dedicated division of an organization",
+    "properties": [
+      {
+        "property": "has name",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Diagnosis",
+    "label": "Diagnosis",
+    "description": "determination of the presence of a disease, condition, or injury from expressed signs and symptoms and assessments such as physical examination, laboratory test, or the like",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject age",
+        "class_or_datatype": [
+          "Age"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has record datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Discharge",
+    "label": "Discharge",
+    "description": "discharge of an individual from the healthcare provider institute",
+    "properties": [
+      {
+        "property": "has target location",
+        "class_or_datatype": [
+          "Location"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Drug",
+    "label": "Drug",
+    "description": "any substance with the intent to prevent, diagnose, treat, or relieve symptoms of a disease or abnormal condition",
+    "properties": [
+      {
+        "property": "has active ingredient",
+        "class_or_datatype": [
+          "Substance"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has inactive ingredient",
+        "class_or_datatype": [
+          "Substance"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has article",
+        "class_or_datatype": [
+          "Drug Article"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "DrugAdministrationEvent",
+    "label": "Drug Administration Event",
+    "description": "single event at which a drug was administered to the patient; this could be a single time point in case of a pill/cream or a duration in case of a single infusion pack or a single patch; one or many drug administration events are initiated by a drug prescription depending on the frequency stated in the prescription",
+    "properties": [
+      {
+        "property": "has administration route code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has drug",
+        "class_or_datatype": [
+          "Drug"
+        ]
+      },
+      {
+        "property": "has time pattern",
+        "class_or_datatype": [
+          "Time Pattern"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has reason to stop code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has duration",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "DrugArticle",
+    "label": "Drug Article",
+    "description": "general details identifying a medication on the level of its commercial article",
+    "properties": [
+      {
+        "property": "has manufactured dose form",
+        "class_or_datatype": [
+          "Pharmaceutical Dose Form"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has name",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": [
+          "Code"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "DrugPrescription",
+    "label": "Drug Prescription",
+    "description": "plan that defines at which frequency a drug should be administered to a patient with a given quantity; at every frequency time point a drug administration event should occur",
+    "properties": [
+      {
+        "property": "has first administration datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has intent",
+        "class_or_datatype": [
+          "Intent"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has last administration datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has record datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has administration route code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has drug",
+        "class_or_datatype": [
+          "Drug"
+        ]
+      },
+      {
+        "property": "has indication to start",
+        "class_or_datatype": [
+          "Diagnosis"
+        ]
+      },
+      {
+        "property": "has frequency",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has time pattern",
+        "class_or_datatype": [
+          "Time Pattern"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Electrocardiogram",
+    "label": "Electrocardiogram",
+    "description": "output of an electrocardiographic procedure",
+    "properties": [
+      {
+        "property": "has data file",
+        "class_or_datatype": [
+          "Data File"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "ElectrocardiographicProcedure",
+    "label": "Electrocardiographic Procedure",
+    "description": "electrographic procedure on the heart which results in a graph of voltage versus time visualizing the electrical activity of the heart muscle using electrodes placed on the skin",
+    "properties": [
+      {
+        "property": "has subject physiologic state",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has number of leads",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has output",
+        "class_or_datatype": [
+          "Electrocardiogram"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has intent",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "ExcludedDisorder",
+    "label": "Excluded Disorder",
+    "description": "determination of the absence of a disease",
+    "properties": [
+      {
+        "property": "has record datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Exposure",
+    "label": "Exposure",
+    "description": "contact between a physical, biological, or chemical agent and an individual",
+    "properties": [
+      {
+        "property": "has duration",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has record datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has agent code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has degree code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has route code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "FluidBalance",
+    "label": "Fluid Balance",
+    "description": "difference between fluid input and output during a specified time interval",
+    "properties": [
+      {
+        "property": "has fluid input output",
+        "class_or_datatype": [
+          "Fluid Input Output"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "FluidInputOutput",
+    "label": "Fluid Input Output",
+    "description": "gain or loss of fluid that impacts the fluid balance",
+    "properties": [
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has substance",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "FollowUp",
+    "label": "Follow Up",
+    "description": "procedure for following up on the patient status",
+    "properties": [
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Vital Status"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "FractionOfInspiredOxygen",
+    "label": "Fraction Of Inspired Oxygen",
+    "description": "value of the fraction of inspired oxygen (FiO2) in a defined setting",
+    "properties": [
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "Gene",
+    "label": "Gene",
+    "description": "fundamental unit of heredity that contains necessary elements to encode for a transcript",
+    "properties": [
+      {
+        "property": "has organism",
+        "class_or_datatype": [
+          "Organism"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": [
+          "Terminology",
+          "Code"
+        ]
+      },
+      {
+        "property": "has transcript",
+        "class_or_datatype": [
+          "Transcript"
+        ]
+      },
+      {
+        "property": "has protein",
+        "class_or_datatype": [
+          "Protein"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "GeneFusion",
+    "label": "Gene Fusion",
+    "description": "the joining of two or more genes resulting in a chimeric transcript and/or a novel interaction",
+    "properties": [
+      {
+        "property": "has feature location",
+        "class_or_datatype": [
+          "Genomic Position",
+          "Chromosomal Location"
+        ]
+      },
+      {
+        "property": "has gene",
+        "class_or_datatype": [
+          "Gene"
+        ]
+      },
+      {
+        "property": "has regulatory feature code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "GenePanel",
+    "label": "Gene Panel",
+    "description": "collection of genes that have been grouped for testing",
+    "properties": [
+      {
+        "property": "has focus gene",
+        "class_or_datatype": [
+          "Gene"
+        ]
+      },
+      {
+        "property": "has data file",
+        "class_or_datatype": [
+          "Data File"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "GenomicDeletion",
+    "label": "Genomic Deletion",
+    "description": "genetic variant involving the deletion of a specific location in a DNA sequence",
+    "properties": [
+      {
+        "property": "has feature location",
+        "class_or_datatype": [
+          "Genomic Position",
+          "Chromosomal Location"
+        ]
+      },
+      {
+        "property": "has deleted sequence",
+        "class_or_datatype": [
+          "Nucleotide Sequence"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "GenomicDelins",
+    "label": "Genomic Delins",
+    "description": "genomic variation in which one or more nucleotides are replaced by different nucleotides relative to a reference sequence, and it is neither a substitution nor an inversion",
+    "properties": [
+      {
+        "property": "has genomic position",
+        "class_or_datatype": [
+          "Genomic Position"
+        ]
+      },
+      {
+        "property": "has inserted sequence",
+        "class_or_datatype": [
+          "Nucleotide Sequence"
+        ]
+      },
+      {
+        "property": "has deleted sequence",
+        "class_or_datatype": [
+          "Nucleotide Sequence"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "GenomicDuplication",
+    "label": "Genomic Duplication",
+    "description": "sequence alteration where, in comparison to a reference sequence, an additional copy of one or more nucleotides or amino acids is inserted immediately downstream of the original sequence at the 3' end",
+    "properties": [
+      {
+        "property": "has feature location",
+        "class_or_datatype": [
+          "Genomic Position",
+          "Chromosomal Location"
+        ]
+      },
+      {
+        "property": "has nucleotide sequence",
+        "class_or_datatype": [
+          "Nucleotide Sequence"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "GenomicInsertion",
+    "label": "Genomic Insertion",
+    "description": "genetic variant involving the addition of a DNA sequence in a specific location",
+    "properties": [
+      {
+        "property": "has feature location",
+        "class_or_datatype": [
+          "Genomic Position",
+          "Chromosomal Location"
+        ]
+      },
+      {
+        "property": "has inserted sequence",
+        "class_or_datatype": [
+          "Nucleotide Sequence"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "GenomicInversion",
+    "label": "Genomic Inversion",
+    "description": "a sequence change where, compared to a reference sequence, more than one nucleotide replacing the original sequence is the reverse complement of the original sequence",
+    "properties": [
+      {
+        "property": "has nucleotide sequence",
+        "class_or_datatype": [
+          "Nucleotide Sequence"
+        ]
+      },
+      {
+        "property": "has feature location",
+        "class_or_datatype": [
+          "Genomic Position",
+          "Chromosomal Location"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "GenomicPosition",
+    "label": "Genomic Position",
+    "description": "genomic position with respect to a reference",
+    "properties": [
+      {
+        "property": "has coordinate convention",
+        "class_or_datatype": [
+          "Genomic Position coordinate convention"
+        ]
+      },
+      {
+        "property": "has reference sequence",
+        "class_or_datatype": [
+          "Reference Sequence"
+        ]
+      },
+      {
+        "property": "has start",
+        "class_or_datatype": [
+          "xsd:double"
+        ]
+      },
+      {
+        "property": "has end",
+        "class_or_datatype": [
+          "xsd:double"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "GenomicTranslocation",
+    "label": "Genomic Translocation",
+    "description": "a sequence change where, compared to a reference sequence, from a specific nucleotide position (the break point), all nucleotides upstream derive from another chromosome than those downstream",
+    "properties": [
+      {
+        "property": "has breakpoint",
+        "class_or_datatype": [
+          "Genomic Position",
+          "Chromosomal Location"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "GenomicTransposition",
+    "label": "Genomic Transposition",
+    "description": "a genomic alteration in which a large segment of DNA is relocated from one site in the genome to a different site, when compared to a reference sequence.",
+    "properties": [
+      {
+        "property": "has insertion breakpoint",
+        "class_or_datatype": [
+          "Genomic Position",
+          "Chromosomal Location"
+        ]
+      },
+      {
+        "property": "has deletion breakpoint",
+        "class_or_datatype": [
+          "Genomic Position",
+          "Chromosomal Location"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "GenomicVariation",
+    "label": "Genomic Variation",
+    "description": "a genomic variation occurring at a defined position",
+    "properties": []
+  },
+  {
+    "class": "GestationalAgeAtBirth",
+    "label": "Gestational Age At Birth",
+    "description": "gestational age of a child at birth",
+    "properties": [
+      {
+        "property": "has quantity",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Hash",
+    "label": "Hash",
+    "description": "irreversible unique number computed on an information entity used to check its validity and integrity",
+    "properties": [
+      {
+        "property": "has string value",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has algorithm",
+        "class_or_datatype": [
+          "Hash algorithm"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "HealthcareEncounter",
+    "label": "Healthcare Encounter",
+    "description": "an interaction between an individual and a specific unit or service of a healthcare provider institute, e.g. emergency, intensive care unit, for the purpose of providing healthcare service(s) or assessing the health status of an individual",
+    "properties": [
+      {
+        "property": "has origin location",
+        "class_or_datatype": [
+          "Location"
+        ]
+      },
+      {
+        "property": "has identifier",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has target location",
+        "class_or_datatype": [
+          "Location"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has therapeutic area",
+        "class_or_datatype": [
+          "Therapeutic Area"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has current location",
+        "class_or_datatype": [
+          "Location"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "HealthcarePrimaryInformationSystem",
+    "label": "Healthcare Primary Information System",
+    "description": "primary source system of the healthcare data",
+    "properties": [
+      {
+        "property": "has name",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "HeartRate",
+    "label": "Heart Rate",
+    "description": "frequency of the heart beats, i.e. the number of time a heart beats per unit of time",
+    "properties": [
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has regularity code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has data file",
+        "class_or_datatype": [
+          "Time Series Data File"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "HeartRateMeasurement",
+    "label": "Heart Rate Measurement",
+    "description": "measurement of the heart rate of the individual",
+    "properties": [
+      {
+        "property": "has subject physiologic state",
+        "class_or_datatype": [
+          "Physiologic State"
+        ]
+      },
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Heart Rate"
+        ]
+      },
+      {
+        "property": "has method code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has performer",
+        "class_or_datatype": [
+          "Performer"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has medical device",
+        "class_or_datatype": [
+          "Medical Device"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "HomeAddress",
+    "label": "Home Address",
+    "description": "permanent place of residence of an individual",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has country",
+        "class_or_datatype": [
+          "Country"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has swiss socio economic position",
+        "class_or_datatype": [
+          "Swiss Socio Economic Position"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "ImagingProcedure",
+    "label": "Imaging Procedure",
+    "description": "imaging procedure used for examination of a body site or function",
+    "properties": [
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has intent",
+        "class_or_datatype": [
+          "Intent"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Implant",
+    "label": "Implant",
+    "description": "implanted medical device, includes, e.g., heart valve prostheses or joint prostheses",
+    "properties": [
+      {
+        "property": "has software",
+        "class_or_datatype": [
+          "Software"
+        ]
+      },
+      {
+        "property": "has type code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has product code",
+        "class_or_datatype": [
+          "Code",
+          "Terminology"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "ImplantPresence",
+    "label": "Implant Presence",
+    "description": "presence of an implanted medical device",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      },
+      {
+        "property": "has record datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has medical device",
+        "class_or_datatype": [
+          "Implant"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "InsuranceStatus",
+    "label": "Insurance Status",
+    "description": "status of the patient's medical insurance",
+    "properties": [
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has coverage type",
+        "class_or_datatype": [
+          "Insurance Status coverage type"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Intent",
+    "label": "Intent",
+    "description": "treatment or procedure purpose",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "Interpretation",
+    "label": "Interpretation",
+    "description": "process of making sense of an outcome to derive meaningful conclusions",
+    "properties": [
+      {
+        "property": "has output",
+        "class_or_datatype": [
+          "SPHN Concept"
+        ]
+      },
+      {
+        "property": "has input",
+        "class_or_datatype": [
+          "SPHN Concept"
+        ]
+      },
+      {
+        "property": "has standard guideline",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Isolate",
+    "label": "Isolate",
+    "description": "a specific individual microbe and its clone separated on a single occasion from a sample taken from a host or culture system",
+    "properties": [
+      {
+        "property": "has shared identifier",
+        "class_or_datatype": [
+          "xsd:anyURI"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      },
+      {
+        "property": "has medical device",
+        "class_or_datatype": [
+          "Medical Device"
+        ]
+      },
+      {
+        "property": "has organism",
+        "class_or_datatype": [
+          "Organism"
+        ]
+      },
+      {
+        "property": "has primary container",
+        "class_or_datatype": [
+          "Sample primary container"
+        ]
+      },
+      {
+        "property": "has collection datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has identifier",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has material type code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has fixation type",
+        "class_or_datatype": [
+          "Sample fixation type"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "LabAnalyzer",
+    "label": "Lab Analyzer",
+    "description": "laboratory analyzer used to assess medical laboratory samples",
+    "properties": [
+      {
+        "property": "has software",
+        "class_or_datatype": [
+          "Software"
+        ]
+      },
+      {
+        "property": "has type code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has product code",
+        "class_or_datatype": [
+          "Code",
+          "Terminology"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "LabResult",
+    "label": "Lab Result",
+    "description": "outcome, value, or information which gives insight about a laboratory test",
+    "properties": [
+      {
+        "property": "has numerical reference",
+        "class_or_datatype": [
+          "Reference Value",
+          "Reference Range"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": [
+          "Terminology",
+          "Code"
+        ]
+      },
+      {
+        "property": "has string value",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "LabTest",
+    "label": "Lab Test",
+    "description": "specific laboratory test performed to analyze a sample with a given equipment and leading to specific results",
+    "properties": [
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Lab Result"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has test kit",
+        "class_or_datatype": [
+          "Lab Analyzer"
+        ]
+      },
+      {
+        "property": "has instrument",
+        "class_or_datatype": [
+          "Lab Analyzer"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "LabTestEvent",
+    "label": "Lab Test Event",
+    "description": "occurrence in which one or multiple laboratory tests are performed on a biological specimen at a given time",
+    "properties": [
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has sample",
+        "class_or_datatype": [
+          "Sample"
+        ]
+      },
+      {
+        "property": "has report datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has lab test",
+        "class_or_datatype": [
+          "Lab Test"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Laterality",
+    "label": "Laterality",
+    "description": "localization with respect to the side of the body",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "LibraryPreparation",
+    "label": "Library Preparation",
+    "description": "process which results in the creation of a library from fragments of DNA",
+    "properties": [
+      {
+        "property": "has kit code",
+        "class_or_datatype": [
+          "Code",
+          "Terminology"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has predecessor",
+        "class_or_datatype": [
+          "Sample Processing"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has quality control metric",
+        "class_or_datatype": [
+          "Quality Control Metric"
+        ]
+      },
+      {
+        "property": "has standard operating procedure",
+        "class_or_datatype": [
+          "Standard Operating Procedure"
+        ]
+      },
+      {
+        "property": "has target enrichment kit code",
+        "class_or_datatype": [
+          "Terminology",
+          "Code"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has gene panel",
+        "class_or_datatype": [
+          "Gene Panel"
+        ]
+      },
+      {
+        "property": "has output",
+        "class_or_datatype": [
+          "Sample"
+        ]
+      },
+      {
+        "property": "has intended insert size",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has input",
+        "class_or_datatype": [
+          "Sample"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Location",
+    "label": "Location",
+    "description": "physical location or medical division taking care of the individual",
+    "properties": [
+      {
+        "property": "has type code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has exact",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Measurement",
+    "label": "Measurement",
+    "description": "process of quantitatively defining the value or magnitude of an attribute or characteristic in comparison to a defined standard",
+    "properties": [
+      {
+        "property": "has method code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has performer",
+        "class_or_datatype": [
+          "Performer"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has medical device",
+        "class_or_datatype": [
+          "Medical Device"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Result"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "MedicalDevice",
+    "label": "Medical Device",
+    "description": "product intended for medical use when the main effect is not achieved by a medicinal product; medical devices include, but are not limited to, implants, instruments, devices, in vitro diagnostics",
+    "properties": [
+      {
+        "property": "has software",
+        "class_or_datatype": [
+          "Software"
+        ]
+      },
+      {
+        "property": "has type code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has product code",
+        "class_or_datatype": [
+          "Code",
+          "Terminology"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "MedicalProcedure",
+    "label": "Medical Procedure",
+    "description": "invasive or non-invasive intervention performed for, with or on behalf of an individual whose purpose is to assess, improve, maintain, promote or modify health, functioning or health conditions",
+    "properties": [
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": [
+          "Terminology",
+          "Code"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has intent",
+        "class_or_datatype": [
+          "Intent"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "MicrobiologyBiomoleculePresenceLabTest",
+    "label": "Microbiology Biomolecule Presence Lab Test",
+    "description": "specific lab test performed on an isolate for detecting the presence of a target biomolecule",
+    "properties": [
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Microbiology Biomolecule Presence Result"
+        ]
+      },
+      {
+        "property": "has instrument",
+        "class_or_datatype": [
+          "Lab Analyzer"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has target molecule",
+        "class_or_datatype": [
+          "Protein",
+          "Gene"
+        ]
+      },
+      {
+        "property": "has test kit",
+        "class_or_datatype": [
+          "Lab Analyzer"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "MicrobiologyBiomoleculePresenceLabTestEvent",
+    "label": "Microbiology Biomolecule Presence Lab Test Event",
+    "description": "occurrence in which one or multiple laboratory tests are performed on an isolate at a given time to detect the presence of a biomolecule",
+    "properties": [
+      {
+        "property": "has report datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has lab test",
+        "class_or_datatype": [
+          "Microbiology Biomolecule Presence Lab Test"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has sample",
+        "class_or_datatype": [
+          "Isolate"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "MicrobiologyBiomoleculePresenceResult",
+    "label": "Microbiology Biomolecule Presence Result",
+    "description": "result of microbiology biomolecule presence test for a specific isolate analyzed",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has string value",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has numerical reference",
+        "class_or_datatype": [
+          "Reference Value",
+          "Reference Range"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "MicrobiologyMicroscopyLabTest",
+    "label": "Microbiology Microscopy Lab Test",
+    "description": "specific microbiology microscopy lab test performed on a sample",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has test kit",
+        "class_or_datatype": [
+          "Lab Analyzer"
+        ]
+      },
+      {
+        "property": "has staining method code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Microbiology Microscopy Result"
+        ]
+      },
+      {
+        "property": "has instrument",
+        "class_or_datatype": [
+          "Lab Analyzer"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "MicrobiologyMicroscopyLabTestEvent",
+    "label": "Microbiology Microscopy Lab Test Event",
+    "description": "occurrence in which one or multiple microbiology microscopy laboratory tests are performed on a sample at a given time",
+    "properties": [
+      {
+        "property": "has sample",
+        "class_or_datatype": [
+          "Sample"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has report datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has lab test",
+        "class_or_datatype": [
+          "Microbiology Microscopy Lab Test"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "MicrobiologyMicroscopyResult",
+    "label": "Microbiology Microscopy Result",
+    "description": "microscopy analysis results for a specific studied biosample in microbiology",
+    "properties": [
+      {
+        "property": "has cell count estimate code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has cell morphology code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has staining result code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has numerical reference",
+        "class_or_datatype": [
+          "Reference Value",
+          "Reference Range"
+        ]
+      },
+      {
+        "property": "has string value",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has cell organization",
+        "class_or_datatype": [
+          "Microbiology Microscopy Result cell organization"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "MicroorganismIdentificationLabTest",
+    "label": "Microorganism Identification Lab Test",
+    "description": "specific lab test performed on a sample for identifying microorganism(s)",
+    "properties": [
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Microorganism Identification Result"
+        ]
+      },
+      {
+        "property": "has instrument",
+        "class_or_datatype": [
+          "Lab Analyzer"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has test kit",
+        "class_or_datatype": [
+          "Lab Analyzer"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "MicroorganismIdentificationLabTestEvent",
+    "label": "Microorganism Identification Lab Test Event",
+    "description": "occurrence in which one or multiple laboratory tests are performed on a sample at a given time for identifying microorganism(s)",
+    "properties": [
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has sample",
+        "class_or_datatype": [
+          "Sample"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has report datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has lab test",
+        "class_or_datatype": [
+          "Microorganism Identification Lab Test"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "MicroorganismIdentificationResult",
+    "label": "Microorganism Identification Result",
+    "description": "result of the microorganism identification lab test",
+    "properties": [
+      {
+        "property": "has organism",
+        "class_or_datatype": [
+          "Organism"
+        ]
+      },
+      {
+        "property": "has numerical reference",
+        "class_or_datatype": [
+          "Reference Value",
+          "Reference Range"
+        ]
+      },
+      {
+        "property": "has string value",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has time to positivity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has presence code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "Nationality",
+    "label": "Nationality",
+    "description": "nationality of the individual",
+    "properties": [
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has record datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has associated country",
+        "class_or_datatype": [
+          "Country"
+        ]
+      },
+      {
+        "property": "has acquisition code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "NucleotideSequence",
+    "label": "Nucleotide Sequence",
+    "description": "a linear arrangement of nucleotides that make up the DNA or RNA sequence",
+    "properties": [
+      {
+        "property": "has literal sequence",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has sequence length",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has derived sequence",
+        "class_or_datatype": [
+          "Code",
+          "Terminology"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "NursingDiagnosis",
+    "label": "Nursing Diagnosis",
+    "description": "clinical judgment concerning a human response to health conditions/life processes, or a vulnerability for that response, by an individual, family, group or community; a nursing diagnosis provides the basis for selection of nursing interventions to achieve outcomes for which the nurse has accountability",
+    "properties": [
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has record datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": [
+          "Code"
+        ]
+      },
+      {
+        "property": "has subject age",
+        "class_or_datatype": [
+          "Age"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "NutritionIntake",
+    "label": "Nutrition Intake",
+    "description": "intake of nutritious substance and/or the respective amount of energy consumed",
+    "properties": [
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has mode code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has substance",
+        "class_or_datatype": [
+          "Substance"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has energy quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "OncologyDiagnosis",
+    "label": "Oncology Diagnosis",
+    "description": "determination of the presence of an oncological disease, from expressed signs and symptoms and assessments such as biopsy, tumor marker test, imaging, or the like",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has incidence datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has subject age",
+        "class_or_datatype": [
+          "Age"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      },
+      {
+        "property": "has record datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "OncologySurgery",
+    "label": "Oncology Surgery",
+    "description": "invasive intervention performed for, with or on behalf of an individual whose purpose is to improve, maintain or promote health, or functioning conditions in the context of an oncological disease, by the means of partial or complete exeresis of a solid tumor lesion that is the organic substrate of this disease",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": [
+          "Terminology",
+          "Code"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has intent",
+        "class_or_datatype": [
+          "Intent"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "OrganSupport",
+    "label": "Organ Support",
+    "description": "type and time period when patient was supported by organ support procedures",
+    "properties": [
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has intent",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "Organism",
+    "label": "Organism",
+    "description": "living system capable of replicating or reproducing, growth and maintenance. An organism may be unicellular or multicellular",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "OxygenAdministrationEvent",
+    "label": "Oxygen Administration Event",
+    "description": "process during which oxygen is administered via cannula without supporting pressure",
+    "properties": [
+      {
+        "property": "has fraction of inspired oxygen",
+        "class_or_datatype": [
+          "Fraction Of Inspired Oxygen"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has flow rate",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has medical device",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "OxygenSaturation",
+    "label": "Oxygen Saturation",
+    "description": "fraction of oxygen present in the blood",
+    "properties": [
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has data file",
+        "class_or_datatype": [
+          "Time Series Data File"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "OxygenSaturationMeasurement",
+    "label": "Oxygen Saturation Measurement",
+    "description": "measurement of the oxygen saturation of the individual",
+    "properties": [
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      },
+      {
+        "property": "has medical device",
+        "class_or_datatype": [
+          "Medical Device"
+        ]
+      },
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Oxygen Saturation"
+        ]
+      },
+      {
+        "property": "has method code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has performer",
+        "class_or_datatype": [
+          "Performer"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Performer",
+    "label": "Performer",
+    "description": "person who carried out the action",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "PharmaceuticalDoseForm",
+    "label": "Pharmaceutical Dose Form",
+    "description": "physical manifestation of a product that contains the active ingredient(s) and/or inactive ingredient(s) that are intended to be delivered to the patient",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "PhysiologicState",
+    "label": "Physiologic State",
+    "description": "physiologic state of the individual, e.g. resting, exercise",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "ProblemCondition",
+    "label": "Problem Condition",
+    "description": "clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has relative temporality code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": [
+          "Terminology",
+          "Code"
+        ]
+      },
+      {
+        "property": "has string value",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has record datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has onset datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Protein",
+    "label": "Protein",
+    "description": "molecule composed by one or more chains of amino acids",
+    "properties": [
+      {
+        "property": "has organism",
+        "class_or_datatype": [
+          "Organism"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": [
+          "Terminology",
+          "Code"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "QualityControlMetric",
+    "label": "Quality Control Metric",
+    "description": "report of the quality control review that was made of factors involved in a procedure",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": [
+          "Terminology",
+          "Code"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Quantity",
+    "label": "Quantity",
+    "description": "an amount or a number of something",
+    "properties": [
+      {
+        "property": "has unit",
+        "class_or_datatype": [
+          "Unit"
+        ]
+      },
+      {
+        "property": "has comparator",
+        "class_or_datatype": [
+          "Comparator"
+        ]
+      },
+      {
+        "property": "has value",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "RadiotherapyProcedure",
+    "label": "Radiotherapy Procedure",
+    "description": "given radiotherapy procedure, for example during oncological treatment",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has fractions number",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has intent",
+        "class_or_datatype": [
+          "Intent"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      },
+      {
+        "property": "has radiation quantity",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "Range",
+    "label": "Range",
+    "description": "interval of values",
+    "properties": [
+      {
+        "property": "has upper limit",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has lower limit",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "ReferenceInterpretation",
+    "label": "ReferenceInterpretation",
+    "description": "process of making sense of a quantitative result to derive meaningful conclusions in comparison to a reference",
+    "properties": [
+      {
+        "property": "has output",
+        "class_or_datatype": [
+          "Reference Interpretation Result"
+        ]
+      },
+      {
+        "property": "has input",
+        "class_or_datatype": [
+          "Result"
+        ]
+      },
+      {
+        "property": "has standard guideline",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "ReferenceInterpretationResult",
+    "label": "Reference Interpretation Result",
+    "description": "outcome of the interpretation of a reference range or value",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "ReferenceRange",
+    "label": "Reference Range",
+    "description": "interval of values that is deemed normal for a physiologic measurement in healthy individuals",
+    "properties": [
+      {
+        "property": "has upper limit",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has lower limit",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "ReferenceSequence",
+    "label": "Reference Sequence",
+    "description": "reference construct used for comparison purposes",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": [
+          "Terminology",
+          "Code"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "ReferenceValue",
+    "label": "Reference Value",
+    "description": "numeric data point serving as reference for comparison and interpretation",
+    "properties": [
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "RespiratoryRate",
+    "label": "Respiratory Rate",
+    "description": "frequency at which the breathing occurs",
+    "properties": [
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has data file",
+        "class_or_datatype": [
+          "Time Series Data File"
+        ]
+      },
+      {
+        "property": "has data determination",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "RespiratoryRateMeasurement",
+    "label": "Respiratory Rate Measurement",
+    "description": "measurement of the frequency at which the breathing occurs",
+    "properties": [
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Respiratory Rate"
+        ]
+      },
+      {
+        "property": "has method code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has performer",
+        "class_or_datatype": [
+          "Performer"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has medical device",
+        "class_or_datatype": [
+          "Medical Device"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Result",
+    "label": "Result",
+    "description": "outcome, value, or information which gives insight about something",
+    "properties": []
+  },
+  {
+    "class": "ResuscitationDirective",
+    "label": "Resuscitation Directive",
+    "description": "decision about the extent of resuscitation interventions appropriate for a specific individual",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has record datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "SPHNConcept",
+    "label": "SPHNConcept",
+    "description": "SPHN Concepts defined by the SPHN dataset",
+    "properties": []
+  },
+  {
+    "class": "Sample",
+    "label": "Sample",
+    "description": "any material sample for testing, diagnostic, propagation, treatment or research purposes",
+    "properties": [
+      {
+        "property": "has primary container",
+        "class_or_datatype": [
+          "Sample primary container"
+        ]
+      },
+      {
+        "property": "has collection datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has identifier",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has material type code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has fixation type",
+        "class_or_datatype": [
+          "Sample fixation type"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has medical device",
+        "class_or_datatype": [
+          "Medical Device"
+        ]
+      },
+      {
+        "property": "has shared identifier",
+        "class_or_datatype": [
+          "xsd:anyURI"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "SampleProcessing",
+    "label": "Sample Processing",
+    "description": "a process that prepares a sample for a subsequent process",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has output",
+        "class_or_datatype": [
+          "Sample"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": [
+          "Terminology",
+          "Code"
+        ]
+      },
+      {
+        "property": "has input",
+        "class_or_datatype": [
+          "Sample"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has quality control metric",
+        "class_or_datatype": [
+          "Quality Control Metric"
+        ]
+      },
+      {
+        "property": "has standard operating procedure",
+        "class_or_datatype": [
+          "Standard Operating Procedure"
+        ]
+      },
+      {
+        "property": "has predecessor",
+        "class_or_datatype": [
+          "Sample Processing"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "SemanticMapping",
+    "label": "Semantic Mapping",
+    "description": "process of transforming data elements to a code",
+    "properties": [
+      {
+        "property": "has method code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has data provider",
+        "class_or_datatype": [
+          "Data Provider"
+        ]
+      },
+      {
+        "property": "has output code",
+        "class_or_datatype": [
+          "Terminology",
+          "Code"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has source data",
+        "class_or_datatype": [
+          "Source Data"
+        ]
+      },
+      {
+        "property": "has purpose",
+        "class_or_datatype": [
+          "Semantic Mapping purpose"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "SequencingAnalysis",
+    "label": "Sequencing Analysis",
+    "description": "analysis of the output of a nucleic acid sequencing assay",
+    "properties": [
+      {
+        "property": "has software",
+        "class_or_datatype": [
+          "Software"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has reference sequence",
+        "class_or_datatype": [
+          "Reference Sequence"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has output",
+        "class_or_datatype": [
+          "Data File"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has input",
+        "class_or_datatype": [
+          "Data File"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has quality control metric",
+        "class_or_datatype": [
+          "Quality Control Metric"
+        ]
+      },
+      {
+        "property": "has predecessor",
+        "class_or_datatype": [
+          "Data Processing",
+          "Assay"
+        ]
+      },
+      {
+        "property": "has standard operating procedure",
+        "class_or_datatype": [
+          "Standard Operating Procedure"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "SequencingAssay",
+    "label": "Sequencing Assay",
+    "description": "an assay that exploits a sequencer as the instrument to generate results",
+    "properties": [
+      {
+        "property": "has sequencing instrument",
+        "class_or_datatype": [
+          "Sequencing Instrument"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has sequencing run",
+        "class_or_datatype": [
+          "Sequencing Run"
+        ]
+      },
+      {
+        "property": "has predecessor",
+        "class_or_datatype": [
+          "Sample Processing"
+        ]
+      },
+      {
+        "property": "has standard operating procedure",
+        "class_or_datatype": [
+          "Standard Operating Procedure"
+        ]
+      },
+      {
+        "property": "has library preparation",
+        "class_or_datatype": [
+          "Library Preparation"
+        ]
+      },
+      {
+        "property": "has sample",
+        "class_or_datatype": [
+          "Sample"
+        ]
+      },
+      {
+        "property": "has intended read depth",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has data file",
+        "class_or_datatype": [
+          "Data File"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has identifier",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has intended read length",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "SequencingInstrument",
+    "label": "Sequencing Instrument",
+    "description": "A sequencing instrument that is used in a sequencing assay",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "SequencingRun",
+    "label": "Sequencing Run",
+    "description": "the valid and completed operation of a high-throughput sequencing instrument associated with a sequencing assay",
+    "properties": [
+      {
+        "property": "has mean read depth",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has quality control metric",
+        "class_or_datatype": [
+          "Quality Control Metric"
+        ]
+      },
+      {
+        "property": "has read count",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has average read length",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has average insert size",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has data file",
+        "class_or_datatype": [
+          "Data File"
+        ]
+      },
+      {
+        "property": "has identifier",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "SingleNucleotideVariation",
+    "label": "Single Nucleotide Variation",
+    "description": "single nucleotide change in a DNA sequence at a specific location",
+    "properties": [
+      {
+        "property": "has genomic position",
+        "class_or_datatype": [
+          "Genomic Position"
+        ]
+      },
+      {
+        "property": "has alternate allele",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has reference allele",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Software",
+    "label": "Software",
+    "description": "Set of procedures and instructions in a data processing system",
+    "properties": [
+      {
+        "property": "has version",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has uniform resource locator",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has description",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has name",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "SourceData",
+    "label": "Source Data",
+    "description": "raw data that has not been processed for meaningful use",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": [
+          "Terminology",
+          "Code"
+        ]
+      },
+      {
+        "property": "has string value",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "SourceSystem",
+    "label": "Source System",
+    "description": "electronic system the data has been retrieved from",
+    "properties": [
+      {
+        "property": "has primary system",
+        "class_or_datatype": [
+          "Healthcare Primary Information System"
+        ]
+      },
+      {
+        "property": "has category",
+        "class_or_datatype": [
+          "Source System category"
+        ]
+      },
+      {
+        "property": "has name",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has purpose",
+        "class_or_datatype": [
+          "Source System purpose"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "StandardOperatingProcedure",
+    "label": "Standard Operating Procedure",
+    "description": "step-by-step instructions for carrying out routine operations imposed by the organization",
+    "properties": [
+      {
+        "property": "has description",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has name",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has data file",
+        "class_or_datatype": [
+          "Data File"
+        ]
+      },
+      {
+        "property": "has version",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "SubjectPseudoIdentifier",
+    "label": "Subject Pseudo Identifier",
+    "description": "a coded unique identifier assigned by a data provider for a specific project to conceal the identity of an individual",
+    "properties": [
+      {
+        "property": "has identifier",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has data provider",
+        "class_or_datatype": [
+          "Data Provider"
+        ]
+      },
+      {
+        "property": "has shared identifier",
+        "class_or_datatype": [
+          "xsd:anyURI"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Substance",
+    "label": "Substance",
+    "description": "any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical",
+    "properties": [
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has generic name",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "SwissSocioEconomicPosition",
+    "label": "Swiss Socio Economic Position",
+    "description": "characterization or classification of the Swiss position in a neighborhood of an individual that takes into account income, education, occupation, and housing conditions",
+    "properties": [
+      {
+        "property": "has value",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has version",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has distance",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "Terminology",
+    "label": "Terminology",
+    "description": "Terminology class for grouping external resources used in the SPHN project",
+    "properties": []
+  },
+  {
+    "class": "TherapeuticArea",
+    "label": "Therapeutic Area",
+    "description": "professional health care specialization",
+    "properties": [
+      {
+        "property": "has specialty name",
+        "class_or_datatype": [
+          "Therapeutic Area specialty name"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "TimePattern",
+    "label": "Time Pattern",
+    "description": "type of time period during which a treatment was given or an assessment was performed; this can be single time points or a continuous event",
+    "properties": [
+      {
+        "property": "has type code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "TimeSeriesDataFile",
+    "label": "Time Series Data File",
+    "description": "electronic resource that contains all the results related to a measurement as time series",
+    "properties": [
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has hash",
+        "class_or_datatype": [
+          "Hash"
+        ]
+      },
+      {
+        "property": "has encoding",
+        "class_or_datatype": [
+          "Data File encoding"
+        ]
+      },
+      {
+        "property": "has format code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has name",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has entry count",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has uniform resource identifier",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has creation datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "TobaccoExposure",
+    "label": "Tobacco Exposure",
+    "description": "episode of exposure of an individual to tobacco in various forms",
+    "properties": [
+      {
+        "property": "has degree code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has route code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has duration",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has record datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has agent code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has type code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Transcript",
+    "label": "Transcript",
+    "description": "RNA molecules that are made from a DNA template",
+    "properties": [
+      {
+        "property": "has protein",
+        "class_or_datatype": [
+          "Protein"
+        ]
+      },
+      {
+        "property": "has organism",
+        "class_or_datatype": [
+          "Organism"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": [
+          "Terminology",
+          "Code"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Transplant",
+    "label": "Transplant",
+    "description": "transplanted organ or tissue from self or donor, including, e.g., kidney graft or bone marrow fluid",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has graft type code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "TransplantPresence",
+    "label": "Transplant Presence",
+    "description": "presence of a transplanted organ or tissue such as, e.g., a kidney graft",
+    "properties": [
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has end datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has start datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      },
+      {
+        "property": "has record datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has transplant",
+        "class_or_datatype": [
+          "Transplant"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "TumorGradeAssessment",
+    "label": "Tumor Grade Assessment",
+    "description": "grading system used to assess the differentiation of the tumor cells based on histology",
+    "properties": [
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Tumor Grade Assessment Result"
+        ]
+      },
+      {
+        "property": "has name",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has range",
+        "class_or_datatype": [
+          "Range"
+        ]
+      },
+      {
+        "property": "has component",
+        "class_or_datatype": [
+          "Assessment Component"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "TumorGradeAssessmentEvent",
+    "label": "Tumor Grade Assessment Event",
+    "description": "evaluation of the tumor grade at a given time, which takes into account a predefined grading system",
+    "properties": [
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has performer",
+        "class_or_datatype": [
+          "Performer"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has assessment",
+        "class_or_datatype": [
+          "Tumor Grade Assessment"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "TumorGradeAssessmentResult",
+    "label": "Tumor Grade Assessment Result",
+    "description": "outcome of a tumor grade assessment",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has string value",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "TumorSpecimen",
+    "label": "Tumor Specimen",
+    "description": "tumor specimen, volume and fixation method used",
+    "properties": [
+      {
+        "property": "has primary container",
+        "class_or_datatype": [
+          "Sample primary container"
+        ]
+      },
+      {
+        "property": "has collection datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has tumor purity",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has identifier",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has material type code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has fixation type",
+        "class_or_datatype": [
+          "Sample fixation type"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has medical device",
+        "class_or_datatype": [
+          "Medical Device"
+        ]
+      },
+      {
+        "property": "has shared identifier",
+        "class_or_datatype": [
+          "xsd:anyURI"
+        ]
+      },
+      {
+        "property": "has body site",
+        "class_or_datatype": [
+          "Body Site"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "TumorStageAssessment",
+    "label": "Tumor Stage Assessment",
+    "description": "staging system used to assess the spread of the oncology disease",
+    "properties": [
+      {
+        "property": "has name",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has result",
+        "class_or_datatype": [
+          "Tumor Stage Assessment Result"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has range",
+        "class_or_datatype": [
+          "Range"
+        ]
+      },
+      {
+        "property": "has component",
+        "class_or_datatype": [
+          "Assessment Component"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "TumorStageAssessmentEvent",
+    "label": "Tumor Stage Assessment Event",
+    "description": "evaluation of the tumor stage at a given time, which takes into account a predefined staging system",
+    "properties": [
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has performer",
+        "class_or_datatype": [
+          "Performer"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has datetime",
+        "class_or_datatype": [
+          "xsd:dateTime"
+        ]
+      },
+      {
+        "property": "has assessment",
+        "class_or_datatype": [
+          "Tumor Stage Assessment"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "TumorStageAssessmentResult",
+    "label": "Tumor Stage Assessment Result",
+    "description": "outcome of a tumor stage assessment",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has string value",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has quantity",
+        "class_or_datatype": [
+          "Quantity"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "Unit",
+    "label": "Unit",
+    "description": "unit of measurement",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "VariantDescriptor",
+    "label": "Variant Descriptor",
+    "description": "human-readable description of the variant",
+    "properties": [
+      {
+        "property": "has zygosity code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has data provider",
+        "class_or_datatype": [
+          "Data Provider"
+        ]
+      },
+      {
+        "property": "has gene",
+        "class_or_datatype": [
+          "Gene"
+        ]
+      },
+      {
+        "property": "has code",
+        "class_or_datatype": [
+          "Terminology",
+          "Code"
+        ]
+      },
+      {
+        "property": "has type code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has notation",
+        "class_or_datatype": [
+          "Variant Notation"
+        ]
+      },
+      {
+        "property": "has subject pseudo identifier",
+        "class_or_datatype": [
+          "Subject Pseudo Identifier"
+        ]
+      },
+      {
+        "property": "has source system",
+        "class_or_datatype": [
+          "Source System"
+        ]
+      },
+      {
+        "property": "has allele origin code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has administrative case",
+        "class_or_datatype": [
+          "Administrative Case"
+        ]
+      },
+      {
+        "property": "has genomic variation",
+        "class_or_datatype": [
+          "Genomic Variation"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "VariantNotation",
+    "label": "Variant Notation",
+    "description": "description of the variant using a specific nomenclature",
+    "properties": [
+      {
+        "property": "has coding system and version",
+        "class_or_datatype": [
+          "xsd:string"
+        ]
+      },
+      {
+        "property": "has value",
+        "class_or_datatype": []
+      }
+    ]
+  },
+  {
+    "class": "VitalStatus",
+    "label": "Vital Status",
+    "description": "state or condition of being living or deceased",
+    "properties": [
+      {
+        "property": "has code",
+        "class_or_datatype": []
+      },
+      {
+        "property": "has death",
+        "class_or_datatype": [
+          "Death"
+        ]
+      }
+    ]
+  },
+  {
+    "class": "AdministrativeGender",
+    "label": "AdministrativeGender",
+    "description": "Administrative Gender",
+    "properties": []
+  },
+  {
+    "class": "Biosample",
+    "label": "Biosample",
+    "description": "Biosample",
+    "properties": []
+  },
+  {
+    "class": "Catheter",
+    "label": "Catheter",
+    "description": "Catheter",
+    "properties": []
+  },
+  {
+    "class": "CentralVenousPressure",
+    "label": "CentralVenousPressure",
+    "description": "Central Venous Pressure",
+    "properties": []
+  },
+  {
+    "class": "CircumferenceMeasure",
+    "label": "CircumferenceMeasure",
+    "description": "Circumference Measure",
+    "properties": []
+  },
+  {
+    "class": "DataProviderInstitute",
+    "label": "DataProviderInstitute",
+    "description": "Data Provider Institute",
+    "properties": []
+  },
+  {
+    "class": "DeathStatus",
+    "label": "DeathStatus",
+    "description": "Death Status",
+    "properties": []
+  },
+  {
+    "class": "DiagnosticRadiologicExamination",
+    "label": "DiagnosticRadiologicExamination",
+    "description": "Diagnostic Radiologic Examination",
+    "properties": []
+  },
+  {
+    "class": "FOPHDiagnosis",
+    "label": "FOPHDiagnosis",
+    "description": "FOPH Diagnosis",
+    "properties": []
+  },
+  {
+    "class": "FOPHProcedure",
+    "label": "FOPHProcedure",
+    "description": "FOPH Procedure",
+    "properties": []
+  },
+  {
+    "class": "GeneticVariation",
+    "label": "GeneticVariation",
+    "description": "Genetic Variation",
+    "properties": []
+  },
+  {
+    "class": "ICDODiagnosis",
+    "label": "ICDODiagnosis",
+    "description": "ICD-O Diagnosis",
+    "properties": []
+  },
+  {
+    "class": "InhaledOxygenConcentration",
+    "label": "InhaledOxygenConcentration",
+    "description": "Inhaled Oxygen Concentration",
+    "properties": []
+  },
+  {
+    "class": "MeasurementMethod",
+    "label": "MeasurementMethod",
+    "description": "Measurement Method",
+    "properties": []
+  },
+  {
+    "class": "Reference",
+    "label": "Reference",
+    "description": "Reference",
+    "properties": []
+  },
+  {
+    "class": "SimpleScore",
+    "label": "SimpleScore",
+    "description": "Simple Score",
+    "properties": []
+  },
+  {
+    "class": "SystemicArterialBloodPressure",
+    "label": "SystemicArterialBloodPressure",
+    "description": "Systemic Arterial Blood Pressure",
+    "properties": []
+  },
+  {
+    "class": "TNMClassification",
+    "label": "TNMClassification",
+    "description": "TNM Classification",
+    "properties": []
+  },
+  {
+    "class": "TumorGrade",
+    "label": "TumorGrade",
+    "description": "Tumor Grade",
+    "properties": []
+  },
+  {
+    "class": "TumorStage",
+    "label": "TumorStage",
+    "description": "Tumor Stage",
+    "properties": []
+  },
+  {
+    "class": "Deprecated",
+    "label": "Deprecated",
+    "description": "Deprecated classes of SPHN that existed in the previous version",
+    "properties": []
+  },
+  {
+    "class": "AdverseEvent_consequences",
+    "label": "AdverseEvent_consequences",
+    "description": "consequences of the concept",
+    "properties": []
+  },
+  {
+    "class": "AdverseEvent_outcome",
+    "label": "AdverseEvent_outcome",
+    "description": "result or effect of an action, situation, or event of the concept",
+    "properties": []
+  },
+  {
+    "class": "BodySurfaceArea_calculationMethod",
+    "label": "BodySurfaceArea_calculationMethod",
+    "description": "formula or method for calculating the concept",
+    "properties": []
+  },
+  {
+    "class": "Comparator",
+    "label": "Comparator",
+    "description": "qualifier describing whether the value is the precise one or not",
+    "properties": []
+  },
+  {
+    "class": "DataFile_encoding",
+    "label": "DataFile_encoding",
+    "description": "encoding of the concept",
+    "properties": []
+  },
+  {
+    "class": "DataProvider_category",
+    "label": "DataProvider_category",
+    "description": "category associated to the concept",
+    "properties": []
+  },
+  {
+    "class": "GenomicPosition_coordinateConvention",
+    "label": "GenomicPosition_coordinateConvention",
+    "description": "convention used for the interpretation of coordinates used in the concept",
+    "properties": []
+  },
+  {
+    "class": "Hash_algorithm",
+    "label": "Hash_algorithm",
+    "description": "algorithm applied to the concept",
+    "properties": []
+  },
+  {
+    "class": "InsuranceStatus_coverageType",
+    "label": "InsuranceStatus_coverageType",
+    "description": "coverage type of the concept",
+    "properties": []
+  },
+  {
+    "class": "MicrobiologyMicroscopyResult_cellOrganization",
+    "label": "MicrobiologyMicroscopyResult_cellOrganization",
+    "description": "cell organization associated to the concept",
+    "properties": []
+  },
+  {
+    "class": "Sample_fixationType",
+    "label": "Sample_fixationType",
+    "description": "fixation or stabilization type",
+    "properties": []
+  },
+  {
+    "class": "Sample_primaryContainer",
+    "label": "Sample_primaryContainer",
+    "description": "type of primary container of the concept",
+    "properties": []
+  },
+  {
+    "class": "SemanticMapping_purpose",
+    "label": "SemanticMapping_purpose",
+    "description": "objective of the concept",
+    "properties": []
+  },
+  {
+    "class": "SourceSystem_category",
+    "label": "SourceSystem_category",
+    "description": "category associated to the concept",
+    "properties": []
+  },
+  {
+    "class": "SourceSystem_purpose",
+    "label": "SourceSystem_purpose",
+    "description": "objective of the concept",
+    "properties": []
+  },
+  {
+    "class": "TherapeuticArea_specialtyName",
+    "label": "TherapeuticArea_specialtyName",
+    "description": "name of professional health care specialization",
+    "properties": []
+  },
+  {
+    "class": "ValueSet",
+    "label": "ValueSet",
+    "description": "List of value sets provided by SPHN",
+    "properties": []
+  }
+]

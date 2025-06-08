@@ -9,24 +9,45 @@ def scrape_page(url, property=False):
     soup = BeautifulSoup(resp.text, "html.parser")
 
     data = {}
-    # 1) Label is now in the top‐level <h1>
+
+    # 1) LABEL (always in <h1> on SULO pages)
     h1 = soup.find("h1")
     if h1:
-        # strip out any <small> text if present
+        # strip out any <small>...</small> if present, e.g. "sulo:Capability <small>…</small>"
         label_text = h1.get_text(" ", strip=True).split(" ")[0]
         if property:
             data["SULO Property"] = label_text
         else:
             data["SULO Class"] = label_text
 
-    # 2) Description still lives in the panel
+    # 2) DESCRIPTION (panel-heading “Description”)
     for panel in soup.select("div.panel.panel-default"):
         title_el = panel.select_one("h3.panel-title")
         if title_el and title_el.get_text(strip=True) == "Description":
             body_el = panel.select_one("div.panel-body")
-            data["description"] = body_el.get_text(strip=True) if body_el else ""
+            data["description"] = body_el.get_text(" ", strip=True) if body_el else ""
             break
-        
+
+    # 3) DOMAIN & RANGE (only if this is a property page)
+    if property:
+        # Look for that table whose header row has class="table-classproperties"
+        header_tr = soup.select_one("tr.table-classproperties")
+        if header_tr:
+            # The next <tr> will contain three <td> columns: [DOMAIN] [PROPERTY] [RANGE]
+            next_row = header_tr.find_next_sibling("tr")
+            if next_row:
+                tds = next_row.find_all("td")
+                if len(tds) >= 3:
+                    # Use get_text(" ", strip=True) so "owl:Thing" + " (inferred)" become "owl:Thing (inferred)"
+                    domain_text = tds[0].get_text(" ", strip=True)
+                    range_text  = tds[2].get_text(" ", strip=True)
+
+                    # Only insert if we actually found text
+                    if domain_text:
+                        data["domain"] = [domain_text]
+                    if range_text:
+                        data["range"] = [range_text]
+
     return data
 
 
@@ -99,18 +120,18 @@ if __name__ == "__main__":
         base_url_pattern="https://aidava-dev.github.io/sulo/{url}",
         urls=class_urls,
         property=False,
-        delay=0.5,
+        delay=0.2,
     )
     
     data_prop = scrape_multiple(
         base_url_pattern="https://aidava-dev.github.io/sulo/{url}",
         urls=properties_urls,
         property=True,
-        delay=0.5,
+        delay=0.2,
     )
 
     data = data_cl + data_prop
 
     # write out
-    with open("data/data.json", "w", encoding="utf-8") as f:
+    with open("data/sulo_data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)

@@ -1,0 +1,277 @@
+[
+  {
+    "sphn_class": "FOPHDiagnosis",
+    "sulo_class": "Feature",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "InhaledOxygenConcentration",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "TNMClassification",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Unit",
+    "sulo_class": "Quantity",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "BodySurfaceArea",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "ICDODiagnosis",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "BodyWeight",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "PhysiologicState",
+    "sulo_class": "Process",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Organism",
+    "sulo_class": "SpatialObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "BodyHeight",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "HeartRate",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "TumorStage",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "TherapeuticArea",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Sample",
+    "sulo_class": "SpatialObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Procedure",
+    "sulo_class": "Process",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Diagnosis",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "RadiotherapyProcedure",
+    "sulo_class": "Process",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Drug",
+    "sulo_class": "SpatialObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Intent",
+    "sulo_class": "Feature",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "HealthcareEncounter",
+    "sulo_class": "Process",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Gene",
+    "sulo_class": "SpatialObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "PharmaceuticalDoseForm",
+    "sulo_class": "Feature",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "ProblemCondition",
+    "sulo_class": "Process",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "MedicalDevice",
+    "sulo_class": "SpatialObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "OncologyDiagnosis",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Unit",
+    "sulo_class": "Unit",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Unit",
+    "sulo_class": "Feature",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "GestationalAgeAtBirth",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "BloodPressure",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "FOPHProcedure",
+    "sulo_class": "Process",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "BodySite",
+    "sulo_class": "SpatialObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "DiagnosticRadiologicExamination",
+    "sulo_class": "Process",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Unit",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "DeathDate",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "BodyPosition",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "LabAnalyzer",
+    "sulo_class": "SpatialObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Substance",
+    "sulo_class": "SpatialObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Age",
+    "sulo_class": "Feature",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "NursingDiagnosis",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "OxygenSaturation",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Measurement",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "CardiacOutput",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "FOPHDiagnosis",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "CareHandling",
+    "sulo_class": "Process",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "SimpleScore",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "hasAdmissionDateTime",
+    "sulo_class": "hasValue",
+    "relation": "rdfs:subPropertyOf"
+  },
+  {
+    "sphn_class": "AdverseEvent",
+    "sulo_class": "Process",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Product",
+    "sulo_class": "SpatialObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Procedure",
+    "sulo_class": "Process",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "ElectrocardiographicProcedure",
+    "sulo_class": "Process",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "TimePattern",
+    "sulo_class": "Feature",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "Chromosome",
+    "sulo_class": "SpatialObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "BodyTemperature",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "TherapeuticArea",
+    "sulo_class": "Feature",
+    "relation": "rdfs:subClassOf"
+  },
+  {
+    "sphn_class": "CircumferenceMeasure",
+    "sulo_class": "InformationObject",
+    "relation": "rdfs:subClassOf"
+  }
+]

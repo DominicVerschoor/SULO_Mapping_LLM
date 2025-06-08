@@ -1,0 +1,49 @@
+Enter the SULO class to map,SULO mapping result,timestamp
+RadiotherapyProcedure,"RadiotherapyProcedure is a Process.
+
+Here are the RDF triples representing the `RadiotherapyProcedure` properties, applying the appropriate SULO design patterns.  Note that the `has subject pseudo identifier` property uses the PRO pattern, while the others use SOLID.
+
+
+1.  `:RadiotherapyProcedure sulo:hasParticipant :PatientRole .`
+    `:PatientRole sulo:isFeatureOf :Patient .`
+    `:Patient sulo:hasValue ""[Pseudonymized Patient ID]""^^xsd:string .`
+
+
+2.  `:RadiotherapyProcedure sulo:hasFeature :RadiotherapyTypeCode .`
+    `:RadiotherapyTypeCode sulo:hasValue ""[Radiotherapy Code]""^^xsd:string .`
+
+
+3.  `:RadiotherapyProcedure sulo:hasFeature :FractionsNumber .`
+    `:FractionsNumber sulo:hasValue ""[Number of Fractions]""^^xsd:integer .`
+
+
+4.  `:RadiotherapyProcedure sulo:hasFeature :AdministrativeCase .`
+    `:AdministrativeCase sulo:hasValue ""[Administrative Case ID]""^^xsd:string .`
+
+
+5.  `:RadiotherapyProcedure sulo:hasFeature :TreatmentIntent .`
+    `:TreatmentIntent sulo:hasValue ""[Treatment Intent Code]""^^xsd:string .`
+
+
+6.  `:RadiotherapyProcedure sulo:hasFeature :SourceSystem .`
+    `:SourceSystem sulo:hasValue ""[Source System Name]""^^xsd:string .`
+
+
+7.  `:RadiotherapyProcedure sulo:atTime :EndTime .`
+    `:EndTime sulo:hasValue ""[End Datetime]""^^xsd:dateTime .`
+
+
+8.  `:RadiotherapyProcedure sulo:atTime :StartTime .`
+    `:StartTime sulo:hasValue ""[Start Datetime]""^^xsd:dateTime .`
+
+
+9.  `:RadiotherapyProcedure sulo:hasFeature :BodySiteCode .`
+    `:BodySiteCode sulo:hasValue ""[Body Site Code]""^^xsd:string .`
+
+
+10. `:RadiotherapyProcedure sulo:hasFeature :RadiationDose .`
+    `:RadiationDose sulo:hasValue ""[Radiation Dose]""^^xsd:decimal .`
+
+
+**Note:**  The bracketed values (""[...]"") represent placeholders for the actual data values.  The datatypes (e.g., `xsd:string`, `xsd:integer`, `xsd:dateTime`, `xsd:decimal`) should be chosen appropriately based on the nature of the data.  Also,  `:PatientRole`, `:RadiotherapyTypeCode`, etc., are blank nodes representing instances of the respective classes.  A real-world implementation would use appropriate URIs for these instances.
+",2025-06-08 21:13:27.489500
