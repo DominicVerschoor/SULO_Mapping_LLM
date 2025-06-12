@@ -1,0 +1,41 @@
+
+PREFIX sphn: <https://www.biomedit.ch/rdf/sphn-schema/sphn#>
+PREFIX sulo: <https://aidava-dev.github.io/sulo/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+?AdministrativeCase a sphn:AdministrativeCase .
+  
+OPTIONAL {
+    ?AdministrativeCase sphn:hasAdmission ?hasAdmission .
+    ?hasAdmission sphn:hasAdmissionDate ?hasAdmissionDate .
+  }
+  
+OPTIONAL {
+    ?AdministrativeCase sphn:hasCareHandling ?hasCareHandling .
+    ?hasCareHandling sphn:hasTypeCode ?hasTypeCode .
+  
+OPTIONAL {
+    ?hasCareHandling sphn:hasSourceSystem ?hasSourceSystem .
+    ?hasSourceSystem sphn:hasSystemName ?hasSystemName .
+  }
+    ?hasCareHandling sphn:hasSourceSystem ?hasSourceSystem .
+  }
+  
+OPTIONAL {
+    ?AdministrativeCase sphn:hasDischarge ?hasDischarge .
+    ?hasDischarge sphn:hasDischargeDate ?hasDischargeDate .
+  }
+    ?AdministrativeCase sphn:hasIdentifier ?hasIdentifier .
+  
+OPTIONAL {
+    ?AdministrativeCase sphn:hasSourceSystem ?hasSourceSystem .
+    ?hasSourceSystem sphn:hasSystemName ?hasSystemName .
+  }
+    ?AdministrativeCase sphn:hasSourceSystem ?hasSourceSystem .
+  
+OPTIONAL {
+    ?AdministrativeCase sphn:hasSubjectPseudoIdentifier ?hasSubjectPseudoIdentifier .
+    ?hasSubjectPseudoIdentifier sphn:hasIdentifier ?hasIdentifier .
+  }
+    ?AdministrativeCase sphn:hasSubjectPseudoIdentifier ?hasSubjectPseudoIdentifier .

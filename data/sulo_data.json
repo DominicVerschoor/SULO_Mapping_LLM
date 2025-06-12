@@ -1,71 +1,1077 @@
 [
   {
     "SULO Class": "sulo:Capability",
-    "description": "A capability is a feature that describes what an entity is able to do, under some set of circumstances."
+    "description": "A capability is a feature that describes what an entity is able to do, under some set of circumstances.",
+    "usedProperties": [
+      {
+        "property": "sulo:isFeatureOf",
+        "type": "owl:ObjectProperty",
+        "description": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isParticipantIn",
+        "type": "owl:ObjectProperty",
+        "description": "is participant in is a relation to relate an object and the process in which it participates.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Class": "sulo:Duration",
-    "description": "Duration is a temporal quantity that represents the extent or (non-negative) amount of time that elapses between two temporal points, typically the start and end of a time interval."
+    "description": "Duration is a temporal quantity that represents the extent or (non-negative) amount of time that elapses between two temporal points, typically the start and end of a time interval.",
+    "usedProperties": [
+      {
+        "property": "sulo:isTimeOf",
+        "type": "owl:ObjectProperty",
+        "description": "a relation between a time and an object that occurs within it.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasValue",
+        "type": "owl:DatatypeProperty",
+        "description": "has value is the (only) data type attribute to store the values of information objects.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:refersTo",
+        "type": "owl:ObjectProperty",
+        "description": "refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isFeatureOf",
+        "type": "owl:ObjectProperty",
+        "description": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isParticipantIn",
+        "type": "owl:ObjectProperty",
+        "description": "is participant in is a relation to relate an object and the process in which it participates.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Class": "sulo:EndTime",
-    "description": "an end time is a time instant at the end of a process/time interval."
+    "description": "an end time is a time instant at the end of a process/time interval.",
+    "usedProperties": [
+      {
+        "property": "sulo:isTimeOf",
+        "type": "owl:ObjectProperty",
+        "description": "a relation between a time and an object that occurs within it.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasValue",
+        "type": "owl:DatatypeProperty",
+        "description": "has value is the (only) data type attribute to store the values of information objects.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:refersTo",
+        "type": "owl:ObjectProperty",
+        "description": "refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isFeatureOf",
+        "type": "owl:ObjectProperty",
+        "description": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isParticipantIn",
+        "type": "owl:ObjectProperty",
+        "description": "is participant in is a relation to relate an object and the process in which it participates.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Class": "sulo:Feature",
-    "description": "A feature is any characteristic that stems from the intrisinc structure and/or context"
+    "description": "A feature is any characteristic that stems from the intrisinc structure and/or context",
+    "usedProperties": [
+      {
+        "property": "sulo:isFeatureOf",
+        "type": "owl:ObjectProperty",
+        "description": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isParticipantIn",
+        "type": "owl:ObjectProperty",
+        "description": "is participant in is a relation to relate an object and the process in which it participates.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Class": "sulo:InformationObject",
-    "description": "an information object is a feature that represents, is about, or encodes some information."
+    "description": "an information object is a feature that represents, is about, or encodes some information.",
+    "usedProperties": [
+      {
+        "property": "sulo:hasValue",
+        "type": "owl:DatatypeProperty",
+        "description": "has value is the (only) data type attribute to store the values of information objects.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:refersTo",
+        "type": "owl:ObjectProperty",
+        "description": "refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isFeatureOf",
+        "type": "owl:ObjectProperty",
+        "description": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isParticipantIn",
+        "type": "owl:ObjectProperty",
+        "description": "is participant in is a relation to relate an object and the process in which it participates.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Class": "sulo:Object",
-    "description": "An object is an entity that maintains its identity through time, and does not have processes as its parts."
+    "description": "An object is an entity that maintains its identity through time, and does not have processes as its parts.",
+    "usedProperties": [
+      {
+        "property": "sulo:isParticipantIn",
+        "type": "owl:ObjectProperty",
+        "description": "is participant in is a relation to relate an object and the process in which it participates.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Class": "sulo:Process",
-    "description": "a process is a entity that unfolds in time, has temporal parts, and has objects that participate in the process."
+    "description": "a process is a entity that unfolds in time, has temporal parts, and has objects that participate in the process.",
+    "usedProperties": [
+      {
+        "property": "sulo:hasParticipant",
+        "type": "owl:ObjectProperty",
+        "description": "has participant is a relation that describes the participation of a (non-process) thing in a process.",
+        "range": "sulo:Object"
+      },
+      {
+        "property": "sulo:isPrecededBy",
+        "type": "owl:ObjectProperty",
+        "description": "A relation in which one process occurs after to another process.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:precedes",
+        "type": "owl:ObjectProperty",
+        "description": "A relation in which one process occurs prior to another process.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Class": "sulo:Quality",
-    "description": "the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event - A quality is a feature that is intrinsically associated with its bearer (or its parts)."
+    "description": "the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event - A quality is a feature that is intrinsically associated with its bearer (or its parts).",
+    "usedProperties": [
+      {
+        "property": "sulo:isFeatureOf",
+        "type": "owl:ObjectProperty",
+        "description": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isParticipantIn",
+        "type": "owl:ObjectProperty",
+        "description": "is participant in is a relation to relate an object and the process in which it participates.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Class": "sulo:Quantity",
-    "description": "A quantity is an informational object that contains the magnitude (and unit) of an attribute."
+    "description": "A quantity is an informational object that contains the magnitude (and unit) of an attribute.",
+    "usedProperties": [
+      {
+        "property": "sulo:hasValue",
+        "type": "owl:DatatypeProperty",
+        "description": "has value is the (only) data type attribute to store the values of information objects.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:refersTo",
+        "type": "owl:ObjectProperty",
+        "description": "refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isFeatureOf",
+        "type": "owl:ObjectProperty",
+        "description": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isParticipantIn",
+        "type": "owl:ObjectProperty",
+        "description": "is participant in is a relation to relate an object and the process in which it participates.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Class": "sulo:Role",
-    "description": "A role is a feature that describes a context-dependent behaviour."
+    "description": "A role is a feature that describes a context-dependent behaviour.",
+    "usedProperties": [
+      {
+        "property": "sulo:isFeatureOf",
+        "type": "owl:ObjectProperty",
+        "description": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isParticipantIn",
+        "type": "owl:ObjectProperty",
+        "description": "is participant in is a relation to relate an object and the process in which it participates.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Class": "sulo:Set",
-    "description": "A set is an information object for which there may be zero or more items."
+    "description": "A set is an information object for which there may be zero or more items.",
+    "usedProperties": [
+      {
+        "property": "sulo:hasMember",
+        "type": "owl:ObjectProperty",
+        "description": "has item is a relation between a collection and an item contained therein.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasValue",
+        "type": "owl:DatatypeProperty",
+        "description": "has value is the (only) data type attribute to store the values of information objects.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:refersTo",
+        "type": "owl:ObjectProperty",
+        "description": "refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isFeatureOf",
+        "type": "owl:ObjectProperty",
+        "description": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isParticipantIn",
+        "type": "owl:ObjectProperty",
+        "description": "is participant in is a relation to relate an object and the process in which it participates.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Class": "sulo:SpatialObject",
-    "description": "A spatial object is an object that occupies space"
+    "description": "A spatial object is an object that occupies space",
+    "usedProperties": [
+      {
+        "property": "sulo:isParticipantIn",
+        "type": "owl:ObjectProperty",
+        "description": "is participant in is a relation to relate an object and the process in which it participates.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Class": "sulo:StartTime",
-    "description": "a start time is a time instant at the beginning of a process/time interval."
+    "description": "a start time is a time instant at the beginning of a process/time interval.",
+    "usedProperties": [
+      {
+        "property": "sulo:isTimeOf",
+        "type": "owl:ObjectProperty",
+        "description": "a relation between a time and an object that occurs within it.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasValue",
+        "type": "owl:DatatypeProperty",
+        "description": "has value is the (only) data type attribute to store the values of information objects.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:refersTo",
+        "type": "owl:ObjectProperty",
+        "description": "refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isFeatureOf",
+        "type": "owl:ObjectProperty",
+        "description": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isParticipantIn",
+        "type": "owl:ObjectProperty",
+        "description": "is participant in is a relation to relate an object and the process in which it participates.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Class": "sulo:Time",
-    "description": "time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference)."
+    "description": "time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference).",
+    "usedProperties": [
+      {
+        "property": "sulo:isTimeOf",
+        "type": "owl:ObjectProperty",
+        "description": "a relation between a time and an object that occurs within it.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasValue",
+        "type": "owl:DatatypeProperty",
+        "description": "has value is the (only) data type attribute to store the values of information objects.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:refersTo",
+        "type": "owl:ObjectProperty",
+        "description": "refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isFeatureOf",
+        "type": "owl:ObjectProperty",
+        "description": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isParticipantIn",
+        "type": "owl:ObjectProperty",
+        "description": "is participant in is a relation to relate an object and the process in which it participates.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Class": "sulo:TimeInstant",
-    "description": "time instant is a quantity of time a particular moment in time."
+    "description": "time instant is a quantity of time a particular moment in time.",
+    "usedProperties": [
+      {
+        "property": "sulo:isTimeOf",
+        "type": "owl:ObjectProperty",
+        "description": "a relation between a time and an object that occurs within it.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasValue",
+        "type": "owl:DatatypeProperty",
+        "description": "has value is the (only) data type attribute to store the values of information objects.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:refersTo",
+        "type": "owl:ObjectProperty",
+        "description": "refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isFeatureOf",
+        "type": "owl:ObjectProperty",
+        "description": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isParticipantIn",
+        "type": "owl:ObjectProperty",
+        "description": "is participant in is a relation to relate an object and the process in which it participates.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Class": "sulo:TimeInterval",
-    "description": "A time interval is a quantity for a continuous and bounded extent of time, characterized by a start time and an end time."
+    "description": "A time interval is a quantity for a continuous and bounded extent of time, characterized by a start time and an end time.",
+    "usedProperties": [
+      {
+        "property": "sulo:isTimeOf",
+        "type": "owl:ObjectProperty",
+        "description": "a relation between a time and an object that occurs within it.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasValue",
+        "type": "owl:DatatypeProperty",
+        "description": "has value is the (only) data type attribute to store the values of information objects.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:refersTo",
+        "type": "owl:ObjectProperty",
+        "description": "refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isFeatureOf",
+        "type": "owl:ObjectProperty",
+        "description": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isParticipantIn",
+        "type": "owl:ObjectProperty",
+        "description": "is participant in is a relation to relate an object and the process in which it participates.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Class": "sulo:Unit",
-    "description": "a unit is a standardized quantity that is used as a reference for a particular quantity."
+    "description": "a unit is a standardized quantity that is used as a reference for a particular quantity.",
+    "usedProperties": [
+      {
+        "property": "sulo:hasValue",
+        "type": "owl:DatatypeProperty",
+        "description": "has value is the (only) data type attribute to store the values of information objects.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:refersTo",
+        "type": "owl:ObjectProperty",
+        "description": "refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isFeatureOf",
+        "type": "owl:ObjectProperty",
+        "description": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isParticipantIn",
+        "type": "owl:ObjectProperty",
+        "description": "is participant in is a relation to relate an object and the process in which it participates.",
+        "range": "sulo:Process"
+      },
+      {
+        "property": "sulo:hasDirectPart",
+        "type": "owl:ObjectProperty",
+        "description": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:hasPart",
+        "type": "owl:ObjectProperty",
+        "description": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isDirectPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocatedIn",
+        "type": "owl:ObjectProperty",
+        "description": "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isLocationOf",
+        "type": "owl:ObjectProperty",
+        "description": "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.",
+        "range": "owl:Thing"
+      },
+      {
+        "property": "sulo:isPartOf",
+        "type": "owl:ObjectProperty",
+        "description": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.",
+        "range": "owl:Thing"
+      }
+    ]
   },
   {
     "SULO Property": "sulo:atTime",

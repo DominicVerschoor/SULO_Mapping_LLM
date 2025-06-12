@@ -1,0 +1,84 @@
+PREFIX sphn: <https://www.biomedit.ch/rdf/sphn-schema/sphn#>
+PREFIX sulo: <https://aidava-dev.github.io/sulo/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT {
+  ?case a sulo:AdministrativeCase .
+
+  # AdministrativeCase Identifier (SOLID)
+  ?case sulo:hasFeature [ a sulo:InformationObject ; sulo:hasValue ?caseIdentifier ] .
+
+  # SubjectPseudoIdentifier (PRO+SOLID)
+  ?case sulo:hasParticipant [
+    a sulo:PatientRole ;
+    sulo:isFeatureOf [
+      a sulo:Patient ;
+      sulo:hasFeature [ a sulo:InformationObject ; sulo:hasValue ?subjectIdentifier ]
+    ]
+  ] .
+
+  # SourceSystem (PRO+SOLID)
+  ?case sulo:hasParticipant [
+    a sulo:DataProviderRole ;
+    sulo:isFeatureOf [
+      a sulo:DataProvider ;
+      sulo:hasFeature [ a sulo:InformationObject ; sulo:hasValue ?systemName ]
+    ]
+  ] .
+
+  # Admission Process (nested)
+  ?case sulo:hasPart [
+    a sulo:AdmissionProcess ;
+    sulo:occursIn [ a sulo:Time ; sulo:hasValue ?admissionDate ] 
+  ] .
+
+  # Discharge Process (nested)
+  ?case sulo:hasPart [
+    a sulo:DischargeProcess ;
+    sulo:occursIn [ a sulo:Time ; sulo:hasValue ?dischargeDate ]
+  ] .
+
+  # CareHandling (as nested process)
+  ?case sulo:hasPart [
+    a sulo:CareHandlingProcess ;
+    sulo:hasFeature [ a sulo:InformationObject ; sulo:hasValue ?careTypeCode ]
+  ] .
+}
+
+WHERE {
+  # AdministrativeCase root
+  ?case a sphn:AdministrativeCase .
+
+  # AdministrativeCase Identifier
+  OPTIONAL { ?case sphn:hasIdentifier ?caseIdentifier. }
+
+  # SubjectPseudoIdentifier nesting
+  OPTIONAL {
+    ?case sphn:hasSubjectPseudoIdentifier ?subject .
+    ?subject sphn:hasIdentifier ?subjectIdentifier.
+  }
+
+  # SourceSystem nesting
+  OPTIONAL {
+    ?case sphn:hasSourceSystem ?source .
+    ?source sphn:hasSystemName ?systemName.
+  }
+
+  # Admission nesting
+  OPTIONAL {
+    ?case sphn:hasAdmission ?admission .
+    ?admission sphn:hasAdmissionDate ?admissionDate.
+  }
+
+  # Discharge nesting
+  OPTIONAL {
+    ?case sphn:hasDischarge ?discharge .
+    ?discharge sphn:hasDischargeDate ?dischargeDate.
+  }
+
+  # CareHandling nesting
+  OPTIONAL {
+    ?case sphn:hasCareHandling ?care .
+    ?care sphn:hasTypeCode ?careTypeCode.
+  }
+}

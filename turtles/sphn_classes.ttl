@@ -1,0 +1,2626 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sphn: <https://www.biomedit.ch/rdf/sphn-schema/sphn#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sphn:AccessDevice a rdfs:Class ;
+    rdfs:label "Access Device" ;
+    sphn:description "product intended for medical use to gain access to the body, such as cannula, tube, catheter or drainage"^^xsd:string ;
+    sphn:properties sphn:hasProductCode,
+        sphn:hasSoftware,
+        sphn:hasTypeCode .
+
+sphn:AccessDevicePresence a rdfs:Class ;
+    rdfs:label "Access Device Presence" ;
+    sphn:description "presence of a medical access device, such as cannula, tube, catheter or drainage"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasEndDatetime,
+        sphn:hasInsertionPoint,
+        sphn:hasMedicalDevice,
+        sphn:hasRestingPoint,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:AdministrativeCase a rdfs:Class ;
+    rdfs:label "Administrative Case" ;
+    sphn:description "administrative artifact for billing according to national healthcare billing guidelines, e.g. Swiss Diagnosis Related Groups, and local settings"^^xsd:string ;
+    sphn:properties sphn:hasAdmission,
+        sphn:hasCareHandling,
+        sphn:hasDischarge,
+        sphn:hasIdentifier,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:AdministrativeGender a rdfs:Class ;
+    rdfs:label "AdministrativeGender" ;
+    sphn:description "Administrative Gender"^^xsd:string .
+
+sphn:AdministrativeSex a rdfs:Class ;
+    rdfs:label "Administrative Sex" ;
+    sphn:description "the sex of the individual used for administrative purposes"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasRecordDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:Admission a rdfs:Class ;
+    rdfs:label "Admission" ;
+    sphn:description "admission of a patient to the healthcare provider institute"^^xsd:string ;
+    sphn:properties sphn:hasDatetime,
+        sphn:hasOriginLocation .
+
+sphn:AdverseEvent a rdfs:Class ;
+    rdfs:label "Adverse Event" ;
+    sphn:description "results from an intervention that caused unintentional harm"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCode,
+        sphn:hasConsequences,
+        sphn:hasIntervention,
+        sphn:hasOnsetDatetime,
+        sphn:hasOutcome,
+        sphn:hasSeverityCode,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:adverseeventConsequences a rdfs:Class ;
+    rdfs:label "AdverseEvent_consequences" ;
+    sphn:description "consequences of the concept"^^xsd:string .
+
+sphn:adverseeventOutcome a rdfs:Class ;
+    rdfs:label "AdverseEvent_outcome" ;
+    sphn:description "result or effect of an action, situation, or event of the concept"^^xsd:string .
+
+sphn:Age a rdfs:Class ;
+    rdfs:label "Age" ;
+    sphn:description "time elapsed since birth of the individual"^^xsd:string ;
+    sphn:properties sphn:hasDeterminationDatetime,
+        sphn:hasQuantity,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:Allergen a rdfs:Class ;
+    rdfs:label "Allergen" ;
+    sphn:description "any substance, product or physical force producing immediate hypersensitivity"^^xsd:string ;
+    sphn:properties sphn:hasCode .
+
+sphn:Allergy a rdfs:Class ;
+    rdfs:label "Allergy" ;
+    sphn:description "risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to an allergen"^^xsd:string ;
+    sphn:properties sphn:hasAllergen,
+        sphn:hasFirstRecordDatetime,
+        sphn:hasLastReactionDatetime,
+        sphn:hasReactionTypeCode,
+        sphn:hasSeverityCode,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier,
+        sphn:hasVerificationStatusCode .
+
+sphn:AllergyEpisode a rdfs:Class ;
+    rdfs:label "Allergy Episode" ;
+    sphn:description "manifestation of an allergic reaction following an exposure to an allergen"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasAllergen,
+        sphn:hasBodySite,
+        sphn:hasCertaintyCode,
+        sphn:hasDatetime,
+        sphn:hasDuration,
+        sphn:hasExposure,
+        sphn:hasManifestationCode,
+        sphn:hasSeverityCode,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:AntimicrobialSusceptibilityLabTest a rdfs:Class ;
+    rdfs:label "Antimicrobial Susceptibility Lab Test" ;
+    sphn:description "specific lab test performed on an isolate against a chemical agent for determining antimicrobial susceptibility"^^xsd:string ;
+    sphn:properties sphn:hasChemicalAgent,
+        sphn:hasCode,
+        sphn:hasInstrument,
+        sphn:hasResult,
+        sphn:hasTestKit .
+
+sphn:AntimicrobialSusceptibilityLabTestEvent a rdfs:Class ;
+    rdfs:label "Antimicrobial Susceptibility Lab Test Event" ;
+    sphn:description "occurrence in which one or multiple laboratory tests are performed on an isolate at a given time for determining antimicrobial susceptibility"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasDatetime,
+        sphn:hasLabTest,
+        sphn:hasReportDatetime,
+        sphn:hasSample,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:AntimicrobialSusceptibilityResult a rdfs:Class ;
+    rdfs:label "Antimicrobial Susceptibility Result" ;
+    sphn:description "result of an antimicrobial susceptibility lab analysis"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasNumericalReference,
+        sphn:hasQuantity,
+        sphn:hasStandardGuideline,
+        sphn:hasStringValue .
+
+sphn:Assay a rdfs:Class ;
+    rdfs:label "Assay" ;
+    sphn:description "a process with the objective to produce information about a sample by examining it"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCode,
+        sphn:hasDataFile,
+        sphn:hasIdentifier,
+        sphn:hasPredecessor,
+        sphn:hasSample,
+        sphn:hasSourceSystem,
+        sphn:hasStandardOperatingProcedure,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:Assessment a rdfs:Class ;
+    rdfs:label "Assessment" ;
+    sphn:description "assessment scale, classification, staging or scoring system"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasComponent,
+        sphn:hasName,
+        sphn:hasRange,
+        sphn:hasResult .
+
+sphn:AssessmentComponent a rdfs:Class ;
+    rdfs:label "Assessment Component" ;
+    sphn:description "component of an assessment"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasName,
+        sphn:hasRange,
+        sphn:hasResult .
+
+sphn:AssessmentEvent a rdfs:Class ;
+    rdfs:label "Assessment Event" ;
+    sphn:description "evaluation at a given time, which takes into account a predefined scale, classification, staging or scoring system"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasAssessment,
+        sphn:hasDatetime,
+        sphn:hasPerformer,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:AssessmentResult a rdfs:Class ;
+    rdfs:label "Assessment Result" ;
+    sphn:description "outcome of an assessment"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasQuantity,
+        sphn:hasStringValue .
+
+sphn:BilledDiagnosis a rdfs:Class ;
+    rdfs:label "Billed Diagnosis" ;
+    sphn:description "discharge diagnosis used for the billing system (e.g. for building the Diagnosis Related Groups) according to guidelines of the national authority (e.g. Swiss Federal Office of Public Health), e.g. K35.3 acute appendicitis with localized peritonitis"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCode,
+        sphn:hasRankCode,
+        sphn:hasRecordDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectAge,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:BilledProcedure a rdfs:Class ;
+    rdfs:label "Billed Procedure" ;
+    sphn:description "procedure, coded for billing (e.g. for building the Diagnosis Related Groups) according to guidelines of the national authority (e.g. Swiss Federal Office of Public Health), e.g. 57.34 open biopsy of the urinary bladder"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasCode,
+        sphn:hasEndDatetime,
+        sphn:hasIntent,
+        sphn:hasRankCode,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:Biobanksample a rdfs:Class ;
+    rdfs:label "Biobanksample" ;
+    sphn:description "biosample stored in a biobank"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBiobankName,
+        sphn:hasIdentifier,
+        sphn:hasSample,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:Biosample a rdfs:Class ;
+    rdfs:label "Biosample" ;
+    sphn:description "Biosample"^^xsd:string .
+
+sphn:Birth a rdfs:Class ;
+    rdfs:label "Birth" ;
+    sphn:description "the event of being born"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCountry,
+        sphn:hasDate,
+        sphn:hasDeliveryModeCode,
+        sphn:hasGestationalAge,
+        sphn:hasGroupSize,
+        sphn:hasMedicalDevice,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:BirthDate a rdfs:Class ;
+    rdfs:label "Birth Date" ;
+    sphn:description "the date and time of birth of the individual"^^xsd:string ;
+    sphn:properties sphn:hasComparator,
+        sphn:hasDay,
+        sphn:hasMonth,
+        sphn:hasTime,
+        sphn:hasYear .
+
+sphn:BloodPressure a rdfs:Class ;
+    rdfs:label "Blood Pressure" ;
+    sphn:description "blood pressure of the individual"^^xsd:string ;
+    sphn:properties sphn:hasDataFile,
+        sphn:hasDatetime,
+        sphn:hasDiastolicPressure,
+        sphn:hasMeanPressure,
+        sphn:hasSystolicPressure .
+
+sphn:BloodPressureMeasurement a rdfs:Class ;
+    rdfs:label "Blood Pressure Measurement" ;
+    sphn:description "measurement process of a blood pressure on an individual"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasEndDatetime,
+        sphn:hasMedicalDevice,
+        sphn:hasMethodCode,
+        sphn:hasPerformer,
+        sphn:hasResult,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:BodyHeight a rdfs:Class ;
+    rdfs:label "Body Height" ;
+    sphn:description "height of the individual"^^xsd:string ;
+    sphn:properties sphn:hasDataDetermination,
+        sphn:hasDatetime,
+        sphn:hasQuantity .
+
+sphn:BodyHeightMeasurement a rdfs:Class ;
+    rdfs:label "Body Height Measurement" ;
+    sphn:description "measurement of the height of the individual"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasAssociatedEvent,
+        sphn:hasEndDatetime,
+        sphn:hasMedicalDevice,
+        sphn:hasMethodCode,
+        sphn:hasPerformer,
+        sphn:hasResult,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:BodyMassIndex a rdfs:Class ;
+    rdfs:label "Body Mass Index" ;
+    sphn:description "body weight in kilograms divided by the square of the body height in meters"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasDeterminationDatetime,
+        sphn:hasQuantity,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:BodyPosition a rdfs:Class ;
+    rdfs:label "Body Position" ;
+    sphn:description "position of the body during a certain time interval, examination or therapy"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCode,
+        sphn:hasEndDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:BodySite a rdfs:Class ;
+    rdfs:label "Body Site" ;
+    sphn:description "any anatomical structure, any nonspecific and anatomical site, as well as morphologic abnormalities"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasLaterality .
+
+sphn:BodySurfaceArea a rdfs:Class ;
+    rdfs:label "Body Surface Area" ;
+    sphn:description "two-dimensional measure of the outer layer of the body"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCalculationMethod,
+        sphn:hasDeterminationDatetime,
+        sphn:hasQuantity,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:bodysurfaceareaCalculationmethod a rdfs:Class ;
+    rdfs:label "BodySurfaceArea_calculationMethod" ;
+    sphn:description "formula or method for calculating the concept"^^xsd:string .
+
+sphn:BodyTemperature a rdfs:Class ;
+    rdfs:label "Body Temperature" ;
+    sphn:description "body temperature of the individual"^^xsd:string ;
+    sphn:properties sphn:hasDataFile,
+        sphn:hasDatetime,
+        sphn:hasQuantity .
+
+sphn:BodyTemperatureMeasurement a rdfs:Class ;
+    rdfs:label "Body Temperature Measurement" ;
+    sphn:description "measurement of the body temperature of the individual"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasEndDatetime,
+        sphn:hasMedicalDevice,
+        sphn:hasMethodCode,
+        sphn:hasPerformer,
+        sphn:hasResult,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:BodyWeight a rdfs:Class ;
+    rdfs:label "Body Weight" ;
+    sphn:description "weight of the individual"^^xsd:string ;
+    sphn:properties sphn:hasDataDetermination,
+        sphn:hasDatetime,
+        sphn:hasQuantity .
+
+sphn:BodyWeightMeasurement a rdfs:Class ;
+    rdfs:label "Body Weight Measurement" ;
+    sphn:description "measurement of the weight of the individual"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasAssociatedEvent,
+        sphn:hasEndDatetime,
+        sphn:hasMedicalDevice,
+        sphn:hasMethodCode,
+        sphn:hasPerformer,
+        sphn:hasResult,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:CardiacIndex a rdfs:Class ;
+    rdfs:label "Cardiac Index" ;
+    sphn:description "cardiac output in relation to the body surface area (BSA)"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasDeterminationDatetime,
+        sphn:hasMethodCode,
+        sphn:hasQuantity,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:CardiacOutput a rdfs:Class ;
+    rdfs:label "Cardiac Output" ;
+    sphn:description "volume of blood passing through the heart per unit of time"^^xsd:string ;
+    sphn:properties sphn:hasDataFile,
+        sphn:hasDatetime,
+        sphn:hasQuantity .
+
+sphn:CardiacOutputMeasurement a rdfs:Class ;
+    rdfs:label "Cardiac Output Measurement" ;
+    sphn:description "measurement of the cardiac output of the individual"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasEndDatetime,
+        sphn:hasMedicalDevice,
+        sphn:hasMethodCode,
+        sphn:hasPerformer,
+        sphn:hasResult,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:CareHandling a rdfs:Class ;
+    rdfs:label "Care Handling" ;
+    sphn:description "describes the relationship between the individual and care provider institute"^^xsd:string ;
+    sphn:properties sphn:hasSourceSystem,
+        sphn:hasTypeCode .
+
+sphn:Catheter a rdfs:Class ;
+    rdfs:label "Catheter" ;
+    sphn:description "Catheter"^^xsd:string .
+
+sphn:CentralVenousPressure a rdfs:Class ;
+    rdfs:label "CentralVenousPressure" ;
+    sphn:description "Central Venous Pressure"^^xsd:string .
+
+sphn:ChromosomalLocation a rdfs:Class ;
+    rdfs:label "Chromosomal Location" ;
+    sphn:description "chromosome locus defined as cytoband intervals"^^xsd:string ;
+    sphn:properties sphn:hasChromosome,
+        sphn:hasEndCytobandCode,
+        sphn:hasStartCytobandCode .
+
+sphn:Chromosome a rdfs:Class ;
+    rdfs:label "Chromosome" ;
+    sphn:description "thread-like structure composed of tightly coiled DNA and histones or circular DNA (mitochondrial DNA). These structures act as carriers of genetic information"^^xsd:string ;
+    sphn:properties sphn:hasCode .
+
+sphn:Circumference a rdfs:Class ;
+    rdfs:label "Circumference" ;
+    sphn:description "circumference of a body site"^^xsd:string ;
+    sphn:properties sphn:hasDatetime,
+        sphn:hasQuantity .
+
+sphn:CircumferenceMeasure a rdfs:Class ;
+    rdfs:label "CircumferenceMeasure" ;
+    sphn:description "Circumference Measure"^^xsd:string .
+
+sphn:CircumferenceMeasurement a rdfs:Class ;
+    rdfs:label "Circumference Measurement" ;
+    sphn:description "measurement of the circumference measure of a body site"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasAssociatedEvent,
+        sphn:hasBodySite,
+        sphn:hasEndDatetime,
+        sphn:hasMedicalDevice,
+        sphn:hasMethodCode,
+        sphn:hasPerformer,
+        sphn:hasResult,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:CivilStatus a rdfs:Class ;
+    rdfs:label "Civil Status" ;
+    sphn:description "the civil status indicates the familial and social situation of the individual"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasEventDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:Code a rdfs:Class ;
+    rdfs:label "Code" ;
+    sphn:description "symbols and/or expressions defined in a coding system"^^xsd:string ;
+    sphn:properties sphn:hasCodingSystemAndVersion,
+        sphn:hasIdentifier,
+        sphn:hasName .
+
+sphn:Comparator a rdfs:Class ;
+    rdfs:label "Comparator" ;
+    sphn:description "qualifier describing whether the value is the precise one or not"^^xsd:string .
+
+sphn:Consent a rdfs:Class ;
+    rdfs:label "Consent" ;
+    sphn:description "information on the individual’s permission to make health related data and collected samples available for research purposes"^^xsd:string ;
+    sphn:properties sphn:hasDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasStatusCode,
+        sphn:hasSubjectPseudoIdentifier,
+        sphn:hasTemplateIdentifier,
+        sphn:hasTypeCode .
+
+sphn:CopyNumberVariation a rdfs:Class ;
+    rdfs:label "Copy Number Variation" ;
+    sphn:description "structural genomic variant characterized by relative changes in the number of copies of a specific genomic segment compared to a reference sequence"^^xsd:string ;
+    sphn:properties sphn:hasFeatureLocation,
+        sphn:hasTotalCopyNumber,
+        sphn:hasTypeCode .
+
+sphn:Country a rdfs:Class ;
+    rdfs:label "Country" ;
+    sphn:description "distinct part of the world, such as a state, nation, or other political entity, often but not necessarily a sovereign state"^^xsd:string ;
+    sphn:properties sphn:hasCode .
+
+sphn:DataDetermination a rdfs:Class ;
+    rdfs:label "Data Determination" ;
+    sphn:description "describes how the data was determined, e.g. measured, calculated"^^xsd:string ;
+    sphn:properties sphn:hasMethodCode .
+
+sphn:DataFile a rdfs:Class ;
+    rdfs:label "Data File" ;
+    sphn:description "electronic resource of information, which can be stored, accessed and transferred as a single unit"^^xsd:string ;
+    sphn:properties sphn:hasCreationDatetime,
+        sphn:hasEncoding,
+        sphn:hasFormatCode,
+        sphn:hasHash,
+        sphn:hasName,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier,
+        sphn:hasUniformResourceIdentifier .
+
+sphn:datafileEncoding a rdfs:Class ;
+    rdfs:label "DataFile_encoding" ;
+    sphn:description "encoding of the concept"^^xsd:string .
+
+sphn:DataProcessing a rdfs:Class ;
+    rdfs:label "Data Processing" ;
+    sphn:description "a process that produces output data from input data"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCode,
+        sphn:hasInput,
+        sphn:hasOutput,
+        sphn:hasPredecessor,
+        sphn:hasQualityControlMetric,
+        sphn:hasSoftware,
+        sphn:hasSourceSystem,
+        sphn:hasStandardOperatingProcedure,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:DataProvider a rdfs:Class ;
+    rdfs:label "Data Provider" ;
+    sphn:description "organization that prepares and delivers data"^^xsd:string ;
+    sphn:properties sphn:hasCategory,
+        sphn:hasDepartment,
+        sphn:hasInstitutionCode .
+
+sphn:DataProviderInstitute a rdfs:Class ;
+    rdfs:label "DataProviderInstitute" ;
+    sphn:description "Data Provider Institute"^^xsd:string .
+
+sphn:dataproviderCategory a rdfs:Class ;
+    rdfs:label "DataProvider_category" ;
+    sphn:description "category associated to the concept"^^xsd:string .
+
+sphn:DataRelease a rdfs:Class ;
+    rdfs:label "Data Release" ;
+    sphn:description "Metadata about the release of the data"^^xsd:string ;
+    sphn:properties sphn:dctermsconformsTo,
+        sphn:hasDataProvider,
+        sphn:hasExtractionDatetime .
+
+sphn:Death a rdfs:Class ;
+    rdfs:label "Death" ;
+    sphn:description "cessation of all vital bodily functions"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCircumstanceCode,
+        sphn:hasConditionCode,
+        sphn:hasDate,
+        sphn:hasReportDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:DeathDate a rdfs:Class ;
+    rdfs:label "Death Date" ;
+    sphn:description "the date and time of death of the individual"^^xsd:string ;
+    sphn:properties sphn:hasDay,
+        sphn:hasMonth,
+        sphn:hasTime,
+        sphn:hasYear .
+
+sphn:DeathStatus a rdfs:Class ;
+    rdfs:label "DeathStatus" ;
+    sphn:description "Death Status"^^xsd:string .
+
+sphn:Department a rdfs:Class ;
+    rdfs:label "Department" ;
+    sphn:description "dedicated division of an organization"^^xsd:string ;
+    sphn:properties sphn:hasName .
+
+sphn:Deprecated a rdfs:Class ;
+    rdfs:label "Deprecated" ;
+    sphn:description "Deprecated classes of SPHN that existed in the previous version"^^xsd:string .
+
+sphn:Diagnosis a rdfs:Class ;
+    rdfs:label "Diagnosis" ;
+    sphn:description "determination of the presence of a disease, condition, or injury from expressed signs and symptoms and assessments such as physical examination, laboratory test, or the like"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCode,
+        sphn:hasRecordDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectAge,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:DiagnosticRadiologicExamination a rdfs:Class ;
+    rdfs:label "DiagnosticRadiologicExamination" ;
+    sphn:description "Diagnostic Radiologic Examination"^^xsd:string .
+
+sphn:Discharge a rdfs:Class ;
+    rdfs:label "Discharge" ;
+    sphn:description "discharge of an individual from the healthcare provider institute"^^xsd:string ;
+    sphn:properties sphn:hasDatetime,
+        sphn:hasTargetLocation .
+
+sphn:Drug a rdfs:Class ;
+    rdfs:label "Drug" ;
+    sphn:description "any substance with the intent to prevent, diagnose, treat, or relieve symptoms of a disease or abnormal condition"^^xsd:string ;
+    sphn:properties sphn:hasActiveIngredient,
+        sphn:hasArticle,
+        sphn:hasInactiveIngredient,
+        sphn:hasQuantity,
+        sphn:hasSourceSystem .
+
+sphn:DrugAdministrationEvent a rdfs:Class ;
+    rdfs:label "Drug Administration Event" ;
+    sphn:description "single event at which a drug was administered to the patient; this could be a single time point in case of a pill/cream or a duration in case of a single infusion pack or a single patch; one or many drug administration events are initiated by a drug prescription depending on the frequency stated in the prescription"^^xsd:string ;
+    sphn:properties sphn:hasAdministrationRouteCode,
+        sphn:hasAdministrativeCase,
+        sphn:hasDrug,
+        sphn:hasDuration,
+        sphn:hasEndDatetime,
+        sphn:hasReasonToStopCode,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier,
+        sphn:hasTimePattern .
+
+sphn:DrugArticle a rdfs:Class ;
+    rdfs:label "Drug Article" ;
+    sphn:description "general details identifying a medication on the level of its commercial article"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasManufacturedDoseForm,
+        sphn:hasName,
+        sphn:hasSourceSystem .
+
+sphn:DrugPrescription a rdfs:Class ;
+    rdfs:label "Drug Prescription" ;
+    sphn:description "plan that defines at which frequency a drug should be administered to a patient with a given quantity; at every frequency time point a drug administration event should occur"^^xsd:string ;
+    sphn:properties sphn:hasAdministrationRouteCode,
+        sphn:hasAdministrativeCase,
+        sphn:hasDrug,
+        sphn:hasFirstAdministrationDatetime,
+        sphn:hasFrequency,
+        sphn:hasIndicationToStart,
+        sphn:hasIntent,
+        sphn:hasLastAdministrationDatetime,
+        sphn:hasRecordDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier,
+        sphn:hasTimePattern .
+
+sphn:Electrocardiogram a rdfs:Class ;
+    rdfs:label "Electrocardiogram" ;
+    sphn:description "output of an electrocardiographic procedure"^^xsd:string ;
+    sphn:properties sphn:hasDataFile .
+
+sphn:ElectrocardiographicProcedure a rdfs:Class ;
+    rdfs:label "Electrocardiographic Procedure" ;
+    sphn:description "electrographic procedure on the heart which results in a graph of voltage versus time visualizing the electrical activity of the heart muscle using electrodes placed on the skin"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasCode,
+        sphn:hasEndDatetime,
+        sphn:hasIntent,
+        sphn:hasNumberOfLeads,
+        sphn:hasOutput,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPhysiologicState,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:ExcludedDisorder a rdfs:Class ;
+    rdfs:label "Excluded Disorder" ;
+    sphn:description "determination of the absence of a disease"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCode,
+        sphn:hasRecordDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:Exposure a rdfs:Class ;
+    rdfs:label "Exposure" ;
+    sphn:description "contact between a physical, biological, or chemical agent and an individual"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasAgentCode,
+        sphn:hasDegreeCode,
+        sphn:hasDuration,
+        sphn:hasEndDatetime,
+        sphn:hasQuantity,
+        sphn:hasRecordDatetime,
+        sphn:hasRouteCode,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:FOPHDiagnosis a rdfs:Class ;
+    rdfs:label "FOPHDiagnosis" ;
+    sphn:description "FOPH Diagnosis"^^xsd:string .
+
+sphn:FOPHProcedure a rdfs:Class ;
+    rdfs:label "FOPHProcedure" ;
+    sphn:description "FOPH Procedure"^^xsd:string .
+
+sphn:FluidBalance a rdfs:Class ;
+    rdfs:label "Fluid Balance" ;
+    sphn:description "difference between fluid input and output during a specified time interval"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasEndDatetime,
+        sphn:hasFluidInputOutput,
+        sphn:hasQuantity,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:FluidInputOutput a rdfs:Class ;
+    rdfs:label "Fluid Input Output" ;
+    sphn:description "gain or loss of fluid that impacts the fluid balance"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasEndDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier,
+        sphn:hasSubstance .
+
+sphn:FollowUp a rdfs:Class ;
+    rdfs:label "Follow Up" ;
+    sphn:description "procedure for following up on the patient status"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasDatetime,
+        sphn:hasResult,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:FractionOfInspiredOxygen a rdfs:Class ;
+    rdfs:label "Fraction Of Inspired Oxygen" ;
+    sphn:description "value of the fraction of inspired oxygen (FiO2) in a defined setting"^^xsd:string ;
+    sphn:properties sphn:hasDatetime,
+        sphn:hasQuantity .
+
+sphn:Gene a rdfs:Class ;
+    rdfs:label "Gene" ;
+    sphn:description "fundamental unit of heredity that contains necessary elements to encode for a transcript"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasOrganism,
+        sphn:hasProtein,
+        sphn:hasTranscript .
+
+sphn:GeneFusion a rdfs:Class ;
+    rdfs:label "Gene Fusion" ;
+    sphn:description "the joining of two or more genes resulting in a chimeric transcript and/or a novel interaction"^^xsd:string ;
+    sphn:properties sphn:hasFeatureLocation,
+        sphn:hasGene,
+        sphn:hasRegulatoryFeatureCode .
+
+sphn:GenePanel a rdfs:Class ;
+    rdfs:label "Gene Panel" ;
+    sphn:description "collection of genes that have been grouped for testing"^^xsd:string ;
+    sphn:properties sphn:hasDataFile,
+        sphn:hasFocusGene .
+
+sphn:GeneticVariation a rdfs:Class ;
+    rdfs:label "GeneticVariation" ;
+    sphn:description "Genetic Variation"^^xsd:string .
+
+sphn:GenomicDeletion a rdfs:Class ;
+    rdfs:label "Genomic Deletion" ;
+    sphn:description "genetic variant involving the deletion of a specific location in a DNA sequence"^^xsd:string ;
+    sphn:properties sphn:hasDeletedSequence,
+        sphn:hasFeatureLocation .
+
+sphn:GenomicDelins a rdfs:Class ;
+    rdfs:label "Genomic Delins" ;
+    sphn:description "genomic variation in which one or more nucleotides are replaced by different nucleotides relative to a reference sequence, and it is neither a substitution nor an inversion"^^xsd:string ;
+    sphn:properties sphn:hasDeletedSequence,
+        sphn:hasGenomicPosition,
+        sphn:hasInsertedSequence .
+
+sphn:GenomicDuplication a rdfs:Class ;
+    rdfs:label "Genomic Duplication" ;
+    sphn:description "sequence alteration where, in comparison to a reference sequence, an additional copy of one or more nucleotides or amino acids is inserted immediately downstream of the original sequence at the 3' end"^^xsd:string ;
+    sphn:properties sphn:hasFeatureLocation,
+        sphn:hasNucleotideSequence .
+
+sphn:GenomicInsertion a rdfs:Class ;
+    rdfs:label "Genomic Insertion" ;
+    sphn:description "genetic variant involving the addition of a DNA sequence in a specific location"^^xsd:string ;
+    sphn:properties sphn:hasFeatureLocation,
+        sphn:hasInsertedSequence .
+
+sphn:GenomicInversion a rdfs:Class ;
+    rdfs:label "Genomic Inversion" ;
+    sphn:description "a sequence change where, compared to a reference sequence, more than one nucleotide replacing the original sequence is the reverse complement of the original sequence"^^xsd:string ;
+    sphn:properties sphn:hasFeatureLocation,
+        sphn:hasNucleotideSequence .
+
+sphn:GenomicPosition a rdfs:Class ;
+    rdfs:label "Genomic Position" ;
+    sphn:description "genomic position with respect to a reference"^^xsd:string ;
+    sphn:properties sphn:hasCoordinateConvention,
+        sphn:hasEnd,
+        sphn:hasReferenceSequence,
+        sphn:hasStart .
+
+sphn:genomicpositionCoordinateconvention a rdfs:Class ;
+    rdfs:label "GenomicPosition_coordinateConvention" ;
+    sphn:description "convention used for the interpretation of coordinates used in the concept"^^xsd:string .
+
+sphn:GenomicTranslocation a rdfs:Class ;
+    rdfs:label "Genomic Translocation" ;
+    sphn:description "a sequence change where, compared to a reference sequence, from a specific nucleotide position (the break point), all nucleotides upstream derive from another chromosome than those downstream"^^xsd:string ;
+    sphn:properties sphn:hasBreakpoint .
+
+sphn:GenomicTransposition a rdfs:Class ;
+    rdfs:label "Genomic Transposition" ;
+    sphn:description "a genomic alteration in which a large segment of DNA is relocated from one site in the genome to a different site, when compared to a reference sequence."^^xsd:string ;
+    sphn:properties sphn:hasDeletionBreakpoint,
+        sphn:hasInsertionBreakpoint .
+
+sphn:GenomicVariation a rdfs:Class ;
+    rdfs:label "Genomic Variation" ;
+    sphn:description "a genomic variation occurring at a defined position"^^xsd:string .
+
+sphn:GestationalAgeAtBirth a rdfs:Class ;
+    rdfs:label "Gestational Age At Birth" ;
+    sphn:description "gestational age of a child at birth"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasQuantity,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:Hash a rdfs:Class ;
+    rdfs:label "Hash" ;
+    sphn:description "irreversible unique number computed on an information entity used to check its validity and integrity"^^xsd:string ;
+    sphn:properties sphn:hasAlgorithm,
+        sphn:hasStringValue .
+
+sphn:hashAlgorithm a rdfs:Class ;
+    rdfs:label "Hash_algorithm" ;
+    sphn:description "algorithm applied to the concept"^^xsd:string .
+
+sphn:HealthcareEncounter a rdfs:Class ;
+    rdfs:label "Healthcare Encounter" ;
+    sphn:description "an interaction between an individual and a specific unit or service of a healthcare provider institute, e.g. emergency, intensive care unit, for the purpose of providing healthcare service(s) or assessing the health status of an individual"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCurrentLocation,
+        sphn:hasEndDatetime,
+        sphn:hasIdentifier,
+        sphn:hasOriginLocation,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier,
+        sphn:hasTargetLocation,
+        sphn:hasTherapeuticArea .
+
+sphn:HealthcarePrimaryInformationSystem a rdfs:Class ;
+    rdfs:label "Healthcare Primary Information System" ;
+    sphn:description "primary source system of the healthcare data"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasName .
+
+sphn:HeartRate a rdfs:Class ;
+    rdfs:label "Heart Rate" ;
+    sphn:description "frequency of the heart beats, i.e. the number of time a heart beats per unit of time"^^xsd:string ;
+    sphn:properties sphn:hasDataFile,
+        sphn:hasDatetime,
+        sphn:hasQuantity,
+        sphn:hasRegularityCode .
+
+sphn:HeartRateMeasurement a rdfs:Class ;
+    rdfs:label "Heart Rate Measurement" ;
+    sphn:description "measurement of the heart rate of the individual"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasEndDatetime,
+        sphn:hasMedicalDevice,
+        sphn:hasMethodCode,
+        sphn:hasPerformer,
+        sphn:hasResult,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPhysiologicState,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:HomeAddress a rdfs:Class ;
+    rdfs:label "Home Address" ;
+    sphn:description "permanent place of residence of an individual"^^xsd:string ;
+    sphn:properties sphn:hasCountry,
+        sphn:hasEndDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier,
+        sphn:hasSwissSocioEconomicPosition .
+
+sphn:ICDODiagnosis a rdfs:Class ;
+    rdfs:label "ICDODiagnosis" ;
+    sphn:description "ICD-O Diagnosis"^^xsd:string .
+
+sphn:ImagingProcedure a rdfs:Class ;
+    rdfs:label "Imaging Procedure" ;
+    sphn:description "imaging procedure used for examination of a body site or function"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasCode,
+        sphn:hasEndDatetime,
+        sphn:hasIntent,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:Implant a rdfs:Class ;
+    rdfs:label "Implant" ;
+    sphn:description "implanted medical device, includes, e.g., heart valve prostheses or joint prostheses"^^xsd:string ;
+    sphn:properties sphn:hasProductCode,
+        sphn:hasSoftware,
+        sphn:hasTypeCode .
+
+sphn:ImplantPresence a rdfs:Class ;
+    rdfs:label "Implant Presence" ;
+    sphn:description "presence of an implanted medical device"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasEndDatetime,
+        sphn:hasMedicalDevice,
+        sphn:hasRecordDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:InhaledOxygenConcentration a rdfs:Class ;
+    rdfs:label "InhaledOxygenConcentration" ;
+    sphn:description "Inhaled Oxygen Concentration"^^xsd:string .
+
+sphn:InsuranceStatus a rdfs:Class ;
+    rdfs:label "Insurance Status" ;
+    sphn:description "status of the patient's medical insurance"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCoverageType,
+        sphn:hasEndDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:insurancestatusCoveragetype a rdfs:Class ;
+    rdfs:label "InsuranceStatus_coverageType" ;
+    sphn:description "coverage type of the concept"^^xsd:string .
+
+sphn:Intent a rdfs:Class ;
+    rdfs:label "Intent" ;
+    sphn:description "treatment or procedure purpose"^^xsd:string ;
+    sphn:properties sphn:hasCode .
+
+sphn:Interpretation a rdfs:Class ;
+    rdfs:label "Interpretation" ;
+    sphn:description "process of making sense of an outcome to derive meaningful conclusions"^^xsd:string ;
+    sphn:properties sphn:hasDatetime,
+        sphn:hasInput,
+        sphn:hasOutput,
+        sphn:hasSourceSystem,
+        sphn:hasStandardGuideline .
+
+sphn:Isolate a rdfs:Class ;
+    rdfs:label "Isolate" ;
+    sphn:description "a specific individual microbe and its clone separated on a single occasion from a sample taken from a host or culture system"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasCollectionDatetime,
+        sphn:hasFixationType,
+        sphn:hasIdentifier,
+        sphn:hasMaterialTypeCode,
+        sphn:hasMedicalDevice,
+        sphn:hasOrganism,
+        sphn:hasPrimaryContainer,
+        sphn:hasSharedIdentifier,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:LabAnalyzer a rdfs:Class ;
+    rdfs:label "Lab Analyzer" ;
+    sphn:description "laboratory analyzer used to assess medical laboratory samples"^^xsd:string ;
+    sphn:properties sphn:hasProductCode,
+        sphn:hasSoftware,
+        sphn:hasTypeCode .
+
+sphn:LabResult a rdfs:Class ;
+    rdfs:label "Lab Result" ;
+    sphn:description "outcome, value, or information which gives insight about a laboratory test"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasNumericalReference,
+        sphn:hasQuantity,
+        sphn:hasStringValue .
+
+sphn:LabTest a rdfs:Class ;
+    rdfs:label "Lab Test" ;
+    sphn:description "specific laboratory test performed to analyze a sample with a given equipment and leading to specific results"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasInstrument,
+        sphn:hasResult,
+        sphn:hasTestKit .
+
+sphn:LabTestEvent a rdfs:Class ;
+    rdfs:label "Lab Test Event" ;
+    sphn:description "occurrence in which one or multiple laboratory tests are performed on a biological specimen at a given time"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasDatetime,
+        sphn:hasLabTest,
+        sphn:hasReportDatetime,
+        sphn:hasSample,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:Laterality a rdfs:Class ;
+    rdfs:label "Laterality" ;
+    sphn:description "localization with respect to the side of the body"^^xsd:string ;
+    sphn:properties sphn:hasCode .
+
+sphn:LibraryPreparation a rdfs:Class ;
+    rdfs:label "Library Preparation" ;
+    sphn:description "process which results in the creation of a library from fragments of DNA"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCode,
+        sphn:hasGenePanel,
+        sphn:hasInput,
+        sphn:hasIntendedInsertSize,
+        sphn:hasKitCode,
+        sphn:hasOutput,
+        sphn:hasPredecessor,
+        sphn:hasQualityControlMetric,
+        sphn:hasSourceSystem,
+        sphn:hasStandardOperatingProcedure,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier,
+        sphn:hasTargetEnrichmentKitCode .
+
+sphn:Location a rdfs:Class ;
+    rdfs:label "Location" ;
+    sphn:description "physical location or medical division taking care of the individual"^^xsd:string ;
+    sphn:properties sphn:hasExact,
+        sphn:hasTypeCode .
+
+sphn:Measurement a rdfs:Class ;
+    rdfs:label "Measurement" ;
+    sphn:description "process of quantitatively defining the value or magnitude of an attribute or characteristic in comparison to a defined standard"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasEndDatetime,
+        sphn:hasMedicalDevice,
+        sphn:hasMethodCode,
+        sphn:hasPerformer,
+        sphn:hasResult,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:MeasurementMethod a rdfs:Class ;
+    rdfs:label "MeasurementMethod" ;
+    sphn:description "Measurement Method"^^xsd:string .
+
+sphn:MedicalDevice a rdfs:Class ;
+    rdfs:label "Medical Device" ;
+    sphn:description "product intended for medical use when the main effect is not achieved by a medicinal product; medical devices include, but are not limited to, implants, instruments, devices, in vitro diagnostics"^^xsd:string ;
+    sphn:properties sphn:hasProductCode,
+        sphn:hasSoftware,
+        sphn:hasTypeCode .
+
+sphn:MedicalProcedure a rdfs:Class ;
+    rdfs:label "Medical Procedure" ;
+    sphn:description "invasive or non-invasive intervention performed for, with or on behalf of an individual whose purpose is to assess, improve, maintain, promote or modify health, functioning or health conditions"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasCode,
+        sphn:hasEndDatetime,
+        sphn:hasIntent,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:MicrobiologyBiomoleculePresenceLabTest a rdfs:Class ;
+    rdfs:label "Microbiology Biomolecule Presence Lab Test" ;
+    sphn:description "specific lab test performed on an isolate for detecting the presence of a target biomolecule"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasInstrument,
+        sphn:hasResult,
+        sphn:hasTargetMolecule,
+        sphn:hasTestKit .
+
+sphn:MicrobiologyBiomoleculePresenceLabTestEvent a rdfs:Class ;
+    rdfs:label "Microbiology Biomolecule Presence Lab Test Event" ;
+    sphn:description "occurrence in which one or multiple laboratory tests are performed on an isolate at a given time to detect the presence of a biomolecule"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasDatetime,
+        sphn:hasLabTest,
+        sphn:hasReportDatetime,
+        sphn:hasSample,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:MicrobiologyBiomoleculePresenceResult a rdfs:Class ;
+    rdfs:label "Microbiology Biomolecule Presence Result" ;
+    sphn:description "result of microbiology biomolecule presence test for a specific isolate analyzed"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasNumericalReference,
+        sphn:hasQuantity,
+        sphn:hasStringValue .
+
+sphn:MicrobiologyMicroscopyLabTest a rdfs:Class ;
+    rdfs:label "Microbiology Microscopy Lab Test" ;
+    sphn:description "specific microbiology microscopy lab test performed on a sample"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasInstrument,
+        sphn:hasResult,
+        sphn:hasStainingMethodCode,
+        sphn:hasTestKit .
+
+sphn:MicrobiologyMicroscopyLabTestEvent a rdfs:Class ;
+    rdfs:label "Microbiology Microscopy Lab Test Event" ;
+    sphn:description "occurrence in which one or multiple microbiology microscopy laboratory tests are performed on a sample at a given time"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasDatetime,
+        sphn:hasLabTest,
+        sphn:hasReportDatetime,
+        sphn:hasSample,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:MicrobiologyMicroscopyResult a rdfs:Class ;
+    rdfs:label "Microbiology Microscopy Result" ;
+    sphn:description "microscopy analysis results for a specific studied biosample in microbiology"^^xsd:string ;
+    sphn:properties sphn:hasCellCountEstimateCode,
+        sphn:hasCellMorphologyCode,
+        sphn:hasCellOrganization,
+        sphn:hasNumericalReference,
+        sphn:hasQuantity,
+        sphn:hasStainingResultCode,
+        sphn:hasStringValue .
+
+sphn:microbiologymicroscopyresultCellorganization a rdfs:Class ;
+    rdfs:label "MicrobiologyMicroscopyResult_cellOrganization" ;
+    sphn:description "cell organization associated to the concept"^^xsd:string .
+
+sphn:MicroorganismIdentificationLabTest a rdfs:Class ;
+    rdfs:label "Microorganism Identification Lab Test" ;
+    sphn:description "specific lab test performed on a sample for identifying microorganism(s)"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasInstrument,
+        sphn:hasResult,
+        sphn:hasTestKit .
+
+sphn:MicroorganismIdentificationLabTestEvent a rdfs:Class ;
+    rdfs:label "Microorganism Identification Lab Test Event" ;
+    sphn:description "occurrence in which one or multiple laboratory tests are performed on a sample at a given time for identifying microorganism(s)"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasDatetime,
+        sphn:hasLabTest,
+        sphn:hasReportDatetime,
+        sphn:hasSample,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:MicroorganismIdentificationResult a rdfs:Class ;
+    rdfs:label "Microorganism Identification Result" ;
+    sphn:description "result of the microorganism identification lab test"^^xsd:string ;
+    sphn:properties sphn:hasNumericalReference,
+        sphn:hasOrganism,
+        sphn:hasPresenceCode,
+        sphn:hasQuantity,
+        sphn:hasStringValue,
+        sphn:hasTimeToPositivity .
+
+sphn:Nationality a rdfs:Class ;
+    rdfs:label "Nationality" ;
+    sphn:description "nationality of the individual"^^xsd:string ;
+    sphn:properties sphn:hasAcquisitionCode,
+        sphn:hasAssociatedCountry,
+        sphn:hasRecordDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:NucleotideSequence a rdfs:Class ;
+    rdfs:label "Nucleotide Sequence" ;
+    sphn:description "a linear arrangement of nucleotides that make up the DNA or RNA sequence"^^xsd:string ;
+    sphn:properties sphn:hasDerivedSequence,
+        sphn:hasLiteralSequence,
+        sphn:hasSequenceLength .
+
+sphn:NursingDiagnosis a rdfs:Class ;
+    rdfs:label "Nursing Diagnosis" ;
+    sphn:description "clinical judgment concerning a human response to health conditions/life processes, or a vulnerability for that response, by an individual, family, group or community; a nursing diagnosis provides the basis for selection of nursing interventions to achieve outcomes for which the nurse has accountability"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCode,
+        sphn:hasRecordDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectAge,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:NutritionIntake a rdfs:Class ;
+    rdfs:label "Nutrition Intake" ;
+    sphn:description "intake of nutritious substance and/or the respective amount of energy consumed"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasEndDatetime,
+        sphn:hasEnergyQuantity,
+        sphn:hasModeCode,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier,
+        sphn:hasSubstance .
+
+sphn:OncologyDiagnosis a rdfs:Class ;
+    rdfs:label "Oncology Diagnosis" ;
+    sphn:description "determination of the presence of an oncological disease, from expressed signs and symptoms and assessments such as biopsy, tumor marker test, imaging, or the like"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasCode,
+        sphn:hasIncidenceDatetime,
+        sphn:hasRecordDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectAge,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:OncologySurgery a rdfs:Class ;
+    rdfs:label "Oncology Surgery" ;
+    sphn:description "invasive intervention performed for, with or on behalf of an individual whose purpose is to improve, maintain or promote health, or functioning conditions in the context of an oncological disease, by the means of partial or complete exeresis of a solid tumor lesion that is the organic substrate of this disease"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasCode,
+        sphn:hasEndDatetime,
+        sphn:hasIntent,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:OrganSupport a rdfs:Class ;
+    rdfs:label "Organ Support" ;
+    sphn:description "type and time period when patient was supported by organ support procedures"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasCode,
+        sphn:hasEndDatetime,
+        sphn:hasIntent,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:Organism a rdfs:Class ;
+    rdfs:label "Organism" ;
+    sphn:description "living system capable of replicating or reproducing, growth and maintenance. An organism may be unicellular or multicellular"^^xsd:string ;
+    sphn:properties sphn:hasCode .
+
+sphn:OxygenAdministrationEvent a rdfs:Class ;
+    rdfs:label "Oxygen Administration Event" ;
+    sphn:description "process during which oxygen is administered via cannula without supporting pressure"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasEndDatetime,
+        sphn:hasFlowRate,
+        sphn:hasFractionOfInspiredOxygen,
+        sphn:hasMedicalDevice,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:OxygenSaturation a rdfs:Class ;
+    rdfs:label "Oxygen Saturation" ;
+    sphn:description "fraction of oxygen present in the blood"^^xsd:string ;
+    sphn:properties sphn:hasDataFile,
+        sphn:hasDatetime,
+        sphn:hasQuantity .
+
+sphn:OxygenSaturationMeasurement a rdfs:Class ;
+    rdfs:label "Oxygen Saturation Measurement" ;
+    sphn:description "measurement of the oxygen saturation of the individual"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasEndDatetime,
+        sphn:hasMedicalDevice,
+        sphn:hasMethodCode,
+        sphn:hasPerformer,
+        sphn:hasResult,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:Performer a rdfs:Class ;
+    rdfs:label "Performer" ;
+    sphn:description "person who carried out the action"^^xsd:string ;
+    sphn:properties sphn:hasCode .
+
+sphn:PharmaceuticalDoseForm a rdfs:Class ;
+    rdfs:label "Pharmaceutical Dose Form" ;
+    sphn:description "physical manifestation of a product that contains the active ingredient(s) and/or inactive ingredient(s) that are intended to be delivered to the patient"^^xsd:string ;
+    sphn:properties sphn:hasCode .
+
+sphn:PhysiologicState a rdfs:Class ;
+    rdfs:label "Physiologic State" ;
+    sphn:description "physiologic state of the individual, e.g. resting, exercise"^^xsd:string ;
+    sphn:properties sphn:hasCode .
+
+sphn:ProblemCondition a rdfs:Class ;
+    rdfs:label "Problem Condition" ;
+    sphn:description "clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCode,
+        sphn:hasOnsetDatetime,
+        sphn:hasRecordDatetime,
+        sphn:hasRelativeTemporalityCode,
+        sphn:hasSourceSystem,
+        sphn:hasStringValue,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:Protein a rdfs:Class ;
+    rdfs:label "Protein" ;
+    sphn:description "molecule composed by one or more chains of amino acids"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasOrganism .
+
+sphn:QualityControlMetric a rdfs:Class ;
+    rdfs:label "Quality Control Metric" ;
+    sphn:description "report of the quality control review that was made of factors involved in a procedure"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasQuantity .
+
+sphn:Quantity a rdfs:Class ;
+    rdfs:label "Quantity" ;
+    sphn:description "an amount or a number of something"^^xsd:string ;
+    sphn:properties sphn:hasComparator,
+        sphn:hasUnit,
+        sphn:hasValue .
+
+sphn:RadiotherapyProcedure a rdfs:Class ;
+    rdfs:label "Radiotherapy Procedure" ;
+    sphn:description "given radiotherapy procedure, for example during oncological treatment"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasCode,
+        sphn:hasEndDatetime,
+        sphn:hasFractionsNumber,
+        sphn:hasIntent,
+        sphn:hasRadiationQuantity,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:Range a rdfs:Class ;
+    rdfs:label "Range" ;
+    sphn:description "interval of values"^^xsd:string ;
+    sphn:properties sphn:hasLowerLimit,
+        sphn:hasUpperLimit .
+
+sphn:Reference a rdfs:Class ;
+    rdfs:label "Reference" ;
+    sphn:description "Reference"^^xsd:string .
+
+sphn:ReferenceInterpretation a rdfs:Class ;
+    rdfs:label "ReferenceInterpretation" ;
+    sphn:description "process of making sense of a quantitative result to derive meaningful conclusions in comparison to a reference"^^xsd:string ;
+    sphn:properties sphn:hasDatetime,
+        sphn:hasInput,
+        sphn:hasOutput,
+        sphn:hasSourceSystem,
+        sphn:hasStandardGuideline .
+
+sphn:ReferenceInterpretationResult a rdfs:Class ;
+    rdfs:label "Reference Interpretation Result" ;
+    sphn:description "outcome of the interpretation of a reference range or value"^^xsd:string ;
+    sphn:properties sphn:hasCode .
+
+sphn:ReferenceRange a rdfs:Class ;
+    rdfs:label "Reference Range" ;
+    sphn:description "interval of values that is deemed normal for a physiologic measurement in healthy individuals"^^xsd:string ;
+    sphn:properties sphn:hasLowerLimit,
+        sphn:hasUpperLimit .
+
+sphn:ReferenceSequence a rdfs:Class ;
+    rdfs:label "Reference Sequence" ;
+    sphn:description "reference construct used for comparison purposes"^^xsd:string ;
+    sphn:properties sphn:hasCode .
+
+sphn:ReferenceValue a rdfs:Class ;
+    rdfs:label "Reference Value" ;
+    sphn:description "numeric data point serving as reference for comparison and interpretation"^^xsd:string ;
+    sphn:properties sphn:hasQuantity .
+
+sphn:RespiratoryRate a rdfs:Class ;
+    rdfs:label "Respiratory Rate" ;
+    sphn:description "frequency at which the breathing occurs"^^xsd:string ;
+    sphn:properties sphn:hasDataDetermination,
+        sphn:hasDataFile,
+        sphn:hasDatetime,
+        sphn:hasQuantity .
+
+sphn:RespiratoryRateMeasurement a rdfs:Class ;
+    rdfs:label "Respiratory Rate Measurement" ;
+    sphn:description "measurement of the frequency at which the breathing occurs"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasEndDatetime,
+        sphn:hasMedicalDevice,
+        sphn:hasMethodCode,
+        sphn:hasPerformer,
+        sphn:hasResult,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:Result a rdfs:Class ;
+    rdfs:label "Result" ;
+    sphn:description "outcome, value, or information which gives insight about something"^^xsd:string .
+
+sphn:ResuscitationDirective a rdfs:Class ;
+    rdfs:label "Resuscitation Directive" ;
+    sphn:description "decision about the extent of resuscitation interventions appropriate for a specific individual"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCode,
+        sphn:hasRecordDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:SPHNConcept a rdfs:Class ;
+    rdfs:label "SPHNConcept" ;
+    sphn:description "SPHN Concepts defined by the SPHN dataset"^^xsd:string .
+
+sphn:Sample a rdfs:Class ;
+    rdfs:label "Sample" ;
+    sphn:description "any material sample for testing, diagnostic, propagation, treatment or research purposes"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasCollectionDatetime,
+        sphn:hasFixationType,
+        sphn:hasIdentifier,
+        sphn:hasMaterialTypeCode,
+        sphn:hasMedicalDevice,
+        sphn:hasPrimaryContainer,
+        sphn:hasSharedIdentifier,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:SampleProcessing a rdfs:Class ;
+    rdfs:label "Sample Processing" ;
+    sphn:description "a process that prepares a sample for a subsequent process"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCode,
+        sphn:hasInput,
+        sphn:hasOutput,
+        sphn:hasPredecessor,
+        sphn:hasQualityControlMetric,
+        sphn:hasSourceSystem,
+        sphn:hasStandardOperatingProcedure,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:sampleFixationtype a rdfs:Class ;
+    rdfs:label "Sample_fixationType" ;
+    sphn:description "fixation or stabilization type"^^xsd:string .
+
+sphn:samplePrimarycontainer a rdfs:Class ;
+    rdfs:label "Sample_primaryContainer" ;
+    sphn:description "type of primary container of the concept"^^xsd:string .
+
+sphn:SemanticMapping a rdfs:Class ;
+    rdfs:label "Semantic Mapping" ;
+    sphn:description "process of transforming data elements to a code"^^xsd:string ;
+    sphn:properties sphn:hasDataProvider,
+        sphn:hasDatetime,
+        sphn:hasMethodCode,
+        sphn:hasOutputCode,
+        sphn:hasPurpose,
+        sphn:hasSourceData,
+        sphn:hasSourceSystem .
+
+sphn:semanticmappingPurpose a rdfs:Class ;
+    rdfs:label "SemanticMapping_purpose" ;
+    sphn:description "objective of the concept"^^xsd:string .
+
+sphn:SequencingAnalysis a rdfs:Class ;
+    rdfs:label "Sequencing Analysis" ;
+    sphn:description "analysis of the output of a nucleic acid sequencing assay"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCode,
+        sphn:hasInput,
+        sphn:hasOutput,
+        sphn:hasPredecessor,
+        sphn:hasQualityControlMetric,
+        sphn:hasReferenceSequence,
+        sphn:hasSoftware,
+        sphn:hasSourceSystem,
+        sphn:hasStandardOperatingProcedure,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:SequencingAssay a rdfs:Class ;
+    rdfs:label "Sequencing Assay" ;
+    sphn:description "an assay that exploits a sequencer as the instrument to generate results"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasCode,
+        sphn:hasDataFile,
+        sphn:hasIdentifier,
+        sphn:hasIntendedReadDepth,
+        sphn:hasIntendedReadLength,
+        sphn:hasLibraryPreparation,
+        sphn:hasPredecessor,
+        sphn:hasSample,
+        sphn:hasSequencingInstrument,
+        sphn:hasSequencingRun,
+        sphn:hasSourceSystem,
+        sphn:hasStandardOperatingProcedure,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:SequencingInstrument a rdfs:Class ;
+    rdfs:label "Sequencing Instrument" ;
+    sphn:description "A sequencing instrument that is used in a sequencing assay"^^xsd:string ;
+    sphn:properties sphn:hasCode .
+
+sphn:SequencingRun a rdfs:Class ;
+    rdfs:label "Sequencing Run" ;
+    sphn:description "the valid and completed operation of a high-throughput sequencing instrument associated with a sequencing assay"^^xsd:string ;
+    sphn:properties sphn:hasAverageInsertSize,
+        sphn:hasAverageReadLength,
+        sphn:hasDataFile,
+        sphn:hasDatetime,
+        sphn:hasIdentifier,
+        sphn:hasMeanReadDepth,
+        sphn:hasQualityControlMetric,
+        sphn:hasReadCount .
+
+sphn:SimpleScore a rdfs:Class ;
+    rdfs:label "SimpleScore" ;
+    sphn:description "Simple Score"^^xsd:string .
+
+sphn:SingleNucleotideVariation a rdfs:Class ;
+    rdfs:label "Single Nucleotide Variation" ;
+    sphn:description "single nucleotide change in a DNA sequence at a specific location"^^xsd:string ;
+    sphn:properties sphn:hasAlternateAllele,
+        sphn:hasGenomicPosition,
+        sphn:hasReferenceAllele .
+
+sphn:Software a rdfs:Class ;
+    rdfs:label "Software" ;
+    sphn:description "Set of procedures and instructions in a data processing system"^^xsd:string ;
+    sphn:properties sphn:hasDescription,
+        sphn:hasName,
+        sphn:hasUniformResourceLocator,
+        sphn:hasVersion .
+
+sphn:SourceData a rdfs:Class ;
+    rdfs:label "Source Data" ;
+    sphn:description "raw data that has not been processed for meaningful use"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasSourceSystem,
+        sphn:hasStringValue .
+
+sphn:SourceSystem a rdfs:Class ;
+    rdfs:label "Source System" ;
+    sphn:description "electronic system the data has been retrieved from"^^xsd:string ;
+    sphn:properties sphn:hasCategory,
+        sphn:hasName,
+        sphn:hasPrimarySystem,
+        sphn:hasPurpose .
+
+sphn:sourcesystemCategory a rdfs:Class ;
+    rdfs:label "SourceSystem_category" ;
+    sphn:description "category associated to the concept"^^xsd:string .
+
+sphn:sourcesystemPurpose a rdfs:Class ;
+    rdfs:label "SourceSystem_purpose" ;
+    sphn:description "objective of the concept"^^xsd:string .
+
+sphn:StandardOperatingProcedure a rdfs:Class ;
+    rdfs:label "Standard Operating Procedure" ;
+    sphn:description "step-by-step instructions for carrying out routine operations imposed by the organization"^^xsd:string ;
+    sphn:properties sphn:hasDataFile,
+        sphn:hasDescription,
+        sphn:hasName,
+        sphn:hasVersion .
+
+sphn:SubjectPseudoIdentifier a rdfs:Class ;
+    rdfs:label "Subject Pseudo Identifier" ;
+    sphn:description "a coded unique identifier assigned by a data provider for a specific project to conceal the identity of an individual"^^xsd:string ;
+    sphn:properties sphn:hasDataProvider,
+        sphn:hasIdentifier,
+        sphn:hasSharedIdentifier .
+
+sphn:Substance a rdfs:Class ;
+    rdfs:label "Substance" ;
+    sphn:description "any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasGenericName,
+        sphn:hasQuantity,
+        sphn:hasSourceSystem .
+
+sphn:SwissSocioEconomicPosition a rdfs:Class ;
+    rdfs:label "Swiss Socio Economic Position" ;
+    sphn:description "characterization or classification of the Swiss position in a neighborhood of an individual that takes into account income, education, occupation, and housing conditions"^^xsd:string ;
+    sphn:properties sphn:hasDistance,
+        sphn:hasValue,
+        sphn:hasVersion .
+
+sphn:SystemicArterialBloodPressure a rdfs:Class ;
+    rdfs:label "SystemicArterialBloodPressure" ;
+    sphn:description "Systemic Arterial Blood Pressure"^^xsd:string .
+
+sphn:TNMClassification a rdfs:Class ;
+    rdfs:label "TNMClassification" ;
+    sphn:description "TNM Classification"^^xsd:string .
+
+sphn:Terminology a rdfs:Class ;
+    rdfs:label "Terminology" ;
+    sphn:description "Terminology class for grouping external resources used in the SPHN project"^^xsd:string .
+
+sphn:TherapeuticArea a rdfs:Class ;
+    rdfs:label "Therapeutic Area" ;
+    sphn:description "professional health care specialization"^^xsd:string ;
+    sphn:properties sphn:hasSourceSystem,
+        sphn:hasSpecialtyName .
+
+sphn:therapeuticareaSpecialtyname a rdfs:Class ;
+    rdfs:label "TherapeuticArea_specialtyName" ;
+    sphn:description "name of professional health care specialization"^^xsd:string .
+
+sphn:TimePattern a rdfs:Class ;
+    rdfs:label "Time Pattern" ;
+    sphn:description "type of time period during which a treatment was given or an assessment was performed; this can be single time points or a continuous event"^^xsd:string ;
+    sphn:properties sphn:hasTypeCode .
+
+sphn:TimeSeriesDataFile a rdfs:Class ;
+    rdfs:label "Time Series Data File" ;
+    sphn:description "electronic resource that contains all the results related to a measurement as time series"^^xsd:string ;
+    sphn:properties sphn:hasCreationDatetime,
+        sphn:hasEncoding,
+        sphn:hasEntryCount,
+        sphn:hasFormatCode,
+        sphn:hasHash,
+        sphn:hasName,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier,
+        sphn:hasUniformResourceIdentifier .
+
+sphn:TobaccoExposure a rdfs:Class ;
+    rdfs:label "Tobacco Exposure" ;
+    sphn:description "episode of exposure of an individual to tobacco in various forms"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasAgentCode,
+        sphn:hasDegreeCode,
+        sphn:hasDuration,
+        sphn:hasEndDatetime,
+        sphn:hasQuantity,
+        sphn:hasRecordDatetime,
+        sphn:hasRouteCode,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier,
+        sphn:hasTypeCode .
+
+sphn:Transcript a rdfs:Class ;
+    rdfs:label "Transcript" ;
+    sphn:description "RNA molecules that are made from a DNA template"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasOrganism,
+        sphn:hasProtein .
+
+sphn:Transplant a rdfs:Class ;
+    rdfs:label "Transplant" ;
+    sphn:description "transplanted organ or tissue from self or donor, including, e.g., kidney graft or bone marrow fluid"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasGraftTypeCode .
+
+sphn:TransplantPresence a rdfs:Class ;
+    rdfs:label "Transplant Presence" ;
+    sphn:description "presence of a transplanted organ or tissue such as, e.g., a kidney graft"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasEndDatetime,
+        sphn:hasRecordDatetime,
+        sphn:hasSourceSystem,
+        sphn:hasStartDatetime,
+        sphn:hasSubjectPseudoIdentifier,
+        sphn:hasTransplant .
+
+sphn:TumorGrade a rdfs:Class ;
+    rdfs:label "TumorGrade" ;
+    sphn:description "Tumor Grade"^^xsd:string .
+
+sphn:TumorGradeAssessment a rdfs:Class ;
+    rdfs:label "Tumor Grade Assessment" ;
+    sphn:description "grading system used to assess the differentiation of the tumor cells based on histology"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasComponent,
+        sphn:hasName,
+        sphn:hasRange,
+        sphn:hasResult .
+
+sphn:TumorGradeAssessmentEvent a rdfs:Class ;
+    rdfs:label "Tumor Grade Assessment Event" ;
+    sphn:description "evaluation of the tumor grade at a given time, which takes into account a predefined grading system"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasAssessment,
+        sphn:hasDatetime,
+        sphn:hasPerformer,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:TumorGradeAssessmentResult a rdfs:Class ;
+    rdfs:label "Tumor Grade Assessment Result" ;
+    sphn:description "outcome of a tumor grade assessment"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasQuantity,
+        sphn:hasStringValue .
+
+sphn:TumorSpecimen a rdfs:Class ;
+    rdfs:label "Tumor Specimen" ;
+    sphn:description "tumor specimen, volume and fixation method used"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasBodySite,
+        sphn:hasCollectionDatetime,
+        sphn:hasFixationType,
+        sphn:hasIdentifier,
+        sphn:hasMaterialTypeCode,
+        sphn:hasMedicalDevice,
+        sphn:hasPrimaryContainer,
+        sphn:hasSharedIdentifier,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier,
+        sphn:hasTumorPurity .
+
+sphn:TumorStage a rdfs:Class ;
+    rdfs:label "TumorStage" ;
+    sphn:description "Tumor Stage"^^xsd:string .
+
+sphn:TumorStageAssessment a rdfs:Class ;
+    rdfs:label "Tumor Stage Assessment" ;
+    sphn:description "staging system used to assess the spread of the oncology disease"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasComponent,
+        sphn:hasName,
+        sphn:hasRange,
+        sphn:hasResult .
+
+sphn:TumorStageAssessmentEvent a rdfs:Class ;
+    rdfs:label "Tumor Stage Assessment Event" ;
+    sphn:description "evaluation of the tumor stage at a given time, which takes into account a predefined staging system"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasAssessment,
+        sphn:hasDatetime,
+        sphn:hasPerformer,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier .
+
+sphn:TumorStageAssessmentResult a rdfs:Class ;
+    rdfs:label "Tumor Stage Assessment Result" ;
+    sphn:description "outcome of a tumor stage assessment"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasQuantity,
+        sphn:hasStringValue .
+
+sphn:Unit a rdfs:Class ;
+    rdfs:label "Unit" ;
+    sphn:description "unit of measurement"^^xsd:string ;
+    sphn:properties sphn:hasCode .
+
+sphn:ValueSet a rdfs:Class ;
+    rdfs:label "ValueSet" ;
+    sphn:description "List of value sets provided by SPHN"^^xsd:string .
+
+sphn:VariantDescriptor a rdfs:Class ;
+    rdfs:label "Variant Descriptor" ;
+    sphn:description "human-readable description of the variant"^^xsd:string ;
+    sphn:properties sphn:hasAdministrativeCase,
+        sphn:hasAlleleOriginCode,
+        sphn:hasCode,
+        sphn:hasDataProvider,
+        sphn:hasGene,
+        sphn:hasGenomicVariation,
+        sphn:hasNotation,
+        sphn:hasSourceSystem,
+        sphn:hasSubjectPseudoIdentifier,
+        sphn:hasTypeCode,
+        sphn:hasZygosityCode .
+
+sphn:VariantNotation a rdfs:Class ;
+    rdfs:label "Variant Notation" ;
+    sphn:description "description of the variant using a specific nomenclature"^^xsd:string ;
+    sphn:properties sphn:hasCodingSystemAndVersion,
+        sphn:hasValue .
+
+sphn:VitalStatus a rdfs:Class ;
+    rdfs:label "Vital Status" ;
+    sphn:description "state or condition of being living or deceased"^^xsd:string ;
+    sphn:properties sphn:hasCode,
+        sphn:hasDeath .
+
+sphn:dctermsconformsTo a rdf:Property ;
+    rdfs:label "dcterms:conformsTo" .
+
+sphn:hasAcquisitionCode a rdf:Property ;
+    rdfs:label "has acquisition code" .
+
+sphn:hasActiveIngredient a rdf:Property ;
+    rdfs:label "has active ingredient" ;
+    rdfs:range sphn:Substance .
+
+sphn:hasAdmission a rdf:Property ;
+    rdfs:label "has admission" ;
+    rdfs:range sphn:Admission .
+
+sphn:hasAlgorithm a rdf:Property ;
+    rdfs:label "has algorithm" ;
+    rdfs:range sphn:Hashalgorithm .
+
+sphn:hasAlleleOriginCode a rdf:Property ;
+    rdfs:label "has allele origin code" .
+
+sphn:hasAlternateAllele a rdf:Property ;
+    rdfs:label "has alternate allele" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasArticle a rdf:Property ;
+    rdfs:label "has article" ;
+    rdfs:range sphn:DrugArticle .
+
+sphn:hasAssociatedCountry a rdf:Property ;
+    rdfs:label "has associated country" ;
+    rdfs:range sphn:Country .
+
+sphn:hasAverageInsertSize a rdf:Property ;
+    rdfs:label "has average insert size" .
+
+sphn:hasAverageReadLength a rdf:Property ;
+    rdfs:label "has average read length" .
+
+sphn:hasBiobankName a rdf:Property ;
+    rdfs:label "has biobank name" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasBreakpoint a rdf:Property ;
+    rdfs:label "has breakpoint" ;
+    rdfs:range sphn:ChromosomalLocation,
+        sphn:GenomicPosition .
+
+sphn:hasCalculationMethod a rdf:Property ;
+    rdfs:label "has calculation method" ;
+    rdfs:range sphn:BodySurfaceAreacalculationmethod .
+
+sphn:hasCareHandling a rdf:Property ;
+    rdfs:label "has care handling" ;
+    rdfs:range sphn:CareHandling .
+
+sphn:hasCellCountEstimateCode a rdf:Property ;
+    rdfs:label "has cell count estimate code" .
+
+sphn:hasCellMorphologyCode a rdf:Property ;
+    rdfs:label "has cell morphology code" .
+
+sphn:hasCellOrganization a rdf:Property ;
+    rdfs:label "has cell organization" ;
+    rdfs:range sphn:MicrobiologyMicroscopyResultcellorganization .
+
+sphn:hasCertaintyCode a rdf:Property ;
+    rdfs:label "has certainty code" .
+
+sphn:hasChemicalAgent a rdf:Property ;
+    rdfs:label "has chemical agent" ;
+    rdfs:range sphn:Drug,
+        sphn:Substance .
+
+sphn:hasChromosome a rdf:Property ;
+    rdfs:label "has chromosome" ;
+    rdfs:range sphn:Chromosome .
+
+sphn:hasCircumstanceCode a rdf:Property ;
+    rdfs:label "has circumstance code" .
+
+sphn:hasConditionCode a rdf:Property ;
+    rdfs:label "has condition code" .
+
+sphn:hasConsequences a rdf:Property ;
+    rdfs:label "has consequences" ;
+    rdfs:range sphn:AdverseEventconsequences .
+
+sphn:hasCoordinateConvention a rdf:Property ;
+    rdfs:label "has coordinate convention" ;
+    rdfs:range sphn:GenomicPositioncoordinateconvention .
+
+sphn:hasCoverageType a rdf:Property ;
+    rdfs:label "has coverage type" ;
+    rdfs:range sphn:InsuranceStatuscoveragetype .
+
+sphn:hasCurrentLocation a rdf:Property ;
+    rdfs:label "has current location" ;
+    rdfs:range sphn:Location .
+
+sphn:hasDeath a rdf:Property ;
+    rdfs:label "has death" ;
+    rdfs:range sphn:Death .
+
+sphn:hasDeletionBreakpoint a rdf:Property ;
+    rdfs:label "has deletion breakpoint" ;
+    rdfs:range sphn:ChromosomalLocation,
+        sphn:GenomicPosition .
+
+sphn:hasDeliveryModeCode a rdf:Property ;
+    rdfs:label "has delivery mode code" .
+
+sphn:hasDepartment a rdf:Property ;
+    rdfs:label "has department" ;
+    rdfs:range sphn:Department .
+
+sphn:hasDerivedSequence a rdf:Property ;
+    rdfs:label "has derived sequence" ;
+    rdfs:range sphn:Code,
+        sphn:Terminology .
+
+sphn:hasDiastolicPressure a rdf:Property ;
+    rdfs:label "has diastolic pressure" .
+
+sphn:hasDischarge a rdf:Property ;
+    rdfs:label "has discharge" ;
+    rdfs:range sphn:Discharge .
+
+sphn:hasDistance a rdf:Property ;
+    rdfs:label "has distance" .
+
+sphn:hasEnd a rdf:Property ;
+    rdfs:label "has end" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#double"^^xsd:string .
+
+sphn:hasEndCytobandCode a rdf:Property ;
+    rdfs:label "has end cytoband code" ;
+    rdfs:range sphn:Code .
+
+sphn:hasEnergyQuantity a rdf:Property ;
+    rdfs:label "has energy quantity" ;
+    rdfs:range sphn:Quantity .
+
+sphn:hasEntryCount a rdf:Property ;
+    rdfs:label "has entry count" .
+
+sphn:hasEventDatetime a rdf:Property ;
+    rdfs:label "has event datetime" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:string .
+
+sphn:hasExact a rdf:Property ;
+    rdfs:label "has exact" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasExposure a rdf:Property ;
+    rdfs:label "has exposure" ;
+    rdfs:range sphn:Exposure .
+
+sphn:hasExtractionDatetime a rdf:Property ;
+    rdfs:label "has extraction datetime" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:string .
+
+sphn:hasFirstAdministrationDatetime a rdf:Property ;
+    rdfs:label "has first administration datetime" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:string .
+
+sphn:hasFirstRecordDatetime a rdf:Property ;
+    rdfs:label "has first record datetime" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:string .
+
+sphn:hasFlowRate a rdf:Property ;
+    rdfs:label "has flow rate" .
+
+sphn:hasFluidInputOutput a rdf:Property ;
+    rdfs:label "has fluid input output" ;
+    rdfs:range sphn:FluidInputOutput .
+
+sphn:hasFocusGene a rdf:Property ;
+    rdfs:label "has focus gene" ;
+    rdfs:range sphn:Gene .
+
+sphn:hasFractionOfInspiredOxygen a rdf:Property ;
+    rdfs:label "has fraction of inspired oxygen" ;
+    rdfs:range sphn:FractionOfInspiredOxygen .
+
+sphn:hasFractionsNumber a rdf:Property ;
+    rdfs:label "has fractions number" .
+
+sphn:hasFrequency a rdf:Property ;
+    rdfs:label "has frequency" ;
+    rdfs:range sphn:Quantity .
+
+sphn:hasGenePanel a rdf:Property ;
+    rdfs:label "has gene panel" ;
+    rdfs:range sphn:GenePanel .
+
+sphn:hasGenericName a rdf:Property ;
+    rdfs:label "has generic name" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasGenomicVariation a rdf:Property ;
+    rdfs:label "has genomic variation" ;
+    rdfs:range sphn:GenomicVariation .
+
+sphn:hasGestationalAge a rdf:Property ;
+    rdfs:label "has gestational age" ;
+    rdfs:range sphn:GestationalAgeAtBirth .
+
+sphn:hasGraftTypeCode a rdf:Property ;
+    rdfs:label "has graft type code" .
+
+sphn:hasGroupSize a rdf:Property ;
+    rdfs:label "has group size" .
+
+sphn:hasInactiveIngredient a rdf:Property ;
+    rdfs:label "has inactive ingredient" ;
+    rdfs:range sphn:Substance .
+
+sphn:hasIncidenceDatetime a rdf:Property ;
+    rdfs:label "has incidence datetime" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:string .
+
+sphn:hasIndicationToStart a rdf:Property ;
+    rdfs:label "has indication to start" ;
+    rdfs:range sphn:Diagnosis .
+
+sphn:hasInsertionBreakpoint a rdf:Property ;
+    rdfs:label "has insertion breakpoint" ;
+    rdfs:range sphn:ChromosomalLocation,
+        sphn:GenomicPosition .
+
+sphn:hasInsertionPoint a rdf:Property ;
+    rdfs:label "has insertion point" ;
+    rdfs:range sphn:BodySite .
+
+sphn:hasInstitutionCode a rdf:Property ;
+    rdfs:label "has institution code" ;
+    rdfs:range sphn:Code .
+
+sphn:hasIntendedInsertSize a rdf:Property ;
+    rdfs:label "has intended insert size" .
+
+sphn:hasIntendedReadDepth a rdf:Property ;
+    rdfs:label "has intended read depth" .
+
+sphn:hasIntendedReadLength a rdf:Property ;
+    rdfs:label "has intended read length" .
+
+sphn:hasIntervention a rdf:Property ;
+    rdfs:label "has intervention" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasKitCode a rdf:Property ;
+    rdfs:label "has kit code" ;
+    rdfs:range sphn:Code,
+        sphn:Terminology .
+
+sphn:hasLastAdministrationDatetime a rdf:Property ;
+    rdfs:label "has last administration datetime" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:string .
+
+sphn:hasLastReactionDatetime a rdf:Property ;
+    rdfs:label "has last reaction datetime" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:string .
+
+sphn:hasLaterality a rdf:Property ;
+    rdfs:label "has laterality" ;
+    rdfs:range sphn:Laterality .
+
+sphn:hasLibraryPreparation a rdf:Property ;
+    rdfs:label "has library preparation" ;
+    rdfs:range sphn:LibraryPreparation .
+
+sphn:hasLiteralSequence a rdf:Property ;
+    rdfs:label "has literal sequence" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasManifestationCode a rdf:Property ;
+    rdfs:label "has manifestation code" .
+
+sphn:hasManufacturedDoseForm a rdf:Property ;
+    rdfs:label "has manufactured dose form" ;
+    rdfs:range sphn:PharmaceuticalDoseForm .
+
+sphn:hasMeanPressure a rdf:Property ;
+    rdfs:label "has mean pressure" .
+
+sphn:hasMeanReadDepth a rdf:Property ;
+    rdfs:label "has mean read depth" .
+
+sphn:hasModeCode a rdf:Property ;
+    rdfs:label "has mode code" .
+
+sphn:hasNotation a rdf:Property ;
+    rdfs:label "has notation" ;
+    rdfs:range sphn:VariantNotation .
+
+sphn:hasNumberOfLeads a rdf:Property ;
+    rdfs:label "has number of leads" .
+
+sphn:hasOutcome a rdf:Property ;
+    rdfs:label "has outcome" ;
+    rdfs:range sphn:AdverseEventoutcome .
+
+sphn:hasOutputCode a rdf:Property ;
+    rdfs:label "has output code" ;
+    rdfs:range sphn:Code,
+        sphn:Terminology .
+
+sphn:hasPresenceCode a rdf:Property ;
+    rdfs:label "has presence code" .
+
+sphn:hasPrimarySystem a rdf:Property ;
+    rdfs:label "has primary system" ;
+    rdfs:range sphn:HealthcarePrimaryInformationSystem .
+
+sphn:hasRadiationQuantity a rdf:Property ;
+    rdfs:label "has radiation quantity" .
+
+sphn:hasReactionTypeCode a rdf:Property ;
+    rdfs:label "has reaction type code" .
+
+sphn:hasReadCount a rdf:Property ;
+    rdfs:label "has read count" .
+
+sphn:hasReasonToStopCode a rdf:Property ;
+    rdfs:label "has reason to stop code" .
+
+sphn:hasReferenceAllele a rdf:Property ;
+    rdfs:label "has reference allele" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasRegularityCode a rdf:Property ;
+    rdfs:label "has regularity code" .
+
+sphn:hasRegulatoryFeatureCode a rdf:Property ;
+    rdfs:label "has regulatory feature code" .
+
+sphn:hasRelativeTemporalityCode a rdf:Property ;
+    rdfs:label "has relative temporality code" .
+
+sphn:hasRestingPoint a rdf:Property ;
+    rdfs:label "has resting point" ;
+    rdfs:range sphn:BodySite .
+
+sphn:hasSequenceLength a rdf:Property ;
+    rdfs:label "has sequence length" .
+
+sphn:hasSequencingInstrument a rdf:Property ;
+    rdfs:label "has sequencing instrument" ;
+    rdfs:range sphn:SequencingInstrument .
+
+sphn:hasSequencingRun a rdf:Property ;
+    rdfs:label "has sequencing run" ;
+    rdfs:range sphn:SequencingRun .
+
+sphn:hasSourceData a rdf:Property ;
+    rdfs:label "has source data" ;
+    rdfs:range sphn:SourceData .
+
+sphn:hasSpecialtyName a rdf:Property ;
+    rdfs:label "has specialty name" ;
+    rdfs:range sphn:TherapeuticAreaspecialtyname .
+
+sphn:hasStainingMethodCode a rdf:Property ;
+    rdfs:label "has staining method code" .
+
+sphn:hasStainingResultCode a rdf:Property ;
+    rdfs:label "has staining result code" .
+
+sphn:hasStart a rdf:Property ;
+    rdfs:label "has start" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#double"^^xsd:string .
+
+sphn:hasStartCytobandCode a rdf:Property ;
+    rdfs:label "has start cytoband code" ;
+    rdfs:range sphn:Code .
+
+sphn:hasStatusCode a rdf:Property ;
+    rdfs:label "has status code" .
+
+sphn:hasSwissSocioEconomicPosition a rdf:Property ;
+    rdfs:label "has swiss socio economic position" ;
+    rdfs:range sphn:SwissSocioEconomicPosition .
+
+sphn:hasSystolicPressure a rdf:Property ;
+    rdfs:label "has systolic pressure" .
+
+sphn:hasTargetEnrichmentKitCode a rdf:Property ;
+    rdfs:label "has target enrichment kit code" ;
+    rdfs:range sphn:Code,
+        sphn:Terminology .
+
+sphn:hasTargetMolecule a rdf:Property ;
+    rdfs:label "has target molecule" ;
+    rdfs:range sphn:Gene,
+        sphn:Protein .
+
+sphn:hasTemplateIdentifier a rdf:Property ;
+    rdfs:label "has template identifier" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasTherapeuticArea a rdf:Property ;
+    rdfs:label "has therapeutic area" ;
+    rdfs:range sphn:TherapeuticArea .
+
+sphn:hasTimeToPositivity a rdf:Property ;
+    rdfs:label "has time to positivity" ;
+    rdfs:range sphn:Quantity .
+
+sphn:hasTotalCopyNumber a rdf:Property ;
+    rdfs:label "has total copy number" .
+
+sphn:hasTranscript a rdf:Property ;
+    rdfs:label "has transcript" ;
+    rdfs:range sphn:Transcript .
+
+sphn:hasTransplant a rdf:Property ;
+    rdfs:label "has transplant" ;
+    rdfs:range sphn:Transplant .
+
+sphn:hasTumorPurity a rdf:Property ;
+    rdfs:label "has tumor purity" .
+
+sphn:hasUniformResourceLocator a rdf:Property ;
+    rdfs:label "has uniform resource locator" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasUnit a rdf:Property ;
+    rdfs:label "has unit" ;
+    rdfs:range sphn:Unit .
+
+sphn:hasVerificationStatusCode a rdf:Property ;
+    rdfs:label "has verification status code" .
+
+sphn:hasZygosityCode a rdf:Property ;
+    rdfs:label "has zygosity code" .
+
+sphn:hasAdministrationRouteCode a rdf:Property ;
+    rdfs:label "has administration route code" .
+
+sphn:hasAgentCode a rdf:Property ;
+    rdfs:label "has agent code" .
+
+sphn:hasAllergen a rdf:Property ;
+    rdfs:label "has allergen" ;
+    rdfs:range sphn:Allergen .
+
+sphn:hasCategory a rdf:Property ;
+    rdfs:label "has category" ;
+    rdfs:range sphn:DataProvidercategory,
+        sphn:SourceSystemcategory .
+
+sphn:hasCodingSystemAndVersion a rdf:Property ;
+    rdfs:label "has coding system and version" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasComparator a rdf:Property ;
+    rdfs:label "has comparator" ;
+    rdfs:range sphn:Comparator .
+
+sphn:hasCountry a rdf:Property ;
+    rdfs:label "has country" ;
+    rdfs:range sphn:Country .
+
+sphn:hasCreationDatetime a rdf:Property ;
+    rdfs:label "has creation datetime" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:string .
+
+sphn:hasDate a rdf:Property ;
+    rdfs:label "has date" ;
+    rdfs:range sphn:BirthDate,
+        sphn:DeathDate .
+
+sphn:hasDay a rdf:Property ;
+    rdfs:label "has day" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#gDay"^^xsd:string .
+
+sphn:hasDegreeCode a rdf:Property ;
+    rdfs:label "has degree code" .
+
+sphn:hasDeletedSequence a rdf:Property ;
+    rdfs:label "has deleted sequence" ;
+    rdfs:range sphn:NucleotideSequence .
+
+sphn:hasDescription a rdf:Property ;
+    rdfs:label "has description" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasDrug a rdf:Property ;
+    rdfs:label "has drug" ;
+    rdfs:range sphn:Drug .
+
+sphn:hasEncoding a rdf:Property ;
+    rdfs:label "has encoding" ;
+    rdfs:range sphn:DataFileencoding .
+
+sphn:hasFormatCode a rdf:Property ;
+    rdfs:label "has format code" .
+
+sphn:hasGene a rdf:Property ;
+    rdfs:label "has gene" ;
+    rdfs:range sphn:Gene .
+
+sphn:hasGenomicPosition a rdf:Property ;
+    rdfs:label "has genomic position" ;
+    rdfs:range sphn:GenomicPosition .
+
+sphn:hasHash a rdf:Property ;
+    rdfs:label "has hash" ;
+    rdfs:range sphn:Hash .
+
+sphn:hasInsertedSequence a rdf:Property ;
+    rdfs:label "has inserted sequence" ;
+    rdfs:range sphn:NucleotideSequence .
+
+sphn:hasLowerLimit a rdf:Property ;
+    rdfs:label "has lower limit" ;
+    rdfs:range sphn:Quantity .
+
+sphn:hasMonth a rdf:Property ;
+    rdfs:label "has month" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#gMonth"^^xsd:string .
+
+sphn:hasNucleotideSequence a rdf:Property ;
+    rdfs:label "has nucleotide sequence" ;
+    rdfs:range sphn:NucleotideSequence .
+
+sphn:hasOnsetDatetime a rdf:Property ;
+    rdfs:label "has onset datetime" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:string .
+
+sphn:hasOriginLocation a rdf:Property ;
+    rdfs:label "has origin location" ;
+    rdfs:range sphn:Location .
+
+sphn:hasProtein a rdf:Property ;
+    rdfs:label "has protein" ;
+    rdfs:range sphn:Protein .
+
+sphn:hasPurpose a rdf:Property ;
+    rdfs:label "has purpose" ;
+    rdfs:range sphn:SemanticMappingpurpose,
+        sphn:SourceSystempurpose .
+
+sphn:hasRankCode a rdf:Property ;
+    rdfs:label "has rank code" .
+
+sphn:hasReferenceSequence a rdf:Property ;
+    rdfs:label "has reference sequence" ;
+    rdfs:range sphn:ReferenceSequence .
+
+sphn:hasRouteCode a rdf:Property ;
+    rdfs:label "has route code" .
+
+sphn:hasSubjectPhysiologicState a rdf:Property ;
+    rdfs:label "has subject physiologic state" ;
+    rdfs:range sphn:PhysiologicState .
+
+sphn:hasSubstance a rdf:Property ;
+    rdfs:label "has substance" ;
+    rdfs:range sphn:Substance .
+
+sphn:hasTargetLocation a rdf:Property ;
+    rdfs:label "has target location" ;
+    rdfs:range sphn:Location .
+
+sphn:hasTime a rdf:Property ;
+    rdfs:label "has time" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#time"^^xsd:string .
+
+sphn:hasTimePattern a rdf:Property ;
+    rdfs:label "has time pattern" ;
+    rdfs:range sphn:TimePattern .
+
+sphn:hasUniformResourceIdentifier a rdf:Property ;
+    rdfs:label "has uniform resource identifier" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasUpperLimit a rdf:Property ;
+    rdfs:label "has upper limit" ;
+    rdfs:range sphn:Quantity .
+
+sphn:hasYear a rdf:Property ;
+    rdfs:label "has year" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#gYear"^^xsd:string .
+
+sphn:hasAssessment a rdf:Property ;
+    rdfs:label "has assessment" ;
+    rdfs:range sphn:Assessment,
+        sphn:TumorGradeAssessment,
+        sphn:TumorStageAssessment .
+
+sphn:hasAssociatedEvent a rdf:Property ;
+    rdfs:label "has associated event" ;
+    rdfs:range sphn:Birth .
+
+sphn:hasCollectionDatetime a rdf:Property ;
+    rdfs:label "has collection datetime" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:string .
+
+sphn:hasComponent a rdf:Property ;
+    rdfs:label "has component" ;
+    rdfs:range sphn:AssessmentComponent .
+
+sphn:hasDataDetermination a rdf:Property ;
+    rdfs:label "has data determination" ;
+    rdfs:range sphn:DataDetermination .
+
+sphn:hasFixationType a rdf:Property ;
+    rdfs:label "has fixation type" ;
+    rdfs:range sphn:Samplefixationtype .
+
+sphn:hasMaterialTypeCode a rdf:Property ;
+    rdfs:label "has material type code" .
+
+sphn:hasPrimaryContainer a rdf:Property ;
+    rdfs:label "has primary container" ;
+    rdfs:range sphn:Sampleprimarycontainer .
+
+sphn:hasSeverityCode a rdf:Property ;
+    rdfs:label "has severity code" ;
+    rdfs:range sphn:Code,
+        sphn:Terminology .
+
+sphn:hasStandardGuideline a rdf:Property ;
+    rdfs:label "has standard guideline" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasValue a rdf:Property ;
+    rdfs:label "has value" .
+
+sphn:hasVersion a rdf:Property ;
+    rdfs:label "has version" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasDataProvider a rdf:Property ;
+    rdfs:label "has data provider" ;
+    rdfs:range sphn:DataProvider .
+
+sphn:hasDeterminationDatetime a rdf:Property ;
+    rdfs:label "has determination datetime" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:string .
+
+sphn:hasDuration a rdf:Property ;
+    rdfs:label "has duration" ;
+    rdfs:range sphn:Quantity .
+
+sphn:hasProductCode a rdf:Property ;
+    rdfs:label "has product code" ;
+    rdfs:range sphn:Code,
+        sphn:Terminology .
+
+sphn:hasRange a rdf:Property ;
+    rdfs:label "has range" ;
+    rdfs:range sphn:Range .
+
+sphn:hasSharedIdentifier a rdf:Property ;
+    rdfs:label "has shared identifier" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#anyURI"^^xsd:string .
+
+sphn:hasSubjectAge a rdf:Property ;
+    rdfs:label "has subject age" ;
+    rdfs:range sphn:Age .
+
+sphn:hasInstrument a rdf:Property ;
+    rdfs:label "has instrument" ;
+    rdfs:range sphn:LabAnalyzer .
+
+sphn:hasLabTest a rdf:Property ;
+    rdfs:label "has lab test" ;
+    rdfs:range sphn:AntimicrobialSusceptibilityLabTest,
+        sphn:LabTest,
+        sphn:MicrobiologyBiomoleculePresenceLabTest,
+        sphn:MicrobiologyMicroscopyLabTest,
+        sphn:MicroorganismIdentificationLabTest .
+
+sphn:hasNumericalReference a rdf:Property ;
+    rdfs:label "has numerical reference" ;
+    rdfs:range sphn:ReferenceRange,
+        sphn:ReferenceValue .
+
+sphn:hasOrganism a rdf:Property ;
+    rdfs:label "has organism" ;
+    rdfs:range sphn:Organism .
+
+sphn:hasQualityControlMetric a rdf:Property ;
+    rdfs:label "has quality control metric" ;
+    rdfs:range sphn:QualityControlMetric .
+
+sphn:hasTestKit a rdf:Property ;
+    rdfs:label "has test kit" ;
+    rdfs:range sphn:LabAnalyzer .
+
+sphn:hasFeatureLocation a rdf:Property ;
+    rdfs:label "has feature location" ;
+    rdfs:range sphn:ChromosomalLocation,
+        sphn:GenomicPosition .
+
+sphn:hasInput a rdf:Property ;
+    rdfs:label "has input" ;
+    rdfs:range sphn:DataFile,
+        sphn:Result,
+        sphn:SPHNConcept,
+        sphn:Sample .
+
+sphn:hasPredecessor a rdf:Property ;
+    rdfs:label "has predecessor" ;
+    rdfs:range sphn:Assay,
+        sphn:DataProcessing,
+        sphn:SampleProcessing .
+
+sphn:hasReportDatetime a rdf:Property ;
+    rdfs:label "has report datetime" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:string .
+
+sphn:hasSoftware a rdf:Property ;
+    rdfs:label "has software" ;
+    rdfs:range sphn:Software .
+
+sphn:hasStandardOperatingProcedure a rdf:Property ;
+    rdfs:label "has standard operating procedure" ;
+    rdfs:range sphn:StandardOperatingProcedure .
+
+sphn:hasOutput a rdf:Property ;
+    rdfs:label "has output" ;
+    rdfs:range sphn:DataFile,
+        sphn:Electrocardiogram,
+        sphn:ReferenceInterpretationResult,
+        sphn:SPHNConcept,
+        sphn:Sample .
+
+sphn:hasIntent a rdf:Property ;
+    rdfs:label "has intent" ;
+    rdfs:range sphn:Intent .
+
+sphn:hasSample a rdf:Property ;
+    rdfs:label "has sample" ;
+    rdfs:range sphn:Isolate,
+        sphn:Sample .
+
+sphn:hasIdentifier a rdf:Property ;
+    rdfs:label "has identifier" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasStringValue a rdf:Property ;
+    rdfs:label "has string value" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasTypeCode a rdf:Property ;
+    rdfs:label "has type code" .
+
+sphn:hasDataFile a rdf:Property ;
+    rdfs:label "has data file" ;
+    rdfs:range sphn:DataFile,
+        sphn:TimeSeriesDataFile .
+
+sphn:hasMethodCode a rdf:Property ;
+    rdfs:label "has method code" .
+
+sphn:hasName a rdf:Property ;
+    rdfs:label "has name" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#string"^^xsd:string .
+
+sphn:hasPerformer a rdf:Property ;
+    rdfs:label "has performer" ;
+    rdfs:range sphn:Performer .
+
+sphn:hasRecordDatetime a rdf:Property ;
+    rdfs:label "has record datetime" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:string .
+
+sphn:hasMedicalDevice a rdf:Property ;
+    rdfs:label "has medical device" ;
+    rdfs:range sphn:AccessDevice,
+        sphn:Implant,
+        sphn:MedicalDevice .
+
+sphn:hasBodySite a rdf:Property ;
+    rdfs:label "has body site" ;
+    rdfs:range sphn:BodySite .
+
+sphn:hasResult a rdf:Property ;
+    rdfs:label "has result" ;
+    rdfs:range sphn:AntimicrobialSusceptibilityResult,
+        sphn:AssessmentResult,
+        sphn:BloodPressure,
+        sphn:BodyHeight,
+        sphn:BodyTemperature,
+        sphn:BodyWeight,
+        sphn:CardiacOutput,
+        sphn:Circumference,
+        sphn:HeartRate,
+        sphn:LabResult,
+        sphn:MicrobiologyBiomoleculePresenceResult,
+        sphn:MicrobiologyMicroscopyResult,
+        sphn:MicroorganismIdentificationResult,
+        sphn:OxygenSaturation,
+        sphn:RespiratoryRate,
+        sphn:Result,
+        sphn:TumorGradeAssessmentResult,
+        sphn:TumorStageAssessmentResult,
+        sphn:VitalStatus .
+
+sphn:hasDatetime a rdf:Property ;
+    rdfs:label "has datetime" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:string .
+
+sphn:hasQuantity a rdf:Property ;
+    rdfs:label "has quantity" ;
+    rdfs:range sphn:Quantity .
+
+sphn:hasEndDatetime a rdf:Property ;
+    rdfs:label "has end datetime" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:string .
+
+sphn:hasStartDatetime a rdf:Property ;
+    rdfs:label "has start datetime" ;
+    rdfs:range "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:string .
+
+sphn:hasAdministrativeCase a rdf:Property ;
+    rdfs:label "has administrative case" ;
+    rdfs:range sphn:AdministrativeCase .
+
+sphn:hasCode a rdf:Property ;
+    rdfs:label "has code" ;
+    rdfs:range sphn:Code,
+        sphn:Terminology .
+
+sphn:hasSubjectPseudoIdentifier a rdf:Property ;
+    rdfs:label "has subject pseudo identifier" ;
+    rdfs:range sphn:SubjectPseudoIdentifier .
+
+sphn:hasSourceSystem a rdf:Property ;
+    rdfs:label "has source system" ;
+    rdfs:range sphn:SourceSystem .
+

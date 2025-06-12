@@ -1,0 +1,18 @@
+@prefix ns1: <https://aidava-dev.github.io/sulo/> .
+
+<https://example.org/resource/case2025> a ns1:AdministrativeCase ;
+    ns1:hasFeature [ a ns1:InformationObject ;
+            ns1:hasValue "ADM-2025-001" ] ;
+    ns1:hasPart [ a ns1:CareHandlingProcess ;
+            ns1:hasFeature [ a ns1:InformationObject ] ],
+        [ a ns1:DischargeProcess ;
+            ns1:occursIn [ a ns1:Time ] ],
+        [ a ns1:AdmissionProcess ;
+            ns1:occursIn [ a ns1:Time ] ] ;
+    ns1:hasParticipant [ a ns1:PatientRole ;
+            ns1:isFeatureOf [ a ns1:Patient ;
+                    ns1:hasFeature [ a ns1:InformationObject ] ] ],
+        [ a ns1:DataProviderRole ;
+            ns1:isFeatureOf [ a ns1:DataProvider ;
+                    ns1:hasFeature [ a ns1:InformationObject ] ] ] .
+

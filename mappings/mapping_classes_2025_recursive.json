@@ -1,0 +1,101 @@
+{
+  "https://www.biomedit.ch/rdf/sphn-schema/sphn#AdministrativeCase": {
+    "targetClass": "sphn:AdministrativeCase",
+    "properties": {
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasSubjectPseudoIdentifier": {
+        "mappings": [
+          { "mapping": ["sulo:Role"], "type": "object" },
+          { "mapping": ["sulo:InformationObject"], "type": "datatype" }
+        ],
+        "targetClass": "https://www.biomedit.ch/rdf/sphn-schema/sphn#SubjectPseudoIdentifier"
+      },
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasAdmission": {
+        "mappings": [
+          { "mapping": ["sulo:Process"], "type": "object" }
+        ],
+        "targetClass": "https://www.biomedit.ch/rdf/sphn-schema/sphn#Admission"
+      },
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasDischarge": {
+        "mappings": [
+          { "mapping": ["sulo:Process"], "type": "object" }
+        ],
+        "targetClass": "https://www.biomedit.ch/rdf/sphn-schema/sphn#Discharge"
+      },
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasSourceSystem": {
+        "mappings": [
+          { "mapping": ["sulo:Role"], "type": "object" },
+          { "mapping": ["sulo:InformationObject"], "type": "datatype" }
+        ],
+        "targetClass": "https://www.biomedit.ch/rdf/sphn-schema/sphn#SourceSystem"
+      },
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasCareHandling": {
+        "mappings": [
+          { "mapping": ["sulo:Process"], "type": "object" }
+        ],
+        "targetClass": "https://www.biomedit.ch/rdf/sphn-schema/sphn#CareHandling"
+      },
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasIdentifier": {
+        "mappings": [
+          { "mapping": ["sulo:InformationObject"], "type": "datatype" }
+        ]
+      }
+    }
+  },
+  "https://www.biomedit.ch/rdf/sphn-schema/sphn#Admission": {
+    "targetClass": "sphn:AdmissionProcess",
+    "properties": {
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasAdmissionDate": {
+        "mappings": [
+          { "mapping": ["sulo:Time"], "type": "datatype" }
+        ]
+      }
+    }
+  },
+  "https://www.biomedit.ch/rdf/sphn-schema/sphn#Discharge": {
+    "targetClass": "sphn:DischargeProcess",
+    "properties": {
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasDischargeDate": {
+        "mappings": [
+          { "mapping": ["sulo:Time"], "type": "datatype" }
+        ]
+      }
+    }
+  },
+  "https://www.biomedit.ch/rdf/sphn-schema/sphn#SourceSystem": {
+    "targetClass": "sphn:SourceSystem",
+    "properties": {
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasSystemName": {
+        "mappings": [
+          { "mapping": ["sulo:InformationObject"], "type": "datatype" }
+        ]
+      }
+    }
+  },
+  "https://www.biomedit.ch/rdf/sphn-schema/sphn#CareHandling": {
+    "targetClass": "sphn:CareHandling",
+    "properties": {
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasTypeCode": {
+        "mappings": [
+          { "mapping": ["sulo:InformationObject"], "type": "datatype" }
+        ]
+      },
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasSourceSystem": {
+        "mappings": [
+          { "mapping": ["sulo:Role"], "type": "object" },
+          { "mapping": ["sulo:InformationObject"], "type": "datatype" }
+        ],
+        "targetClass": "https://www.biomedit.ch/rdf/sphn-schema/sphn#SourceSystem"
+      }
+    }
+  },
+  "https://www.biomedit.ch/rdf/sphn-schema/sphn#SubjectPseudoIdentifier": {
+    "targetClass": "sphn:Patient",
+    "properties": {
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasIdentifier": {
+        "mappings": [
+          { "mapping": ["sulo:InformationObject"], "type": "datatype" }
+        ]
+      }
+    }
+  }
+}

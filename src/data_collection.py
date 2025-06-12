@@ -28,6 +28,35 @@ def scrape_page(url, property=False):
             data["description"] = body_el.get_text(" ", strip=True) if body_el else ""
             break
 
+    if not property:
+        header_tr = soup.select_one("tr.table-classproperties")
+        data["usedProperties"] = []
+        if header_tr:
+            current_row = header_tr.find_next_sibling("tr")
+            while current_row:
+                tds = current_row.find_all("td")
+                if len(tds) == 4:
+                    prop = tds[0].get_text(" ", strip=True)
+                    prop_type = tds[1].get_text(" ", strip=True)
+                    description = tds[2].get_text(" ", strip=True)
+                    range_text = tds[3].get_text(" ", strip=True)
+
+                    if prop.startswith('sulo'):
+                        data["usedProperties"].append({
+                            "property": prop,
+                            "type": prop_type,
+                            "description": description,
+                            "range": range_text
+                        })
+
+                elif len(tds) == 1:
+                    # Section header like "From class sulo:Process" — can optionally parse it if needed
+                    pass
+
+                current_row = current_row.find_next_sibling("tr")
+
+
+
     # 3) DOMAIN & RANGE (only if this is a property page)
     if property:
         # Look for that table whose header row has class="table-classproperties"

@@ -1,0 +1,33 @@
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+prefix sphn: <https://www.biomedit.ch/rdf/sphn-schema/sphn#> 
+prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+# SubjectPseudoIdentifier (Patient)
+sphn:Patient_47101010033 a sphn:SubjectPseudoIdentifier ;
+  sphn:hasIdentifier "47101010033" .
+
+# AdministrativeCase
+sphn:AdministrativeCase_1503 a sphn:AdministrativeCase ;
+  sphn:hasSubjectPseudoIdentifier sphn:Patient_47101010033 ;
+  sphn:hasAdmission sphn:Admission_1001 ;
+  sphn:hasDischarge sphn:Discharge_1001 ;
+  sphn:hasSourceSystem sphn:SourceSystem_1001 ;
+  sphn:hasCareHandling sphn:careHandling_1234 ;
+  sphn:hasIdentifier "abc123" .
+
+# Diagnosis
+sphn:careHandling_1234 a sphn:CareHandling ;
+  sphn:hasSourceSystem sphn:SourceSystem_1001 ;
+  sphn:hasTypeCode 'typeCodeA' .
+
+# Admission
+sphn:Admission_1001 a sphn:Admission ;
+  sphn:hasAdmissionDate "2023-05-15"^^xsd:date .
+
+# Discharge
+sphn:Discharge_1001 a sphn:Discharge ;
+  sphn:hasDischargeDate "2023-05-20"^^xsd:date .
+
+# SourceSystem
+sphn:SourceSystem_1001 a sphn:SourceSystem ;
+  sphn:hasSystemName "Hospital System A" .

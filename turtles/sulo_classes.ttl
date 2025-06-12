@@ -1,0 +1,203 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sulo: <https://aidava-dev.github.io/sulo/> .
+
+<https://aidava-dev.github.io/sulo/Capability>
+  a owl:Class ;
+  rdfs:comment "A capability is a feature that describes what an entity is able to do, under some set of circumstances."^^xsd:string ;
+  sulo:usedProperty sulo:isFeatureOf, sulo:isParticipantIn, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:isFeatureOf
+  a owl:ObjectProperty, owl:DatatypeProperty ;
+  rdfs:comment "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing."^^xsd:string ;
+  rdfs:range "owl:Thing"^^xsd:string, "owl:Thing (inferred)"^^xsd:string ;
+  rdfs:domain "sulo:Feature , Blank node (see implementation)"^^xsd:string .
+
+sulo:isParticipantIn
+  a owl:ObjectProperty, owl:DatatypeProperty ;
+  rdfs:comment "is participant in is a relation to relate an object and the process in which it participates."^^xsd:string ;
+  rdfs:range "sulo:Process"^^xsd:string ;
+  rdfs:domain "sulo:Object"^^xsd:string .
+
+sulo:hasDirectPart
+  a owl:ObjectProperty, owl:DatatypeProperty ;
+  rdfs:comment "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts."^^xsd:string ;
+  rdfs:range "owl:Thing"^^xsd:string, "owl:Thing (inferred)"^^xsd:string ;
+  rdfs:domain "owl:Thing (inferred)"^^xsd:string .
+
+sulo:hasPart
+  a owl:ObjectProperty, owl:DatatypeProperty ;
+  rdfs:comment "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part."^^xsd:string ;
+  rdfs:range "owl:Thing"^^xsd:string, "owl:Thing (inferred)"^^xsd:string ;
+  rdfs:domain "owl:Thing (inferred)"^^xsd:string .
+
+sulo:isDirectPartOf
+  a owl:ObjectProperty, owl:DatatypeProperty ;
+  rdfs:comment "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole."^^xsd:string ;
+  rdfs:range "owl:Thing"^^xsd:string, "owl:Thing (inferred)"^^xsd:string ;
+  rdfs:domain "owl:Thing (inferred)"^^xsd:string .
+
+sulo:isLocatedIn
+  a owl:ObjectProperty, owl:DatatypeProperty ;
+  rdfs:comment "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A."^^xsd:string ;
+  rdfs:range "owl:Thing"^^xsd:string, "owl:Thing (inferred)"^^xsd:string ;
+  rdfs:domain "owl:Thing (inferred)"^^xsd:string .
+
+sulo:isLocationOf
+  a owl:ObjectProperty, owl:DatatypeProperty ;
+  rdfs:comment "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B."^^xsd:string ;
+  rdfs:range "owl:Thing"^^xsd:string, "owl:Thing (inferred)"^^xsd:string ;
+  rdfs:domain "owl:Thing (inferred)"^^xsd:string .
+
+sulo:isPartOf
+  a owl:ObjectProperty, owl:DatatypeProperty ;
+  rdfs:comment "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole."^^xsd:string ;
+  rdfs:range "owl:Thing"^^xsd:string, "owl:Thing (inferred)"^^xsd:string ;
+  rdfs:domain "owl:Thing (inferred)"^^xsd:string .
+
+sulo:Duration
+  a owl:Class ;
+  rdfs:comment "Duration is a temporal quantity that represents the extent or (non-negative) amount of time that elapses between two temporal points, typically the start and end of a time interval."^^xsd:string ;
+  sulo:usedProperty sulo:isTimeOf, sulo:hasValue, sulo:refersTo, sulo:isFeatureOf, sulo:isParticipantIn, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:isTimeOf
+  a owl:ObjectProperty, owl:DatatypeProperty ;
+  rdfs:comment "a relation between a time and an object that occurs within it."^^xsd:string ;
+  rdfs:range "owl:Thing"^^xsd:string ;
+  rdfs:domain "sulo:Time"^^xsd:string .
+
+sulo:hasValue
+  a owl:DatatypeProperty ;
+  rdfs:comment "has value is the (only) data type attribute to store the values of information objects."^^xsd:string ;
+  rdfs:range "owl:Thing"^^xsd:string, "owl:Thing (inferred)"^^xsd:string ;
+  rdfs:domain "sulo:InformationObject"^^xsd:string .
+
+sulo:refersTo
+  a owl:ObjectProperty, owl:DatatypeProperty ;
+  rdfs:comment "refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about."^^xsd:string ;
+  rdfs:range "owl:Thing"^^xsd:string ;
+  rdfs:domain "sulo:InformationObject"^^xsd:string .
+
+sulo:EndTime
+  a owl:Class ;
+  rdfs:comment "an end time is a time instant at the end of a process/time interval."^^xsd:string ;
+  sulo:usedProperty sulo:isTimeOf, sulo:hasValue, sulo:refersTo, sulo:isFeatureOf, sulo:isParticipantIn, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:Feature
+  a owl:Class ;
+  rdfs:comment "A feature is any characteristic that stems from the intrisinc structure and/or context"^^xsd:string ;
+  sulo:usedProperty sulo:isFeatureOf, sulo:isParticipantIn, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:InformationObject
+  a owl:Class ;
+  rdfs:comment "an information object is a feature that represents, is about, or encodes some information."^^xsd:string ;
+  sulo:usedProperty sulo:hasValue, sulo:refersTo, sulo:isFeatureOf, sulo:isParticipantIn, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:Object
+  a owl:Class ;
+  rdfs:comment "An object is an entity that maintains its identity through time, and does not have processes as its parts."^^xsd:string ;
+  sulo:usedProperty sulo:isParticipantIn, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:Process
+  a owl:Class ;
+  rdfs:comment "a process is a entity that unfolds in time, has temporal parts, and has objects that participate in the process."^^xsd:string ;
+  sulo:usedProperty sulo:hasParticipant, sulo:isPrecededBy, sulo:precedes, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:hasParticipant
+  a owl:ObjectProperty, owl:DatatypeProperty ;
+  rdfs:comment "has participant is a relation that describes the participation of a (non-process) thing in a process."^^xsd:string ;
+  rdfs:range "sulo:Object"^^xsd:string ;
+  rdfs:domain "sulo:Process"^^xsd:string .
+
+sulo:isPrecededBy
+  a owl:ObjectProperty, owl:DatatypeProperty ;
+  rdfs:comment "A relation in which one process occurs after to another process."^^xsd:string ;
+  rdfs:range "sulo:Process"^^xsd:string ;
+  rdfs:domain "sulo:Process"^^xsd:string .
+
+sulo:precedes
+  a owl:ObjectProperty, owl:DatatypeProperty ;
+  rdfs:comment "A relation in which one process occurs prior to another process."^^xsd:string ;
+  rdfs:range "sulo:Process"^^xsd:string ;
+  rdfs:domain "sulo:Process"^^xsd:string .
+
+sulo:Quality
+  a owl:Class ;
+  rdfs:comment "the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event - A quality is a feature that is intrinsically associated with its bearer (or its parts)."^^xsd:string ;
+  sulo:usedProperty sulo:isFeatureOf, sulo:isParticipantIn, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:Quantity
+  a owl:Class ;
+  rdfs:comment "A quantity is an informational object that contains the magnitude (and unit) of an attribute."^^xsd:string ;
+  sulo:usedProperty sulo:hasValue, sulo:refersTo, sulo:isFeatureOf, sulo:isParticipantIn, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:Role
+  a owl:Class ;
+  rdfs:comment "A role is a feature that describes a context-dependent behaviour."^^xsd:string ;
+  sulo:usedProperty sulo:isFeatureOf, sulo:isParticipantIn, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:Set
+  a owl:Class ;
+  rdfs:comment "A set is an information object for which there may be zero or more items."^^xsd:string ;
+  sulo:usedProperty sulo:hasMember, sulo:hasValue, sulo:refersTo, sulo:isFeatureOf, sulo:isParticipantIn, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:hasMember
+  a owl:ObjectProperty, owl:DatatypeProperty ;
+  rdfs:comment "has item is a relation between a collection and an item contained therein."^^xsd:string ;
+  rdfs:range "owl:Thing"^^xsd:string ;
+  rdfs:domain "sulo:Set"^^xsd:string .
+
+sulo:SpatialObject
+  a owl:Class ;
+  rdfs:comment "A spatial object is an object that occupies space"^^xsd:string ;
+  sulo:usedProperty sulo:isParticipantIn, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:StartTime
+  a owl:Class ;
+  rdfs:comment "a start time is a time instant at the beginning of a process/time interval."^^xsd:string ;
+  sulo:usedProperty sulo:isTimeOf, sulo:hasValue, sulo:refersTo, sulo:isFeatureOf, sulo:isParticipantIn, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:Time
+  a owl:Class ;
+  rdfs:comment "time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference)."^^xsd:string ;
+  sulo:usedProperty sulo:isTimeOf, sulo:hasValue, sulo:refersTo, sulo:isFeatureOf, sulo:isParticipantIn, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:TimeInstant
+  a owl:Class ;
+  rdfs:comment "time instant is a quantity of time a particular moment in time."^^xsd:string ;
+  sulo:usedProperty sulo:isTimeOf, sulo:hasValue, sulo:refersTo, sulo:isFeatureOf, sulo:isParticipantIn, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:TimeInterval
+  a owl:Class ;
+  rdfs:comment "A time interval is a quantity for a continuous and bounded extent of time, characterized by a start time and an end time."^^xsd:string ;
+  sulo:usedProperty sulo:isTimeOf, sulo:hasValue, sulo:refersTo, sulo:isFeatureOf, sulo:isParticipantIn, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:Unit
+  a owl:Class ;
+  rdfs:comment "a unit is a standardized quantity that is used as a reference for a particular quantity."^^xsd:string ;
+  sulo:usedProperty sulo:hasValue, sulo:refersTo, sulo:isFeatureOf, sulo:isParticipantIn, sulo:hasDirectPart, sulo:hasPart, sulo:isDirectPartOf, sulo:isLocatedIn, sulo:isLocationOf, sulo:isPartOf .
+
+sulo:atTime
+  a owl:DatatypeProperty ;
+  rdfs:comment "a relation between any thing and the time in which it occurs at."^^xsd:string ;
+  rdfs:domain "owl:Thing"^^xsd:string ;
+  rdfs:range "sulo:Time"^^xsd:string .
+
+sulo:hasFeature
+  a owl:DatatypeProperty ;
+  rdfs:comment "has feature is a relation between a thing and an internal, contextual, or externally attributed characteristic."^^xsd:string ;
+  rdfs:domain "Blank node (see implementation)"^^xsd:string ;
+  rdfs:range "sulo:Feature"^^xsd:string .
+
+sulo:isItemIn
+  a owl:DatatypeProperty ;
+  rdfs:comment "has item is a relation between an item and the collection in which it contained."^^xsd:string ;
+  rdfs:domain "owl:Thing"^^xsd:string ;
+  rdfs:range "sulo:Set"^^xsd:string .
+
+sulo:isReferredIn
+  a owl:DatatypeProperty ;
+  rdfs:comment "is referred in is relation between an object that is the subject of an information object."^^xsd:string ;
+  rdfs:domain "owl:Thing"^^xsd:string ;
+  rdfs:range "sulo:InformationObject"^^xsd:string .

@@ -1,0 +1,56 @@
+{
+  "https://www.biomedit.ch/rdf/sphn-schema/sphn#AdministrativeCase": {
+    "targetClass": "https://aidava-dev.github.io/sulo/class-suloProcess.html",
+    "properties": {
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasIdentifier": ["https://aidava-dev.github.io/sulo/class-InformationObject.html.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasDatetime": ["https://aidava-dev.github.io/sulo/class-Time.html.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasDataFile": ["https://aidava-dev.github.io/sulo/class-InformationObject.html.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasAdmissionDatetime": ["https://aidava-dev.github.io/sulo/class-Time.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasDischargeDatetime": ["https://aidava-dev.github.io/sulo/class-Time.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasLocation": ["https://aidava-dev.github.io/sulo/class-SpatialObject.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasOriginLocation": ["https://aidava-dev.github.io/sulo/class-SpatialObject.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasDischargeLocation": ["https://aidava-dev.github.io/sulo/class-SpatialObject.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasSubjectPseudoIdentifier": ["https://aidava-dev.github.io/sulo/class-Role.html", "https://aidava-dev.github.io/sulo/class-InformationObject.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasCareHandling": ["https://aidava-dev.github.io/sulo/class-Process.html"]
+    }
+  },
+  "https://www.biomedit.ch/rdf/sphn-schema/sphn#Allergy": {
+    "targetClass": "https://aidava-dev.github.io/sulo/class-suloProcess.html",
+    "properties": {
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasVerificationStatusCode": ["https://aidava-dev.github.io/sulo/class-InformationObject.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasReactionTypeCode": ["https://aidava-dev.github.io/sulo/class-InformationObject.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasSeverityTypeCode": ["https://aidava-dev.github.io/sulo/class-Quality.html", "https://aidava-dev.github.io/sulo/class-InformationObject.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasDataProviderInstitute": ["https://aidava-dev.github.io/sulo/class-Role.html", "https://aidava-dev.github.io/sulo/class-InformationObject.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasFirstRecordDatetime": ["https://aidava-dev.github.io/sulo/class-Time.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasLastRecordDatetime": ["https://aidava-dev.github.io/sulo/class-Time.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasAllergen": ["https://aidava-dev.github.io/sulo/class-Role.html", "https://aidava-dev.github.io/sulo/class-Object.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasSubjectPseudoIdentifier": ["https://aidava-dev.github.io/sulo/class-Role.html", "https://aidava-dev.github.io/sulo/class-InformationObject.html"]
+    }
+  },
+  "https://www.biomedit.ch/rdf/sphn-schema/sphn#BirthDate": {
+    "targetClass": "https://aidava-dev.github.io/sulo/class-suloInformationObject.html",
+    "properties": {
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasComparator": ["https://aidava-dev.github.io/sulo/class-suloInformationObject.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasSubjectPseudoIdentifier": ["https://aidava-dev.github.io/sulo/class-Role.html", "https://aidava-dev.github.io/sulo/class-InformationObject.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasTime": ["https://aidava-dev.github.io/sulo/class-Time.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasDay": ["https://aidava-dev.github.io/sulo/class-InformationObject.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasMonth": ["https://aidava-dev.github.io/sulo/class-InformationObject.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasYear": ["https://aidava-dev.github.io/sulo/class-InformationObject.html"]
+    }
+  },
+
+  "https://www.biomedit.ch/rdf/sphn-schema/sphn#Diagnosis": {
+    "targetClass": "https://aidava-dev.github.io/sulo/class-suloProcess.html",
+    "properties": {
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasCode": ["https://aidava-dev.github.io/sulo/prop-suloInformationObject.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasDataProviderInstitute": ["https://aidava-dev.github.io/sulo/class-Role.html", "https://aidava-dev.github.io/sulo/class-InformationObject.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasAdministrativeCase": ["https://aidava-dev.github.io/sulo/class-Process.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasRecordDatetime": ["https://aidava-dev.github.io/sulo/class-Time.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasCodingDatetime": ["https://aidava-dev.github.io/sulo/class-Time.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasSubjectAge": ["https://aidava-dev.github.io/sulo/class-InformationObject.html"],
+      "https://www.biomedit.ch/rdf/sphn-schema/sphn#hasSubjectPseudoIdentifier": ["https://aidava-dev.github.io/sulo/class-Role", "https://aidava-dev.github.io/sulo/class-InformationObject.html"]
+    }
+  }
+}
+
+
