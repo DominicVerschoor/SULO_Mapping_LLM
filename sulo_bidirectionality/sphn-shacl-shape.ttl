@@ -1,0 +1,98 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sphn: <https://biomedit.ch/rdf/sphn-ontology/sphn#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://example.org/resource/> .
+
+:AdministrativeCaseShape a sh:NodeShape ;
+    sh:targetClass sphn:AdministrativeCase ;
+
+    sh:property [
+        sh:path sphn:hasIdentifier ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path sphn:hasSharedIdentifier ;
+        sh:datatype xsd:string ;
+    ] ;
+
+    sh:property [
+        sh:path sphn:hasCareHandling ;
+    ] ;
+
+    sh:property [
+        sh:path sphn:hasSubjectPseudoIdentifier ;
+        sh:node :SubjectShape ;
+        sh:minCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path sphn:hasSourceSystem ;
+        sh:node :SourceSystemShape ;
+        sh:minCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path sphn:hasAdmission ;
+        sh:node :AdmissionShape ;
+        sh:minCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path sphn:hasDischarge ;
+        sh:node :DischargeShape ;
+        sh:minCount 1 ;
+    ] .
+
+:SubjectShape a sh:NodeShape ;
+    sh:property [
+        sh:path sphn:hasIdentifier ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path sphn:hasDataProvider ;
+        sh:node :DataProviderShape ;
+    ] .
+
+:DataProviderShape a sh:NodeShape ;
+    sh:property [
+        sh:path sphn:hasIdentifier ;
+        sh:datatype xsd:string ;
+    ] .
+
+:SourceSystemShape a sh:NodeShape ;
+    sh:property [
+        sh:path sphn:hasName ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path sphn:hasPrimarySystem ;
+    ] ;
+    sh:property [
+        sh:path sphn:hasCategory ;
+    ] ;
+    sh:property [
+        sh:path sphn:hasPurpose ;
+    ] .
+
+:AdmissionShape a sh:NodeShape ;
+    sh:property [
+        sh:path sphn:hasDateTime ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path sphn:hasOriginLocation ;
+    ] .
+
+:DischargeShape a sh:NodeShape ;
+    sh:property [
+        sh:path sphn:hasDateTime ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path sphn:hasTargetLocation ;
+    ] .

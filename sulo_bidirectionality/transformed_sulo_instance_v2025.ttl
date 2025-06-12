@@ -1,0 +1,49 @@
+@prefix : <https://example.org/resource/> .
+@prefix sulo: <https://w3id.org/sulo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:case2025 a :AdministrativeCase ;
+    sulo:hasFeature [ a :SharedIdentifier, sulo:InformationObject ;
+                      sulo:hasValue "shared-abc-999" ],
+                   [ a sulo:InformationObject ;
+                     sulo:hasValue "ADM-2025-001" ] ;
+    sulo:hasPart :admissionX,
+                 :dischargeX ;
+    sulo:hasParticipant 
+        [ a :CareHandlingRole ;
+          sulo:isFeatureOf [ a :CareProviderInstitute ;
+                             sulo:hasFeature [ a sulo:InformationObject ;
+                                               sulo:hasValue "General Hospital Maastricht" ] ] ],
+        [ a :DataProviderRole ;
+          sulo:isFeatureOf [ a :DataProvider ;
+                             sulo:hasFeature [ a sulo:InformationObject ;
+                                               sulo:hasValue "DP-001-HOSP" ] ] ],
+        [ a :PatientRole ;
+          sulo:isFeatureOf [ a :Patient ;
+                             sulo:hasFeature [ a sulo:InformationObject ;
+                                               sulo:hasValue "SUBJ-789XYZ" ] ] ],
+        [ a :SourceSystemRole ;
+          sulo:isFeatureOf :sourceSystemA ] .
+
+:admissionX a :AdmissionProcess ;
+    sulo:hasPart :preAdmissionX ;
+    sulo:isLocatedIn :ER_Department ;
+    sulo:atTime [ a sulo:Time ;
+                  sulo:hasValue "2025-06-10T08:15:00+00:00"^^xsd:dateTime ] .
+
+:preAdmissionX a :PreAdmissionProcess ;
+    sulo:isLocatedIn :AmbulanceService .
+
+:dischargeX a :DischargeProcess ;
+    sulo:isLocatedIn :RecoveryUnit ;
+    sulo:atTime [ a sulo:Time ;
+                  sulo:hasValue "2025-06-15T12:00:00+00:00"^^xsd:dateTime ] .
+
+:sourceSystemA a :SourceSystem ;
+    sulo:refersTo :primarySystem1 ;
+    sulo:hasFeature [ a :SourceSystemCategory ;
+                      sulo:hasValue "EHR" ],
+                    [ a :Name ;
+                      sulo:hasValue "Hospital EHR System A" ],
+                    [ a :Purpose ;
+                      sulo:hasValue "Clinical decision support" ] .

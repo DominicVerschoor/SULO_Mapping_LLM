@@ -1,0 +1,50 @@
+@prefix : <https://example.org/resource/> .
+@prefix sulo: <https://w3id.org/sulo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:case2025 a :AdministrativeCase ;
+    sulo:hasFeature [ a :SharedIdentifier,
+                sulo:InformationObject ;
+            sulo:hasValue "shared-abc-999" ],
+        [ a sulo:InformationObject ;
+            sulo:hasValue "ADM-2025-001" ] ;
+    sulo:hasPart :admissionX,
+        :dischargeX ;
+    sulo:hasParticipant [ a :CareHandlingRole ;
+            sulo:isFeatureOf [ a :CareProviderInstitute ;
+                    sulo:hasFeature [ a sulo:InformationObject ;
+                            sulo:hasValue :careHandling2025 ] ] ],
+        [ a :PatientRole ;
+            sulo:isFeatureOf [ a :Patient ;
+                    sulo:hasFeature [ a sulo:InformationObject ;
+                            sulo:hasValue "SUBJ-789XYZ" ] ] ],
+        [ a :SourceSystemRole ;
+            sulo:isFeatureOf :sourceSystemA ],
+        [ a :DataProviderRole ;
+            sulo:isFeatureOf [ a :DataProvider ;
+                    sulo:hasFeature [ a sulo:InformationObject ;
+                            sulo:hasValue "DP-001-HOSP" ] ] ] .
+
+:admissionX a :AdmissionProcess ;
+    sulo:atTime [ a sulo:Time ;
+            sulo:hasValue "2025-06-10T08:15:00+00:00"^^xsd:dateTime ] ;
+    sulo:hasPart :preAdmissionX ;
+    sulo:isLocatedIn :ER_Department .
+
+:dischargeX a :DischargeProcess ;
+    sulo:atTime [ a sulo:Time ;
+            sulo:hasValue "2025-06-15T12:00:00+00:00"^^xsd:dateTime ] ;
+    sulo:isLocatedIn :RecoveryUnit .
+
+:preAdmissionX a :PreAdmissionProcess ;
+    sulo:isLocatedIn :ER_Department .
+
+:sourceSystemA a :SourceSystem ;
+    sulo:hasFeature [ a :SourceSystemCategory ;
+            sulo:hasValue :categoryEmergency ],
+        [ a :Name ;
+            sulo:hasValue "Hospital EHR System A" ],
+        [ a :Purpose ;
+            sulo:hasValue :purposeTreatment ] ;
+    sulo:refersTo :primarySystem1 .
+

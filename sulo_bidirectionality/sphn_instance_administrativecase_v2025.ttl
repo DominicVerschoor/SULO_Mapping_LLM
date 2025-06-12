@@ -1,0 +1,33 @@
+@prefix sphn: <https://biomedit.ch/rdf/sphn-ontology/sphn#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://example.org/resource/> .
+
+:case2025 a sphn:AdministrativeCase ;
+    sphn:hasIdentifier "ADM-2025-001" ;
+    sphn:hasSourceSystem :systemX ;
+    sphn:hasAdmission :admissionX ;
+    sphn:hasDischarge :dischargeX ;
+    sphn:hasSubjectPseudoIndentifier :subject789 ;
+    sphn:hasCareHandling :careHandling2025 .
+
+:admissionX a sphn:Admission ;
+    sphn:hasOriginLocation :ER_Department ;
+    sphn:hasDateTime "2025-06-10T08:15:00Z"^^xsd:dateTime .
+
+:dischargeX a sphn:Discharge ;
+    sphn:hasTargetLocation :RecoveryUnit ;
+    sphn:hasDateTime "2025-06-15T12:00:00Z"^^xsd:dateTime .
+
+:subject789 a sphn:SubjectPseudoIdentifier ;
+    sphn:hasIdentifier "SUBJ-789XYZ" ;
+    sphn:hasDataProvider :hospitalDataProvider ;
+    sphn:hasSharedIdentifier "shared-abc-999" .
+
+:systemX a :SourceSystem ;
+    :hasPrimarySystem :EHRSystem ;
+    :hasPurpose :purposeTreatment ;
+    :hasCategory :categoryEmergency ;
+    :hasName "Hospital EHR System A" .
+
+:hospitalDataProvider a :DataProvider ;
+    :hasIdentifier "DP-001-HOSP" .

@@ -1,0 +1,8 @@
+@prefix sphn: <https://biomedit.ch/rdf/sphn-ontology/sphn#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rdf.aidava.eu/resource/AdministrativeCase/2604> a sphn:AdministrativeCase ;
+    sphn:admission [ a sphn:Admission ;
+            sphn:hasDateTime "1999-04-14T12:00:00+00:00"^^xsd:dateTime ;
+            sphn:hasOriginLocation <https://rdf.aidava.eu/resource/AdministrativeCase/Organization/2604> ] .
+

@@ -1,0 +1,50 @@
+@prefix : <http://mapping.example.com/> .
+@prefix aidava-resource: <https://rdf.aidava.eu/resource/> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix icd-10: <https://biomedit.ch/rdf/sphn-resource/icd-10-gm/> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix snomed_ct: <http://snomed.info/id/> .
+@prefix sphn: <https://biomedit.ch/rdf/sphn-ontology/sphn#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+
+<https://rdf.aidava.eu/resource/AdministrativeCase/1503> a sphn:AdministrativeCase;
+  <https://biomedit.ch/rdf/sphn-ontology/AIDAVA/hasPatient> <https://rdf.aidava.eu/resource/Patient/47101010033>;
+  sphn:hasOriginLocation <https://rdf.aidava.eu/resource/AdministrativeCase/Organization/1503> .
+
+<https://rdf.aidava.eu/resource/AdministrativeCase/2604> a sphn:AdministrativeCase;
+  sphn:hasSubjectPseudoIdentifier <https://rdf.aidava.eu/resource/Patient/47101010033>;
+  sphn:hasAdmissionDateTime "1999-04-14T12:00:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  sphn:hasOriginLocation <https://rdf.aidava.eu/resource/AdministrativeCase/Organization/2604> .
+
+<https://rdf.aidava.eu/resource/AdministrativeCase/Diagnosis/1503> a sphn:Diagnosis;
+  sphn:hasAdministrativeCase <https://rdf.aidava.eu/resource/AdministrativeCase/1503> .
+
+<https://rdf.aidava.eu/resource/AdministrativeCase/Diagnosis/2604> a sphn:Diagnosis;
+  sphn:hasAdministrativeCase <https://rdf.aidava.eu/resource/AdministrativeCase/2604>;
+  sphn:hasCode icd-10:S62.6 .
+
+<https://rdf.aidava.eu/resource/AdministrativeCase/Organization/1503> a sphn:Location;
+  sphn:hasCode <https://rdf.aidava.eu/resource/AdministrativeCase/Organization/Code/1503>;
+  rdfs:label "Emergency" .
+
+<https://rdf.aidava.eu/resource/AdministrativeCase/Organization/2604> a sphn:Location;
+  sphn:hasCode <https://rdf.aidava.eu/resource/AdministrativeCase/Organization/Code/2604>;
+  rdfs:label "Cardiovascular" .
+
+<https://rdf.aidava.eu/resource/AdministrativeCase/Organization/Code/1503> a sphn:Code;
+  sphn:hasIdentifier "90006399" .
+
+<https://rdf.aidava.eu/resource/AdministrativeCase/Organization/Code/2604> a sphn:Code;
+  sphn:hasIdentifier "90006399" .
+
+<https://rdf.aidava.eu/resource/Patient/47101010033> a <https://biomedit.ch/rdf/sphn-ontology/AIDAVA/Patient>;
+  sphn:hasIdentifier "47101010033" .

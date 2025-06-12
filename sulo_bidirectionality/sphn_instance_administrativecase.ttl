@@ -1,0 +1,25 @@
+@prefix sphn: <https://biomedit.ch/rdf/sphn-ontology/sphn#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://example.org/resource/> .
+
+:case123 a sphn:AdministrativeCase ;
+
+    sphn:hasIdentifier "ADM-000123" ;
+
+    sphn:hasDateTime "2023-06-10T09:00:00Z"^^xsd:dateTime ;
+
+    sphn:hasDataFile <https://example.org/data/case123.json> ;
+
+    sphn:hasAdmissionDateTime "2023-06-10T09:15:00Z"^^xsd:dateTime ;
+
+    sphn:hasDischargeDateTime "2023-06-14T14:30:00Z"^^xsd:dateTime ;
+
+    sphn:hasLocation :location1 ;
+
+    sphn:hasOriginLocation :emergencyDept ;
+
+    sphn:hasDischargeLocation :generalWard ;
+
+    sphn:hasSubjectPseudoIdentifier :subject123 ;
+
+    sphn:hasCareHandling :careHandling789 .

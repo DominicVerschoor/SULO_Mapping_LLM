@@ -1,0 +1,23 @@
+@prefix : <https://example.org/resource/> .
+@prefix sulo: <https://w3id.org/sulo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:case123 a :AdministrativeCase ;
+    sulo:hasFeature [ a sulo:InformationObject ;
+            sulo:hasValue "ADM-000123" ] ;
+    sulo:hasPart [ a :AdmissionProcess ;
+            sulo:isLocatedIn :emergencyDept ;
+            sulo:occursIn [ a sulo:Time ;
+                    sulo:hasValue "2023-06-10T09:15:00+00:00"^^xsd:dateTime ] ],
+        [ a :DischargeProcess ;
+            sulo:isLocatedIn :generalWard ;
+            sulo:occursIn [ a sulo:Time ;
+                    sulo:hasValue "2023-06-14T14:30:00+00:00"^^xsd:dateTime ] ],
+        :careHandling789 ;
+    sulo:hasParticipant [ a :PatientRole ;
+            sulo:isFeatureOf :subject123 ] ;
+    sulo:isLocatedIn :location1 ;
+    sulo:isReferredIn <https://example.org/data/case123.json> ;
+    sulo:occursIn [ a sulo:StartTime ;
+            sulo:hasValue "2023-06-10T09:00:00+00:00"^^xsd:dateTime ] .
+
