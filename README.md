@@ -1,42 +1,47 @@
-# RAG SQL Reader Application
+# SULO Mapping with LLM
 
-This project is a Retrieval-Augmented Generation (RAG) application designed to streamline interactions with a SQL 
-database. By harnessing the power of Function Calling, the application adapts 
-a Large Language Model (LLM) to the specific database structure. Gemini-Pro, a language model from Google, is utilized for this purpose. The front end of the application is developed using Gradio, providing an intuitive interface for users to seamlessly interact with the database.
+This repository presents a hybrid pipeline for semantic ontology mapping between the [Swiss Personalized Health Network (SPHN)](https://sphn.ch) schema and the [SULO](https://w3id.org/sulo) (Simplified Upper-Level Ontology). It supports both forward (SPHN → SULO) and reverse (SULO → SPHN) transformations using Large Language Models (LLMs), SPARQL, and SHACL validation. The pipeline was tested across two SPHN schema versions: `2023.02` and `2025.01`.
 
-# Features
+Features
+-  Bidirectional mapping (SPHN → SULO and SULO → SPHN)
+- LLM-guided reasoning via structured prompting and in-context learning
+- Schema-agnostic mapping compatible with multiple SPHN versions
+- SHACL validation of resulting RDF graphs
+- Tkinter GUI for domain expert involvement
+- Gradio interface for querying LLMs interactively
 
-- SQL Query Generation: The application is capable of generating SQL queries based on user input. Users can input their 
-queries or questions, and the application utilizes the underlying LLM to generate corresponding SQL queries tailored
-to the database schema.
+🧪 Usage
+🔹 LLM Mapping Interface (Gradio)
 
-- Chatbot Interface: The front end of the application is developed using Gradio, a user-friendly framework for 
-building interactive web applications. The Gradio interface provides users with an intuitive and responsive chatbot
-platform to interact with the database, facilitating seamless query formulation and data exploration.
+The LLM processes multi-step instructions and outputs RDF triples mapped to SULO
 
-# Installation
-Create a new virtual environment using Conda, use python 3.11 or greater:
+🔹 Manual Mapping Tool (Tkinter GUI)
 
-    conda create -n CBS_Statistical_Assistent python=3.11
+Provides class/property suggestions and LLM-generated justifications
 
-Activate the environment:
+🔹 SPARQL Transformations
+Edit and run SPARQL queries from:
 
-    conda activate CBS_Statistical_Assistent
+mappings/queries/sphn2023_to_sulo.rq
 
-Install the required Python libraries:
+sulo_bidirectionality/sulo_to_sphn_construct.rq
 
-    pip install -r requirements.txt
+Or test interactively in the Jupyter notebooks provided.
 
-# Usage 
-Create a file called `.env`.
-In the `.env` file, insert your [Google API Key](https://aistudio.google.com/app/apikey):
+🔹 SHACL Validation
+Use pySHACL to validate reverse-transformed SPHN RDF graphs:
 
-    GOOGLE_API_KEY=your_google_api_key
+Datasets & Examples
 
-Activate the Conda environment:
+turtles/sphn_instance_administrativecase_v2025.ttl — original SPHN instance
 
-    conda activate CBS_Statistical_Assistent
+mappings/output/administrative_case_transformed_sulo.ttl — SULO-mapped version
 
-From the root directory, run the following command:
+sulo_bidirectionality/sulo2sphnv2025.ttl — reconstructed SPHN RDF
 
-    python src/main.py
+Experiments & Evaluation
+The system was tested on 5 representative SPHN classes:
+
+AdministrativeCase, Allergy, DrugPrescription, ProblemCondition, Diagnosis
+
+Each class was mapped from both SPHN 2023.02 and 2025.01 to SULO using SPARQL queries guided by LLM-inferred relations. Reverse mappings and SHACL validation were used to ensure semantic integrity.
