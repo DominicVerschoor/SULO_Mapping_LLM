@@ -94,7 +94,6 @@ Identify all conceptual facets that have been flagged for that property
 Map each facet to one or more SULO classes, but keep them together as a single property's range.
 In other words, a property's range is a set of SULO classes, not a single class, so you capture every relevant facet under that one property name.
 When mapping, focus on the linkage of each term/facet towards the focal concept, not its direct meaning. Ask: “In the story of the focal concept, what function does the range fulfil?”
-Hint: subject pseudo identifer is a plays a patient role and an information object
 Output: A list of SULO class(es) for each property, reflecting all its facets as the property's unified range.
 """,
             """Task IV. 	Determine the SULO relations

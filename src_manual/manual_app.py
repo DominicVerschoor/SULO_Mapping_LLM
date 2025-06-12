@@ -73,8 +73,9 @@ class ClassificationWindow(tk.Toplevel):
         self.canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
 
     def build_page(self):
-        self.reasons = {}  
-        
+        # A place to stash all (prop,cls)->reason tuples
+        self.reasons = {}
+
         def parse_tsv_output(tsv: str):
             mapping = {}
             for raw_line in tsv.splitlines():
@@ -86,8 +87,8 @@ class ClassificationWindow(tk.Toplevel):
                 except ValueError:
                     continue
 
-                # if this line is for the class itself, map to "__class__"
-                if key.replace(" ", "").strip().lower() == self.input_class.replace(" ", "").strip().lower():
+                # Normalize the class‐line into our __class__ bucket
+                if key.strip().lower() == self.input_class.strip().lower():
                     prop_key = "__class__"
                 else:
                     prop_key = key
@@ -95,147 +96,120 @@ class ClassificationWindow(tk.Toplevel):
                 mapping.setdefault(prop_key, []).append((cls, reason))
             return mapping
 
-        # button callback that fills in recommendations
         def get_rec():
-            # start a fresh chat
+            # — run your LLM steps exactly as before …
             llm = llm_app.SuloMappingApp()
-            instructions = llm.instructions
             chat = llm.get_model().start_chat()
-
             chat.send_message(f"The class I want to map is: {self.input_class}")
-            print("Generating Context…"); chat.send_message(instructions[0])
-            print("Learning SULO…"); chat.send_message(instructions[1])
-            print("Classifying Properties…"); chat.send_message(instructions[2])
+            chat.send_message(llm.instructions[0])
+            chat.send_message(llm.instructions[1])
+            chat.send_message(llm.instructions[2])
 
-            tsv_instruction = '''
+            tsv_prompt = '''
     Output *only* raw TSV lines (no extra text, no JSON, no markdown), one for the input class and then one per property classification.
     Each line must be EXACTLY:
 
     <input_class>\\t<sulo_class>\\t<one-sentence reasoning>
     <property>\\t<sulo_class>\\t<one-sentence reasoning>
 
-    Examples:
-    administrativeCase sulo:Process   Because there is a start and end date meaning a procedure took place.
-    hasParticipant    sulo:Process    Because participants denote processes in which the object takes part.
-    hasParticipant    sulo:Object     Because participants themselves are treated as objects in the process lifecycle.
-    hasDuration       sulo:Time       Because duration directly captures the temporal extent of the event.
+    …Do **not** include anything else.'''
+            raw = chat.send_message(tsv_prompt).text
+            mapping = parse_tsv_output(raw)
 
-    If a property has multiple SULO classes, repeat the property on its own line for each class, with its own reasoning.
-    Do **not** include anything else, only those TSV lines.
-    '''
-            final_resp = chat.send_message(tsv_instruction)
-            mapping = parse_tsv_output(final_resp.text)
-
-            # clear everything
-            for k, v in self.mapping_vars.items():
-                if k == "__class__":
-                    v.set("")      # clear radio
+            # 1) Clear everything
+            for key, val in self.mapping_vars.items():
+                if key == "__class__":
+                    val.set("")             # clear radio
+                    self.class_reason_lbl.config(text="")  # clear reason text
                 else:
-                    for var in v.values():
+                    for var in val.values():
                         var.set(False)
 
-            # apply recommendations
+            # 2) Apply the new mapping
             for prop, pairs in mapping.items():
                 if prop == "__class__":
-                    # pick first recommendation for the class (Process vs Object)
-                    cls_choice, _ = pairs[0]
+                    # pick first (the domain)
+                    cls_choice, reason = pairs[0]
                     self.mapping_vars["__class__"].set(cls_choice)
+                    self.class_reason_lbl.config(text=reason)
                 else:
-                    for cls, _ in pairs:
+                    for cls, reason in pairs:
                         cbvar = self.mapping_vars[prop].get(cls)
                         if cbvar:
                             cbvar.set(True)
 
-            self.reasons.clear()
-            for prop, pairs in mapping.items():
-                self.reasons[prop] = pairs
-                    
+            # 3) Store reasons & enable “View Reasoning”
+            self.reasons = mapping
             self.reason_btn.config(state="normal")
-                
-        # --- Header ---
-        ttk.Label(
-            self.content,
-            text=f"Mapping for class: {self.input_class}",
-            font=("TkDefaultFont", 12, "bold")
-        ).pack(pady=(10, 5))
 
-        # load SULO classes for checkboxes
-        sulo_classes = json.load(open("data/sulo_data.json"))
+        # — Header —
+        ttk.Label(self.content,
+                text=f"Mapping for: {self.input_class}",
+                font=("TkDefaultFont", 12, "bold")
+        ).pack(pady=(10,5))
 
-        if not self.properties:
-            ttk.Label(self.content, text="No properties found.").pack(pady=20)
-        else:
-            # LLM recommendation button
-            ttk.Button(
-                self.content,
-                text="Get LLM Recommendations",
-                command=get_rec
-            ).pack(pady=(10, 5))
+        # — LLM & Reason buttons —
+        ttk.Button(self.content, text="Get LLM Recommendations", command=get_rec)\
+            .pack(pady=(5,2))
+        self.reason_btn = ttk.Button(self.content,
+                                    text="View Reasoning",
+                                    command=self.show_reasons,
+                                    state="disabled")
+        self.reason_btn.pack(pady=(0,10))
 
-            self.reason_btn = ttk.Button(
-            self.content,
-            text="View Reasoning",
-            command=self.show_reasons,
-            state="disabled"
-            )
-            self.reason_btn.pack(pady=(0, 10))
+        # — Class‐level frame —
+        class_frame = ttk.LabelFrame(self.content, text="Class domain")
+        class_frame.pack(fill="x", padx=10, pady=5)
 
-            # --- Class-level classification ---
-            class_frame = ttk.LabelFrame(self.content, text=f"Class: {self.input_class}")
-            class_frame.pack(fill="x", padx=10, pady=5)
-
-            ttk.Label(
-                class_frame,
-                text="Select the SULO domain for this class:",
+        ttk.Label(class_frame,
+                text="Select the SULO domain (Process vs Object):",
                 wraplength=550
+        ).pack(anchor="w", padx=10, pady=(5,2))
+
+        self.class_var = tk.StringVar(value="")
+        for domain in ("sulo:Process", "sulo:Object"):
+            ttk.Radiobutton(class_frame,
+                            text=domain,
+                            variable=self.class_var,
+                            value=domain
+            ).pack(anchor="w", padx=20, pady=2)
+
+        # A small label under the radios to show the LLM’s reasoning
+        self.class_reason_lbl = ttk.Label(class_frame, text="", foreground="gray50", wraplength=550)
+        self.class_reason_lbl.pack(anchor="w", padx=20, pady=(2,5))
+
+        # record the StringVar so on_submit can pick it up
+        self.mapping_vars["__class__"] = self.class_var
+
+        # — Property‐level frames & checkboxes —
+        sulo_classes = json.load(open("data/sulo_data.json"))
+        for prop in self.properties:
+            lf = ttk.LabelFrame(self.content, text=prop["property"])
+            lf.pack(fill="x", padx=10, pady=5)
+
+            ttk.Label(lf,
+                    text="Select all SULO classes that apply:",
+                    wraplength=550
             ).pack(anchor="w", padx=10, pady=(5,2))
 
-            # radio buttons for Process vs Object
-            self.class_var = tk.StringVar(value="")
-            for domain in ("sulo:Process", "sulo:Object"):
-                rb = ttk.Radiobutton(
-                    class_frame,
-                    text=domain,
-                    variable=self.class_var,
-                    value=domain
-                )
-                rb.pack(anchor="w", padx=20, pady=2)
+            self.mapping_vars[prop["property"]] = {}
+            for s in sulo_classes:
+                try:
+                    cls = s["SULO Class"]
+                    des = self.shortened_descriptions.get(cls, cls)
+                    var = tk.BooleanVar(value=False)
+                    ttk.Checkbutton(lf,
+                                    text=f"{des} ({cls})",
+                                    variable=var
+                    ).pack(anchor="w", padx=20, pady=2)
+                    self.mapping_vars[prop["property"]][cls] = var
+                except:
+                    continue
 
-            # store for on_submit validation
-            self.mapping_vars["__class__"] = self.class_var
+        # — Finally: submit —
+        ttk.Button(self.content, text="Submit", command=self.on_submit)\
+            .pack(pady=(20,10))
 
-            # --- Property-level classification ---
-            for prop in self.properties:
-                prop_name = prop.get("property")
-                lf = ttk.LabelFrame(self.content, text=prop_name)
-                lf.pack(fill="x", padx=10, pady=5)
-
-                ttk.Label(
-                    lf,
-                    text="Select ALL SULO classes that apply:",
-                    wraplength=550
-                ).pack(pady=(0, 10))
-
-                self.mapping_vars[prop_name] = {}
-                for sulo in sulo_classes:
-                    cls = sulo.get("SULO Class")
-                    if cls:
-                        des = self.shortened_descriptions.get(cls, cls)
-                        var = tk.BooleanVar(value=False)
-                        cb = ttk.Checkbutton(
-                            lf,
-                            text=f"{des} ({cls})",
-                            variable=var
-                        )
-                        cb.pack(anchor="w", padx=10, pady=2)
-                        self.mapping_vars[prop_name][cls] = var
-
-        # --- Submit button at the very bottom ---
-        ttk.Button(
-            self.content,
-            text="Submit",
-            command=self.on_submit
-        ).pack(pady=(20, 10))
 
     def show_reasons(self):
         """Pop up a window listing each (prop,cls) → reason."""
